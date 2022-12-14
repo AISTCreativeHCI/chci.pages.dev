@@ -1,0 +1,7 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@emSize: 15px;
+@fontSize: 15px;
+@lineHeight: 1.7;

@@ -34,3 +34,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# fomantic-ui
+/semantic/dist/
+/public/semantic.min.css
+/public/themes/
