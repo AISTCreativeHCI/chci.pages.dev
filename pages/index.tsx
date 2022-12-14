@@ -1,37 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Link from "next/link";
+import { Container, Header, Segment } from "semantic-ui-react";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Creative HCI web pages</title>
         <meta name="description" content="Web pages for Creative HCI project" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome!
-        </h1>
-
-        <p className={styles.description}>
-          see <a href="/aist-seminar">AIST Creative HCI Seminar</a> for now.
-        </p>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
-    </div>
-  )
+      <Container>
+        <Segment basic>
+          <Header content="Welcome!" />
+          <p>
+            See <Link href="/aist-seminar">AIST Creative HCI Seminar</Link> for now.
+          </p>
+        </Segment>
+      </Container>
+    </>
+  );
 }
