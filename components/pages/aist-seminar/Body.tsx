@@ -2,8 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { FC, useContext } from "react";
-import { Container, Divider, Header, Icon, Menu, Segment } from "semantic-ui-react";
-import { SiteContext } from "../contexts/SiteContext";
+import { Container, Divider, Header, Menu, Segment } from "semantic-ui-react";
+
+import { SiteContext } from "../../contexts/SiteContext";
 
 export const Body: FC = () => {
   const site = useContext(SiteContext);

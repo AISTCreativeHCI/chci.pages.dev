@@ -1,5 +1,5 @@
-import { Body } from "../../components/aist-seminar/Body";
+import { Body } from "../../components/pages/aist-seminar/Body";
 
-export default function Home() {
+export default function Index() {
   return (<Body />);
 }
