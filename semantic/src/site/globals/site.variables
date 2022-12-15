@@ -2,6 +2,9 @@
      User Global Variables
 *******************************/
 
-@emSize: 15px;
-@fontSize: 15px;
+@emSize: 16px;
+@fontSize: 16px;
 @lineHeight: 1.7;
+
+@red: #cf0010;
+@primaryColor: @red;
