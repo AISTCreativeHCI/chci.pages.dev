@@ -1,6 +1,6 @@
 import { createContext } from "react";
 
-interface SiteInfoIface {
+export interface SiteInfoIface {
   root: string;
   title: string;
   description: string;

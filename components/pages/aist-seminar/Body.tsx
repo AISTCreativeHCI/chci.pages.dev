@@ -1,55 +1,25 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-import { FC, useContext } from "react";
-import { Container, Divider, Header, Menu, Segment } from "semantic-ui-react";
+import { FC } from "react";
+import { Container, Divider, Header, Segment } from "semantic-ui-react";
 
-import { SiteContext } from "../../contexts/SiteContext";
+import { useSiteInfo } from "../../lib/useSiteInfo";
+import { PageHeader } from "../../PageHeader";
 
 import styles from "./Body.module.css";
 
 export const Body: FC = () => {
-  const scx = useContext(SiteContext);
-  const { language } = scx;
-  const site = scx[language];
-  const ja = language == "ja";
-  const altRoot = scx[ja ? "en" : "ja"].root;
+  const {
+    ja,
+    site,
+  } = useSiteInfo();
   return (
     <>
       <Head>
-        <title>{site.title}</title>
-        <meta name="description" content={site.description} />
+        <title key="title">{site.title}</title>
+        <meta name="description" content={site.description} key="description" />
       </Head>
-      <Menu fixed="top" id="fixed-menu">
-        <Link href={site.root} legacyBehavior passHref>
-          <Menu.Item
-            as="a"
-            icon="splotch"
-            className={styles["hide-on-small-screens"]}
-            content={site.title}
-          />
-        </Link>
-        <Menu.Menu position="right">
-          {/* <Link href={`${site.root}/team`} legacyBehavior passHref>
-            <Menu.Item
-              as="a"
-              icon="users"
-              content={
-                <span className={styles["hide-on-small-screens"]}>
-                  {ja ? "運営" : "Organizers"}
-                </span>
-              }
-            />
-          </Link> */}
-          <Link href={`${altRoot}`} legacyBehavior passHref>
-            <Menu.Item
-              as="a"
-              icon="globe"
-              content={ja ? "English" : "日本語"}
-            />
-          </Link>
-        </Menu.Menu>
-      </Menu>
+      <PageHeader />
       <div className={styles.hero}>
         <Container>
           <Header as="h1" content={site.title} />
