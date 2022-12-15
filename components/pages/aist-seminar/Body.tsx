@@ -6,6 +6,8 @@ import { Container, Divider, Header, Menu, Segment } from "semantic-ui-react";
 
 import { SiteContext } from "../../contexts/SiteContext";
 
+import styles from "./Body.module.css";
+
 export const Body: FC = () => {
   const site = useContext(SiteContext);
   return (
@@ -28,32 +30,47 @@ export const Body: FC = () => {
           </Link>
         </Menu.Menu> */}
       </Menu>
+      <div className={styles.hero}>
+        <Container>
+          <Header as="h1" content={site.title} />
+          <Segment basic>
+            <p>
+              At AIST (National Institute of Advanced Industrial Science and
+              Technology), we strive to develop technologies that help people
+              unleash their creativity, which should be the prominent role of
+              human beings in the age of AI.
+            </p>
+            <p>
+              This seminar series will invite rising stars in the Human-Computer
+              Interaction field and cover diverse topics which are
+              directly/indirectly connected to creativity support research. The
+              seminar series is supported by the advisory board of senior and
+              prestigious HCI researchers based in Japan.
+            </p>
+          </Segment>
+        </Container>
+      </div>
       <Container>
-        <Header as="h1" content={site.title} />
-        <Segment basic>
+        <Segment color="red">
+          <h2>First Edition</h2>
+          <div className={styles.details}>
+            <p>Details to be disclosed soon... stay tuned!</p>
+          </div>
           <p>
-            At AIST (National Institute of Advanced Industrial Science and
-            Technology), we strive to develop technologies that help people
-            unleash their creativity, which should be the prominent role of
-            human beings in the age of AI.
+            The seminar's first edition will be held on{" "}
+            <strong>March 7 (Tue), 2023</strong>. For this very first edition,
+            we plan to invite two edge runners of the interdisciplinary study on
+            creativity who have actively published papers at top-tier HCI
+            venues, including CHI, CSCW, DIS, and C&amp;C.
           </p>
           <p>
-            This seminar series will invite rising stars in the Human-Computer
-            Interaction field and cover diverse topics which are
-            directly/indirectly connected to creativity support research. The
-            seminar series is supported by the advisory board of senior and
-            prestigious HCI researchers based in Japan.
-          </p>
-        </Segment>
-        <Segment>
-          <h2>Schedule</h2>
-          <p>
-            The first edition of the seminar is going to be held on{" "}
-            <strong>March 7 (Tue), 2023</strong>.
+            The format will be a one-day hybrid workshop -- attendees can either
+            visit a venue in Tokyo, Japan, or watch online streaming on YouTube
+            Live.
           </p>
         </Segment>
       </Container>
-      <footer>
+      <footer className={styles.footer}>
         <Divider />
         <Segment basic textAlign="center">
           <a
