@@ -1,3 +1,9 @@
+@media screen and (max-width: 640px) {
+  .hide-on-small-screens {
+    display: none !important;
+  }
+}
+
 .hero {
   margin: 0 0 2em 0;
   padding: 6em 0 2.5em 0;
