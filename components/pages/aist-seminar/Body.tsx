@@ -1,18 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
 import { FC } from "react";
-import { Container, Divider, Header, Segment } from "semantic-ui-react";
+import { Container, Header, Segment } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
+import { PageFooter } from "../../PageFooter";
 import { PageHeader } from "../../PageHeader";
 
 import styles from "./Body.module.css";
 
 export const Body: FC = () => {
-  const {
-    ja,
-    site,
-  } = useSiteInfo();
+  const { ja, site } = useSiteInfo();
   return (
     <>
       <Head>
@@ -20,7 +17,7 @@ export const Body: FC = () => {
         <meta name="description" content={site.description} key="description" />
       </Head>
       <PageHeader />
-      <div className={styles.hero}>
+      <div className="hero">
         <Container>
           <Header as="h1" content={site.title} />
           <Segment basic>
@@ -98,23 +95,7 @@ export const Body: FC = () => {
           )}
         </Segment>
       </Container>
-      <footer className={styles.footer}>
-        <Divider />
-        <Segment basic textAlign="center">
-          <a
-            href="https://www.aist.go.jp"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/aist-logo.png"
-              alt="AIST Logo"
-              width={150}
-              height={26}
-            />
-          </a>
-        </Segment>
-      </footer>
+      <PageFooter />
     </>
   );
 };

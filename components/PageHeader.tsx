@@ -21,7 +21,7 @@ export const PageHeader: FC = () => {
   />
 </Link>
 <Menu.Menu position="right">
-  {/* <Link href={`${site.root}/team`} legacyBehavior passHref>
+  <Link href={`${site.root}/team`} legacyBehavior passHref>
     <Menu.Item
       as="a"
       icon="users"
@@ -31,7 +31,7 @@ export const PageHeader: FC = () => {
         </span>
       }
     />
-  </Link> */}
+  </Link>
   <Link href={`${altRoot}`} legacyBehavior passHref>
     <Menu.Item
       as="a"
