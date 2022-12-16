@@ -3,9 +3,7 @@ import { Html, Head, Main, NextScript } from "next/document";
 import { useSiteInfo } from "../components/lib/useSiteInfo";
 
 export default function Document() {
-  const {
-    site,
-  } = useSiteInfo();
+  const { site } = useSiteInfo();
   return (
     <Html>
       <Head>

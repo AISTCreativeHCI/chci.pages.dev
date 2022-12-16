@@ -15,7 +15,8 @@ export default function Index() {
         <Segment basic>
           <Header content="Welcome!" />
           <p>
-            See <Link href="/aist-seminar">AIST Creative HCI Seminar</Link> for now.
+            See <Link href="/aist-seminar">AIST Creative HCI Seminar</Link> for
+            now.
           </p>
         </Segment>
       </div>

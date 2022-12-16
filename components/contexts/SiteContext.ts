@@ -17,11 +17,11 @@ export const SiteContext = createContext<SiteContextIface>({
   ja: {
     root: "/aist-seminar",
     title: "AIST Creative HCI Seminar",
-    description: "AIST Creative HCI Seminar の紹介ページです。"
+    description: "AIST Creative HCI Seminar の紹介ページです。",
   },
   en: {
     root: "/aist-seminar/en",
     title: "AIST Creative HCI Seminar",
-    description: "This page introduces AIST Creative HCI Seminar."
-  }
+    description: "This page introduces AIST Creative HCI Seminar.",
+  },
 });
