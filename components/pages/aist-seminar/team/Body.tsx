@@ -1,13 +1,18 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Container, Header, Segment } from "semantic-ui-react";
+import { Container, Icon, List, Segment } from "semantic-ui-react";
 
+import { TeamIface } from "../../../lib/TeamIface";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageHeader } from "../../../PageHeader";
 import { PageFooter } from "../../../PageFooter";
 
+import team from "./team.json";
+import advisors from "./advisory-board.json";
+import { Team } from "./Team";
+
 export const Body: FC = () => {
-  const { ja, site } = useSiteInfo();
+  const { language, ja, site } = useSiteInfo();
   return (
     <>
       <Head>
@@ -38,11 +43,11 @@ export const Body: FC = () => {
       <Container>
         <Segment>
           <h2>{ja ? "チーム" : "Team"}</h2>
-          <p>TBA</p>
+          <Team team={team} language={language} />
         </Segment>
         <Segment>
           <h2>{ja ? "アドバイザリーボード" : "Advisory Board"}</h2>
-          <p>TBA</p>
+          <Team team={advisors} language={language} />
         </Segment>
         <Segment color="red">
           <h2>{ja ? "連絡先" : "Contact"}</h2>

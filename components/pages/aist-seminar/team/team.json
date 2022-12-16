@@ -1,0 +1,94 @@
+[
+  {
+    "ja": {
+      "name": "加藤 淳",
+      "affiliation": "国立研究開発法人 産業技術総合研究所",
+      "website": "https://junkato.jp/ja"
+    },
+    "en": {
+      "name": "Dr. Jun Kato",
+      "affiliation": "National Institute of Advanced Industrial Science and Technology (AIST)",
+      "website": "https://junkato.jp"
+    }
+  },
+  {
+    "ja": {
+      "name": "小山 裕己",
+      "affiliation": "国立研究開発法人 産業技術総合研究所",
+      "website": "https://koyama.xyz/index-j.html"
+    },
+    "en": {
+      "name": "Dr. Yuki Koyama",
+      "affiliation": "National Institute of Advanced Industrial Science and Technology (AIST)",
+      "website": "https://koyama.xyz"
+    }
+  },
+  {
+    "ja": {
+      "name": "山崎 みどり",
+      "affiliation": "Out Of Blue Inc.",
+      "website": "https://out-of-blue.com"
+    },
+    "en": {
+      "name": "Midori Yamazaki",
+      "affiliation": "Out Of Blue Inc.",
+      "website": "https://out-of-blue.com"
+    }
+  },
+  {
+    "ja": {
+      "name": "矢倉 大夢",
+      "affiliation": "筑波大学",
+      "website": "https://yumetaro.info/index.ja.xhtml"
+    },
+    "en": {
+      "name": "Hiromu Yakura",
+      "affiliation": "University of Tsukuba",
+      "website": "https://yumetaro.info"
+    }
+  },
+  {
+    "ja": {
+      "name": "新 由衣",
+      "affiliation": "Tamwood International College, Vancouver, Canada",
+      "website": "https://atarapi.com"
+    },
+    "en": {
+      "name": "Yui Atarashi",
+      "affiliation": "Tamwood International College, Vancouver, Canada",
+      "website": "https://atarapi.com/"
+    }
+  },
+  {
+    "ja": {
+      "name": "村上 貴人",
+      "affiliation": "筑波大学",
+      "website": "https://kamiwork.com"
+    },
+    "en": {
+      "name": "Takahito Murakami",
+      "affiliation": "University of Tsukuba",
+      "website": "https://kamiwork.com"
+    }
+  },
+  {
+    "ja": {
+      "name": "元村 愛美",
+      "affiliation": "お茶の水女子大学"
+    },
+    "en": {
+      "name": "Ami Motomura",
+      "affiliation": "Ochanomizu University"
+    }
+  },
+  {
+    "ja": {
+      "name": "石田 瑞季",
+      "affiliation": "お茶の水女子大学"
+    },
+    "en": {
+      "name": "Mizuki Ishida",
+      "affiliation": "Ochanomizu University"
+    }
+  }
+]
