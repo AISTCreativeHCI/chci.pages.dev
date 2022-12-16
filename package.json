@@ -9,13 +9,11 @@
     "build:semantic-ui": "cd semantic && npx gulp build-css && npx gulp build-assets && npm run copy:semantic-ui",
     "copy:semantic-ui": "cpx semantic/dist/{semantic.min.css,themes/**/*} public/",
     "export": "next export",
+    "prettify": "prettier --write components pages",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
     "fomantic-ui": "^2.9.0",
     "next": "13.0.4",
     "react": "18.2.0",
@@ -24,6 +22,10 @@
     "typescript": "4.9.3"
   },
   "devDependencies": {
-    "cpx": "^1.5.0"
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "cpx": "^1.5.0",
+    "prettier": "^2.8.1"
   }
 }
