@@ -4,6 +4,18 @@
   }
 }
 
+@media only screen and (max-width: 767.98px) {
+  .ui.segment .ui.grid > .stackable.stackable.stackable.row > .column,
+  .ui.segment .ui.stackable.grid > .column.grid > .column,
+  .ui.segment .ui.stackable.grid > .column.row > .column,
+  .ui.segment .ui.stackable.grid > .column:not(.row),
+  .ui.segment .ui.stackable.grid > .row > .column,
+  .ui.segment .ui.stackable.grid > .row > .wide.column,
+  .ui.segment .ui.stackable.grid > .wide.column {
+    padding: 1rem 0;
+  }
+}
+
 .hero {
   margin: 0 0 2em 0;
   padding: 6em 0 2.5em 0;
