@@ -1,0 +1,33 @@
+.details {
+  background: #eee;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0em -1em 1em -1em;
+  padding: 3em 1em;
+  display: flex;
+  align-items: center;
+}
+.details .title {
+  flex-grow: 1;
+}
+.details .images {
+  flex-grow: 0;
+  text-align: center;
+}
+.images > img:global(.ui.avatar.image) {
+  width: 7em;
+  height: 7em;
+  max-width: none;
+  border: 0.2em solid #fff;
+  border-radius: 5em;
+  margin-right: -0.4em;
+}
+.images > img:global(.ui.avatar.image):last-child {
+  margin-right: 0;
+}
+.speakers img {
+  border-radius: 0.2em;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+}
+.alert {
+  color: #a33;
+}
