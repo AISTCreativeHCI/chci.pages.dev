@@ -15,6 +15,14 @@ export const Body: FC = () => {
       <Head>
         <title key="title">{site.title}</title>
         <meta name="description" content={site.description} key="description" />
+        <meta property="og:title" content={site.title} />
+        <meta property="og:description" content={site.description} />
+        <meta property="og:image" content={site.image} />
+        <meta property="twitter:title" content={site.title} />
+        <meta property="twitter:description" content={site.description} />
+        <meta property="twitter:image" content={site.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta charSet="utf-8" />
       </Head>
       <PageHeader />
       <div className="hero">
