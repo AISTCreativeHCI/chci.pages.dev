@@ -28,6 +28,31 @@
   border-radius: 0.2em;
   border: 1px solid rgba(34, 36, 38, 0.15);
 }
-.alert {
+.registration {
+  text-align: center;
+  background-size: auto auto;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 2px,
+    #fff6f6 2px,
+    #fff6f6 28px
+  );
+  border: 1px solid #fee;
+  padding: 1.25em 1em;
+}
+.registration > .alert {
   color: #a33;
+  border-top: 1px solid #fee;
+  text-align: left;
+  margin-top: 1.25em;
+  padding-top: 1.25em;
+  margin-left: 0 !important;
+  padding-left: 1.25rem;
+}
+.map {
+  width: 100%;
+  min-height: 450px;
+  border: none;
 }

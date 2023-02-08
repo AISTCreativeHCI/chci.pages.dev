@@ -1,5 +1,13 @@
 import { FC } from "react";
-import { Divider, Grid, Header, Image, List, Segment } from "semantic-ui-react";
+import {
+  Button,
+  Divider,
+  Grid,
+  Header,
+  Image,
+  List,
+  Segment,
+} from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 
@@ -18,13 +26,17 @@ export const FirstEditionSegment: FC = () => {
           />
           <List>
             <List.Item
-              content={ja ? "日時: 2023年3月7日（火）" : "Date: Mar. 7th, 2023"}
+              content={
+                ja
+                  ? "日時: 2023年3月7日（火）13:00 ～ 16:30 / 開場 12:30"
+                  : "Date: Mar. 7th, 2023"
+              }
             />
             <List.Item
               content={
                 ja
-                  ? "会場: 東京大学本郷キャンパス / YouTube Live"
-                  : "The University of Tokyo Hongo Campus / YouTube Live (Hybrid)"
+                  ? "会場: 東京大学本郷キャンパス 福武ラーニングシアター / YouTube Live"
+                  : "Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)"
               }
             />
           </List>
@@ -53,12 +65,9 @@ export const FirstEditionSegment: FC = () => {
             に開催します。記念すべき第1回目では、CHI、CSCW、DIS、C&amp;Cなど、HCIのトップ国際会議で活発に論文を発表している、創造性に関する学際研究のエッジランナー2名をお招きする予定です。
           </p>
           <p>
-            形式は、東京大学本郷キャンパス 構内の会場にお越しいただくか、YouTube
+            形式は、東京大学本郷キャンパス
+            構内の会場（福武ラーニングシアター）にお越しいただくか、YouTube
             Liveでのオンラインストリーミングをご覧いただく、1日のハイブリッドワークショップとなります。講演者は現地に招聘予定です。ぜひ活発な議論をお願いいたします。
-          </p>
-          <p className={styles.alert}>
-            ※現地参加には事前の参加登録が必要となります。参加登録は開催一か月前の
-            <strong>2023年2月7日（火）</strong>に当サイト上で開始予定です。
           </p>
         </>
       ) : (
@@ -77,11 +86,45 @@ export const FirstEditionSegment: FC = () => {
           </p>
         </>
       )}
+      <div className={styles.registration}>
+        <Button
+          icon="edit"
+          color="red"
+          size="massive"
+          content={ja ? "参加登録" : "Registration"}
+          as="a"
+          href="https://forms.office.com/r/yzPWSfChR3"
+        />
+        {ja ? (
+          <List bulleted className={styles.alert}>
+            <List.Item>
+              現地参加には事前の参加登録が必要となります。先着順で締め切る可能性がありますのでお早めにご登録ください。
+            </List.Item>
+            <List.Item>
+              参加登録時に収集する個人情報は
+              <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
+                産総研プライバシーポリシー
+              </a>
+              に準じて取り扱います。
+            </List.Item>
+          </List>
+        ) : (
+          <p className={styles.alert}>
+            Personal information collected in this form will be utilized while
+            following the{" "}
+            <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
+              AIST privacy policy
+            </a>
+            .
+          </p>
+        )}
+      </div>
       <Divider />
+      <Header as="h3" content={ja ? "招待講演者" : "Invited speakers"} />
       <Grid columns={2} stackable className={styles.speakers}>
         <Grid.Column>
           <Header
-            as="h3"
+            as="h4"
             image={
               <Image
                 src="/images/1-jonas-frich.jpg"
@@ -102,7 +145,7 @@ export const FirstEditionSegment: FC = () => {
         </Grid.Column>
         <Grid.Column>
           <Header
-            as="h3"
+            as="h4"
             image={
               <Image src="/images/1-zhicong-lu.jpg" alt="[Photo: Zhicong Lu]" />
             }
@@ -151,6 +194,15 @@ export const FirstEditionSegment: FC = () => {
           York, NY, USA, Article 137, 1–14.
         </List.Item>
       </List>
+      <Divider />
+      <Header as="h3" content={ja ? "現地会場" : "Onsite venue"} />
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.576638462137!2d139.75883396612772!3d35.71203448588789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c307e317f31%3A0xa5a4e210ad6b021e!2z5p2x5Lqs5aSn5a2m5aSn5a2m6ZmiIOaDheWgseWtpueSsOODu-emj-atpuODm-ODvOODqw!5e0!3m2!1sja!2sjp!4v1675821575074!5m2!1sja!2sjp"
+        allowFullScreen
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className={styles.map}
+      ></iframe>
     </Segment>
   );
 };
