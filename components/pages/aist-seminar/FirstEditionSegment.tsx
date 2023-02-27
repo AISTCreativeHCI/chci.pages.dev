@@ -29,7 +29,7 @@ export const FirstEditionSegment: FC = () => {
               content={
                 ja
                   ? "日時: 2023年3月7日（火）13:00 ～ 16:30 / 開場 12:30"
-                  : "Date: Mar. 7th, 2023"
+                  : "Date: Mar. 7th, 2023 / Time: 13:00-16:30 (Japan Standard Time)"
               }
             />
             <List.Item
@@ -62,12 +62,16 @@ export const FirstEditionSegment: FC = () => {
               インタラクション 2023
             </a>
             開催前日の<strong>2023年3月7日（火）</strong>
-            に開催します。記念すべき第1回目では、CHI、CSCW、DIS、C&amp;Cなど、HCIのトップ国際会議で活発に論文を発表している、創造性に関する学際研究のエッジランナー2名をお招きする予定です。
+            午後1時から開催します。形式は、東京大学本郷キャンパス
+            構内の会場（福武ラーニングシアター）にお越しいただくか、YouTube
+            Liveでのオンラインストリーミングをご覧いただくハイブリッドワークショップとなります。
           </p>
           <p>
-            形式は、東京大学本郷キャンパス
-            構内の会場（福武ラーニングシアター）にお越しいただくか、YouTube
-            Liveでのオンラインストリーミングをご覧いただく、1日のハイブリッドワークショップとなります。講演者は現地に招聘予定です。ぜひ活発な議論をお願いいたします。
+            記念すべき第1回目では、 Human-Computer Interaction (HCI)
+            分野のトップ国際会議で活発に論文を発表している、創造性に関する学際研究のエッジランナーとしてJonas
+            Frich氏とZhicong
+            Lu氏の2名を会場にお招きします。それぞれ、HCI分野における創造性支援研究の歴史と今後の展望について、また、VTuberや「どうぶつの森」など文化に深く根差したコンピュータの利活用法について顕著な業績がある研究者です。
+            HCI分野の前提知識がなくても楽しめる内容になりますので、人とコンピュータの関係を考え、よりよくしていくHCI分野の最前線を知り、考えを深める機会となる本セミナーに、ぜひお越しください。
           </p>
         </>
       ) : (
@@ -100,6 +104,7 @@ export const FirstEditionSegment: FC = () => {
             <List.Item>
               現地参加には事前の参加登録が必要となります。先着順で締め切る可能性がありますのでお早めにご登録ください。
             </List.Item>
+            <List.Item>参加費は無料です。</List.Item>
             <List.Item>
               参加登録時に収集する個人情報は
               <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
@@ -135,6 +140,17 @@ export const FirstEditionSegment: FC = () => {
             subheader="Digital Design &
                 Information Studies, Aarhus University"
           />
+          {ja && (
+            <p>
+              Jonas Frich氏は、Human-Computer Interaction (HCI)
+              分野における20年にわたる創造性支援研究（143論文）を分析した{" "}
+              <a href="https://doi.org/10.1145/3290605.3300619">
+                "Mapping the Landscape of Creativity Support Tools in HCI"
+              </a>{" "}
+              [CHI 2019]
+              などの論文があり心理学分野の背景を持つHCI研究者です。Jonas氏の講演は、創造性支援研究のこれまでを知り、これからを考える、またとない機会になるはずです。
+            </p>
+          )}
           <p>
             Jonas Frich is an Assistant Professor at Digital Design &amp;
             Information Studies, Aarhus University, Denmark. He is an expert on
@@ -153,6 +169,19 @@ export const FirstEditionSegment: FC = () => {
             subheader="Department of
                 Computer Science, City University of Hong Kong"
           />
+          {ja && (
+            <p>
+              Zhicong Lu氏はVTuberとファンの関係を調べた{" "}
+              <a href="https://doi.org/10.1145/3411764.3445660">
+                "More Kawaii than a Real-Person Live Streamer"
+              </a>{" "}
+              [CHI 2021] や{" "}
+              <a href="https://doi.org/10.1145/3474711">
+                「どうぶつの森」の社会動態を調べた論文
+              </a>{" "}
+              などの著者で、コンピュータが可能にした創造的活動を社会科学的視点で分析してきたHCI研究者です。Zhicong氏の講演は、文化に深く根差したコンピュータの利活用法を知り、その調査手法を学ぶ稀有な機会になるはずです。
+            </p>
+          )}
           <p>
             Zhicong Lu is an Assistant Professor at the Department of Computer
             Science, City University of Hong Kong. His research has been
