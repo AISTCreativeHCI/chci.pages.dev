@@ -7,6 +7,7 @@ import { PageFooter } from "../../PageFooter";
 import { PageHeader } from "../../PageHeader";
 import { FirstEditionSegment } from "./FirstEditionSegment";
 import { HeroSegment } from "./HeroSegment";
+import { SIGCHISegment } from "./SIGCHISegment";
 
 export const Body: FC = () => {
   const { site } = useSiteInfo();
@@ -33,6 +34,7 @@ export const Body: FC = () => {
       </div>
       <Container>
         <FirstEditionSegment />
+        <SIGCHISegment />
       </Container>
       <PageFooter />
     </>
