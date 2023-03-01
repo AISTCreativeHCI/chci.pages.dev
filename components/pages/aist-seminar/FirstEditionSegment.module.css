@@ -1,3 +1,9 @@
+.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
 .details {
   background: #eee;
   color: rgba(0, 0, 0, 0.6);

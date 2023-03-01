@@ -18,6 +18,7 @@ export const FirstEditionSegment: FC = () => {
   const { ja } = useSiteInfo();
   return (
     <Segment color="red">
+      <a id="first" className={styles.anchor}></a>
       <div className={styles.details}>
         <div className={styles.title}>
           <Header
@@ -91,7 +92,8 @@ export const FirstEditionSegment: FC = () => {
           </p>
         </>
       )}
-      <div className={styles.registration} id="registration">
+      <a id="first-registration" className={styles.anchor}></a>
+      <div className={styles.registration}>
         <Button
           icon="edit"
           color="red"
@@ -125,6 +127,7 @@ export const FirstEditionSegment: FC = () => {
           </p>
         )}
       </div>
+      <a id="first-invited-speakers" className={styles.anchor}></a>
       <Divider />
       <Header as="h3" content={ja ? "招待講演者" : "Invited speakers"} />
       <Grid columns={2} stackable className={styles.speakers}>
@@ -194,6 +197,7 @@ export const FirstEditionSegment: FC = () => {
           </p>
         </Grid.Column>
       </Grid>
+      <a id="first-timetable" className={styles.anchor}></a>
       <Divider />
       <Header as="h3" content={ja ? "プログラム" : "Timetable"} />
       <Table striped basic="very" size="small">
@@ -274,6 +278,7 @@ export const FirstEditionSegment: FC = () => {
         </Table.Body>
       </Table>
       <Divider />
+      <a id="first-references" className={styles.anchor}></a>
       <Header as="h3" content={ja ? "参考文献" : "References"} />
       {ja ? (
         <p>招待講演者の発表文献一覧からの抜粋です。</p>
@@ -303,6 +308,7 @@ export const FirstEditionSegment: FC = () => {
           York, NY, USA, Article 137, 1–14.
         </List.Item>
       </List>
+      <a id="first-venue" className={styles.anchor}></a>
       <Divider />
       <Header as="h3" content={ja ? "現地会場" : "Onsite venue"} />
       <iframe
