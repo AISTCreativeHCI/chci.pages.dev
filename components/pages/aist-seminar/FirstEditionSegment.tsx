@@ -93,40 +93,6 @@ export const FirstEditionSegment: FC = () => {
         </>
       )}
       <a id="first-registration" className={styles.anchor}></a>
-      <div className={styles.registration}>
-        <Button
-          icon="edit"
-          color="red"
-          size="massive"
-          content={ja ? "参加登録" : "Registration"}
-          as="a"
-          href="https://forms.office.com/r/yzPWSfChR3"
-        />
-        {ja ? (
-          <List bulleted className={styles.alert}>
-            <List.Item>
-              現地参加には事前の参加登録が必要となります。先着順で締め切る可能性がありますのでお早めにご登録ください。
-            </List.Item>
-            <List.Item>参加費は無料です。</List.Item>
-            <List.Item>
-              参加登録時に収集する個人情報は
-              <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
-                産総研プライバシーポリシー
-              </a>
-              に準じて取り扱います。
-            </List.Item>
-          </List>
-        ) : (
-          <p className={styles.alert}>
-            Personal information collected in this form will be utilized while
-            following the{" "}
-            <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
-              AIST privacy policy
-            </a>
-            .
-          </p>
-        )}
-      </div>
       <a id="first-invited-speakers" className={styles.anchor}></a>
       <Divider />
       <Header as="h3" content={ja ? "招待講演者" : "Invited speakers"} />
