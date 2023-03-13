@@ -1,14 +1,5 @@
 import { FC } from "react";
-import {
-  Button,
-  Divider,
-  Grid,
-  Header,
-  Image,
-  List,
-  Segment,
-  Table,
-} from "semantic-ui-react";
+import { Button, Segment } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 import { HeroSegment } from "./1/HeroSegment";

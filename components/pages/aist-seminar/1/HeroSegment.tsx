@@ -1,12 +1,5 @@
 import { FC } from "react";
-import {
-  Button,
-  Divider,
-  Header,
-  Image,
-  List,
-  Segment,
-} from "semantic-ui-react";
+import { Button, Divider, Header, Image, List } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 
