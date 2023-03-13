@@ -77,7 +77,16 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
               primary
               icon="file"
               size="large"
-              content={ja ? "共有ノート" : "Shared notes"}
+              content={
+                <span>
+                  <span className="show-on-small-screens" aria-hidden="true">
+                    {ja ? "ノート" : "Notes"}
+                  </span>
+                  <span className="hide-on-small-screens">
+                    {ja ? "共有ノート" : "Shared notes"}
+                  </span>
+                </span>
+              }
               as="a"
               href="https://docs.google.com/document/d/1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY/edit"
             />
@@ -85,7 +94,14 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
               icon="edit"
               size="large"
               content={
-                ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"
+                <span>
+                  <span className="show-on-small-screens" aria-hidden="true">
+                    {ja ? "アンケート" : "Questionnaire"}
+                  </span>
+                  <span className="hide-on-small-screens">
+                    {ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"}
+                  </span>
+                </span>
               }
               as="a"
               href="https://forms.office.com/r/iMbrDZrttL"

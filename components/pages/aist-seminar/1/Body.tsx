@@ -35,7 +35,7 @@ export const Body: FC = () => {
   return (
     <>
       <Head>
-        <title key="title">{site.title}</title>
+        <title key="title">{site.translatedTitle || site.title}</title>
         <meta name="description" content={site.description} key="description" />
         <meta
           property="og:title"
@@ -43,7 +43,10 @@ export const Body: FC = () => {
         />
         <meta property="og:description" content={site.description} />
         <meta property="og:image" content={site.image} />
-        <meta property="twitter:title" content={site.title} />
+        <meta
+          property="twitter:title"
+          content={site.translatedTitle || site.title}
+        />
         <meta property="twitter:description" content={site.description} />
         <meta property="twitter:image" content={site.image} />
         <meta name="twitter:card" content="summary_large_image" />

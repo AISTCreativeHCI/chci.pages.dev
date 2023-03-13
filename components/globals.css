@@ -1,6 +1,13 @@
+.show-on-small-screens {
+  display: none;
+}
+
 @media screen and (max-width: 640px) {
   .hide-on-small-screens {
     display: none !important;
+  }
+  .show-on-small-screens {
+    display: inherit !important;
   }
 }
 

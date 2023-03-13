@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Container, Header } from "semantic-ui-react";
+import { Container, Image } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 import { PageFooter } from "../../PageFooter";
@@ -26,10 +26,16 @@ export const Body: FC = () => {
         <meta charSet="utf-8" />
         <link rel="icon" href={site.favicon} />
       </Head>
-      <PageHeader />
+      <PageHeader withoutBrand />
       <div className="hero">
         <Container>
-          <Header as="h1" content={site.title} />
+          <h1>
+            <Image
+              fluid
+              src="/aist-creative-hci-seminar-logo-text-outlined.svg"
+              alt={site.title}
+            />
+          </h1>
           <HeroSegment />
         </Container>
       </div>
