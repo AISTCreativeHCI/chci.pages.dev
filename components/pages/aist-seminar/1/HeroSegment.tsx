@@ -72,13 +72,25 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           allowFullScreen
         ></iframe>
         <div className={styles.button}>
-          <Button
-            icon="edit"
-            size="large"
-            content={ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"}
-            as="a"
-            href="https://forms.office.com/r/yzPWSfChR3"
-          />
+          <Button.Group>
+            <Button
+              primary
+              icon="file"
+              size="large"
+              content={ja ? "共有ノート" : "Shared notes"}
+              as="a"
+              href="https://docs.google.com/document/d/1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY/edit"
+            />
+            <Button
+              icon="edit"
+              size="large"
+              content={
+                ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"
+              }
+              as="a"
+              href="https://forms.office.com/r/yzPWSfChR3"
+            />
+          </Button.Group>
         </div>
       </div>
     </>
