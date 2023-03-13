@@ -88,7 +88,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
                 ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"
               }
               as="a"
-              href="https://forms.office.com/r/yzPWSfChR3"
+              href="https://forms.office.com/r/iMbrDZrttL"
             />
           </Button.Group>
         </div>
