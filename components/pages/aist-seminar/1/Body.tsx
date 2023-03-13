@@ -73,7 +73,10 @@ export const Body: FC = () => {
         <SIGCHISegment basic />
         <Divider />
         <Breadcrumb>
-          <Breadcrumb.Section link href="/aist-seminar">
+          <Breadcrumb.Section
+            link
+            href={ja ? "/aist-seminar" : "/aist-seminar/en"}
+          >
             AIST Creative HCI Seminar
           </Breadcrumb.Section>
           <Breadcrumb.Divider icon="right angle" />
