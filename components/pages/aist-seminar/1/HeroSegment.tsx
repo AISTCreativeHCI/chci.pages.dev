@@ -21,19 +21,14 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         <div className={styles.title}>
           <Header
             as="h2"
-            content="AIST Creative HCI Seminar #1"
+            content={
+              fullWidth
+                ? "#1 Jonas Frich & Zhicong Lu"
+                : "AIST Creative HCI Seminar #1"
+            }
             subheader={ja && "第一回 AIST Creative HCI Seminar"}
           />
           <List>
-            {fullWidth && (
-              <List.Item
-                content={
-                  ja
-                    ? "招待講演者: Jonas Frich, Zhicong Lu"
-                    : "Invited speakers: Jonas Frich, Zhicong Lu"
-                }
-              />
-            )}
             <List.Item
               content={
                 ja
