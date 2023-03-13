@@ -1,14 +1,14 @@
 import { FC } from "react";
-import { Segment } from "semantic-ui-react";
+import { Segment, SegmentProps } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 
 import styles from "./SIGCHISegment.module.css";
 
-export const SIGCHISegment: FC = () => {
+export const SIGCHISegment: FC<SegmentProps> = (props) => {
   const { ja } = useSiteInfo();
   return (
-    <Segment textAlign="center">
+    <Segment textAlign="center" {...props}>
       {ja ? (
         <>
           <p>

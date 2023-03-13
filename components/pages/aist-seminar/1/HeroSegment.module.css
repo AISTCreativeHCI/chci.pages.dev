@@ -1,0 +1,41 @@
+.details {
+  background: #f3f4f5;
+  color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+.details.fullwidth {
+  margin: 0em -1em 1em -1em;
+  padding: 3em 1em;
+}
+.details .title {
+  flex-grow: 1;
+}
+.details .images {
+  flex-grow: 0;
+  text-align: center;
+}
+.images > img:global(.ui.avatar.image) {
+  width: 7em;
+  height: 7em;
+  max-width: none;
+  border: 0.2em solid #fff;
+  border-radius: 5em;
+  margin-right: -0.4em;
+}
+.images > img:global(.ui.avatar.image):last-child {
+  margin-right: 0;
+}
+.wrapper {
+  background: #666;
+  line-height: 0;
+}
+.player {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+}
+.button {
+  text-align: center;
+  padding: 1em;
+}

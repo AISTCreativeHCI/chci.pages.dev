@@ -5,6 +5,7 @@ export interface SiteInfoIface {
   title: string;
   description: string;
   image: string;
+  favicon: string;
 }
 
 export interface SiteContextIface {
@@ -19,12 +20,14 @@ export const SiteContext = createContext<SiteContextIface>({
     root: "/aist-seminar",
     title: "AIST Creative HCI Seminar",
     description: "AIST Creative HCI Seminar の紹介ページです。",
-    image: "/images/1-hero-ja.png",
+    image: "/aist-creative-hci-seminar-hero.png",
+    favicon: "/aist-creative-hci-seminar-logo.png",
   },
   en: {
     root: "/aist-seminar/en",
     title: "AIST Creative HCI Seminar",
     description: "This page introduces AIST Creative HCI Seminar.",
-    image: "/images/1-hero-en.png",
+    image: "/aist-creative-hci-seminar-hero.png",
+    favicon: "/aist-creative-hci-seminar-logo.png",
   },
 });

@@ -5,7 +5,7 @@
   visibility: hidden;
 }
 .details {
-  background: #eee;
+  background: #f3f4f5;
   color: rgba(0, 0, 0, 0.6);
   margin: 0em -1em 1em -1em;
   padding: 3em 1em;
@@ -29,10 +29,6 @@
 }
 .images > img:global(.ui.avatar.image):last-child {
   margin-right: 0;
-}
-.speakers img {
-  border-radius: 0.2em;
-  border: 1px solid rgba(34, 36, 38, 0.15);
 }
 .registration {
   text-align: center;

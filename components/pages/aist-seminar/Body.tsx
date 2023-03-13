@@ -24,6 +24,7 @@ export const Body: FC = () => {
         <meta property="twitter:image" content={site.image} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta charSet="utf-8" />
+        <link rel="icon" href={site.favicon} />
       </Head>
       <PageHeader />
       <div className="hero">
