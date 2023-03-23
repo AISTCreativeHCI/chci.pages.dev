@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Segment } from "semantic-ui-react";
 
-import { useSiteInfo } from "../../lib/useSiteInfo";
+import { useSiteInfo } from "../../../lib/useSiteInfo";
 
 export const HeroSegment: FC = () => {
   const { ja } = useSiteInfo();

@@ -2,12 +2,12 @@ import Head from "next/head";
 import { FC } from "react";
 import { Container, Image } from "semantic-ui-react";
 
-import { useSiteInfo } from "../../lib/useSiteInfo";
-import { PageFooter } from "../../PageFooter";
-import { PageHeader } from "../../PageHeader";
+import { useSiteInfo } from "../../../lib/useSiteInfo";
+import { PageFooter } from "../../../PageFooter";
+import { PageHeader } from "../../../PageHeader";
 import { FirstEditionSegment } from "./FirstEditionSegment";
 import { HeroSegment } from "./HeroSegment";
-import { SIGCHISegment } from "./SIGCHISegment";
+import { SIGCHISegment } from "../SIGCHISegment";
 
 export const Body: FC = () => {
   const { site } = useSiteInfo();
