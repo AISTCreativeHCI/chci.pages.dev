@@ -11,6 +11,7 @@ interface IProps {
   editionJa: string;
   dateTime: string;
   venue: string;
+  topic: string;
   speakers: {
     name: string;
     photoPath: string;
@@ -24,6 +25,7 @@ export const HeroSegment: FC<IProps> = ({
   editionJa,
   dateTime,
   venue,
+  topic,
   speakers,
   children,
 }) => {
@@ -48,6 +50,7 @@ export const HeroSegment: FC<IProps> = ({
           <List>
             <List.Item content={dateTime} />
             <List.Item content={venue} />
+            <List.Item content={topic} />
           </List>
         </div>
         <div className={styles.images}>

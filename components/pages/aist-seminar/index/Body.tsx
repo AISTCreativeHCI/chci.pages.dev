@@ -45,6 +45,29 @@ export const Body: FC = () => {
       <Container>
         <EditionSegment>
           <SecondEditionHeroSegment fullWidth />
+          {ja ? (
+            <>
+              <p>
+                本セミナーの第2回目は、
+                <strong>2023年4月14日（金）午前10時</strong>から開催します。 「
+                <strong>AI × HCI（HCIのためのAI）</strong>」
+                をテーマに、AI技術の応用によって初めて可能になったインタラクションの研究で活発に論文を発表している若手研究者2名をお呼びします。
+                形式は、Zoom
+                Webinarでのオンラインストリーミングをご覧いただくオンラインのワークショップとなります。ぜひ活発な質疑をお願いいたします。
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                The seminar's second edition will be held on{" "}
+                <strong>April 14 (Fri), 2023</strong>. For the second edition,
+                we plan to invite two rising stars on research of applying AI
+                technologies for novel interaction techniques who have actively
+                published papers at top-tier HCI venues. The format will be a
+                one-day online seminar on Zoom Webinar.
+              </p>
+            </>
+          )}
           <Alertbox
             text={
               ja ? (
@@ -73,7 +96,7 @@ export const Body: FC = () => {
               size="massive"
               content={ja ? "参加登録" : "Registration"}
               as="a"
-              disabled
+              href="https://forms.office.com/r/ea3NHQqetQ"
             />
           </Alertbox>
         </EditionSegment>
