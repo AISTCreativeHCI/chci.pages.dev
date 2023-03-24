@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Button, Container, Image, List } from "semantic-ui-react";
+import { Button, Container, Divider, Image, List } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
@@ -11,6 +11,7 @@ import { HeroSegment } from "./HeroSegment";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegment } from "./EditionSegment";
 import { Alertbox } from "../Alertbox";
+import { InvitedSpeakersSegment } from "../2/InvitedSpeakersSegment";
 
 export const Body: FC = () => {
   const { site, ja } = useSiteInfo();
@@ -68,6 +69,8 @@ export const Body: FC = () => {
               </p>
             </>
           )}
+          <InvitedSpeakersSegment />
+          <Divider hidden />
           <Alertbox
             text={
               ja ? (

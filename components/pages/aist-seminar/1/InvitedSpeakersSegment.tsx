@@ -9,7 +9,8 @@ export const InvitedSpeakersSegment: FC = () => {
     () => [
       {
         name: "Jonas Frich",
-        affiliation: "Digital Design & Information Studies, Aarhus University",
+        affiliation:
+          "Assistant Professor, Digital Design & Information Studies, Aarhus University",
         photoPath: "/images/1-jonas-frich.jpg",
         bio: (
           <>
@@ -37,7 +38,7 @@ export const InvitedSpeakersSegment: FC = () => {
       {
         name: "Zhicong Lu",
         affiliation:
-          "Department of Computer Science, City University of Hong Kong",
+          "Assistant Professor, Department of Computer Science, City University of Hong Kong",
         photoPath: "/images/1-zhicong-lu.jpg",
         bio: (
           <>
