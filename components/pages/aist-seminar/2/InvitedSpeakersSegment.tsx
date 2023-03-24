@@ -76,5 +76,5 @@ export const InvitedSpeakersSegment: FC<IProps> = ({ bare }) => {
     ],
     []
   );
-  return <GenericInvitedSpeakersSegment bare speakers={speakers} />;
+  return <GenericInvitedSpeakersSegment bare={bare} speakers={speakers} />;
 };

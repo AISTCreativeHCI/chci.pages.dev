@@ -12,6 +12,7 @@ import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegment } from "./EditionSegment";
 import { Alertbox } from "../Alertbox";
 import { InvitedSpeakersSegment } from "../2/InvitedSpeakersSegment";
+import { ReferencesSegment } from "../2/ReferencesSegment";
 
 export const Body: FC = () => {
   const { site, ja } = useSiteInfo();
@@ -68,8 +69,6 @@ export const Body: FC = () => {
               </p>
             </>
           )}
-          <InvitedSpeakersSegment />
-          <Divider hidden />
           <Alertbox
             text={
               ja ? (
@@ -101,6 +100,8 @@ export const Body: FC = () => {
               href="https://forms.office.com/r/ea3NHQqetQ"
             />
           </Alertbox>
+          <InvitedSpeakersSegment bare />
+          <ReferencesSegment bare />
         </EditionSegment>
         <FirstEditionSegment />
         <SIGCHISegment />
