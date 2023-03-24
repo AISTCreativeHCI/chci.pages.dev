@@ -5,6 +5,7 @@ import { Breadcrumb, Container, Divider } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
+import { Alertbox } from "../Alertbox";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { AboutSegment } from "./AboutSegment";
 import { HeroSegment } from "./HeroSegment";
@@ -60,13 +61,13 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
-        <div className="alertbox">
+        <Alertbox>
           <p>
             {ja
               ? "本ページはアーカイブ目的で提供されており、主に開催前時点での情報が掲載されています。"
               : "This page is provided for archival purposes and contains information as of a point in time prior to the event."}
           </p>
-        </div>
+        </Alertbox>
         <AboutSegment />
         <InvitedSpeakersSegment />
         <TimetableSegment />

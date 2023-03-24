@@ -36,27 +36,3 @@
   top: -60px;
   visibility: hidden;
 }
-
-.alertbox {
-  text-align: center;
-  background-size: auto auto;
-  background-color: #fff;
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent,
-    transparent 2px,
-    #fff6f6 2px,
-    #fff6f6 28px
-  );
-  color: #a33;
-  border: 1px solid #fee;
-  padding: 1.25em 1em;
-}
-.alertbox > .alert {
-  border-top: 1px solid #fee;
-  text-align: left;
-  margin-top: 1.25em;
-  padding-top: 1.25em;
-  margin-left: 0 !important;
-  padding-left: 1.25rem;
-}

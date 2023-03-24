@@ -1,16 +1,19 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Container, Image } from "semantic-ui-react";
+import { Button, Container, Image, List } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
+import { HeroSegment as SecondEditionHeroSegment } from "../2/HeroSegment";
 import { FirstEditionSegment } from "./FirstEditionSegment";
 import { HeroSegment } from "./HeroSegment";
 import { SIGCHISegment } from "../SIGCHISegment";
+import { EditionSegment } from "./EditionSegment";
+import { Alertbox } from "../Alertbox";
 
 export const Body: FC = () => {
-  const { site } = useSiteInfo();
+  const { site, ja } = useSiteInfo();
   return (
     <>
       <Head>
@@ -40,6 +43,40 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
+        <EditionSegment>
+          <SecondEditionHeroSegment fullWidth />
+          <Alertbox
+            text={
+              ja ? (
+                <p>
+                  参加登録時に収集する個人情報は
+                  <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
+                    産総研プライバシーポリシー
+                  </a>
+                  に準じて取り扱います。
+                </p>
+              ) : (
+                <p>
+                  Personal information collected in this form will be utilized
+                  while following the{" "}
+                  <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
+                    AIST privacy policy
+                  </a>
+                  .
+                </p>
+              )
+            }
+          >
+            <Button
+              icon="edit"
+              color="red"
+              size="massive"
+              content={ja ? "参加登録" : "Registration"}
+              as="a"
+              disabled
+            />
+          </Alertbox>
+        </EditionSegment>
         <FirstEditionSegment />
         <SIGCHISegment />
       </Container>
