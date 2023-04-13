@@ -13,6 +13,7 @@ import { EditionSegment } from "./EditionSegment";
 import { Alertbox } from "../Alertbox";
 import { InvitedSpeakersSegment } from "../2/InvitedSpeakersSegment";
 import { ReferencesSegment } from "../2/ReferencesSegment";
+import { TimetableSegment } from "../2/TimetableSegment";
 
 export const Body: FC = () => {
   const { site, ja } = useSiteInfo();
@@ -111,6 +112,7 @@ export const Body: FC = () => {
             />
           </Alertbox>
           <InvitedSpeakersSegment bare />
+          <TimetableSegment bare />
           <ReferencesSegment bare />
         </EditionSegment>
         <FirstEditionSegment />
