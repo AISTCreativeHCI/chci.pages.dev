@@ -73,7 +73,7 @@ export const Body: FC = () => (
       <meta charSet="utf-8" />
       <link rel="stylesheet" href="/chi2023.css" />
     </Head>
-    <Menu fixed="top" id="top">
+    <Menu fixed="top">
       <Menu.Item className={styles.brand} as="a" href="#top">
         SIGCCC
       </Menu.Item>
@@ -84,7 +84,7 @@ export const Body: FC = () => (
         Organizers
       </Menu.Item>
     </Menu>
-    <div className={styles.body}>
+    <div className={styles.body} id="top">
       <div className={styles.hero}>
         <Container>
           <Header
