@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { Header, Segment } from "semantic-ui-react";
+import { Divider, Grid, Header, Image, Segment } from "semantic-ui-react";
 
 import styles from "../components/pages/index.module.css";
 
@@ -18,10 +18,30 @@ export default function Index() {
       <div className={styles.wrapper}>
         <Segment basic>
           <Header content="Welcome!" />
-          <p>
-            See <Link href="/aist-seminar">AIST Creative HCI Seminar</Link> for
-            now.
-          </p>
+          <p>This is a home page for the following two projects.</p>
+          <Divider />
+          <Grid stackable columns={2}>
+            <Grid.Column>
+              <Link href="/chi2023">
+                <Image
+                  bordered
+                  src="/chi2023/chi2023-kato-sigccc.jpg"
+                  alt="ACM CHI 2023: Special Interest Group on Creativity and Cultures"
+                  fluid
+                />
+              </Link>
+            </Grid.Column>
+            <Grid.Column>
+              <Link href="/aist-seminar">
+                <Image
+                  bordered
+                  src="/aist-creative-hci-seminar-hero.png"
+                  alt="AIST Creative HCI Seminar"
+                  fluid
+                />
+              </Link>
+            </Grid.Column>
+          </Grid>
         </Segment>
       </div>
     </main>
