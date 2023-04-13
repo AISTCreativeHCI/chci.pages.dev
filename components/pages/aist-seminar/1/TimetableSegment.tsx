@@ -7,7 +7,7 @@ export const TimetableSegment: FC = () => {
   const { ja } = useSiteInfo();
   return (
     <Segment basic>
-      <a id="invited-speakers" className="anchor"></a>
+      <a id="timetable" className="anchor"></a>
       <Header as="h2" dividing content={ja ? "プログラム" : "Timetable"} />
       <Table striped basic="very" size="small">
         <Table.Header>
