@@ -26,6 +26,19 @@
 .hero .share :global(.ui.horizontal.list > .item:last-child) {
   margin-right: 0;
 }
+
+.hero .images > img:global(.ui.avatar.image) {
+  width: 3em;
+  height: 3em;
+  max-width: none;
+  border: 0.15em solid #fff;
+  border-radius: 5em;
+  margin-right: -0.5em;
+}
+.hero .images > img:global(.ui.avatar.image):last-child {
+  margin-right: 0;
+}
+
 .content {
   border: 1px solid rgba(34, 36, 38, 0.1);
   border-width: 1px 0;

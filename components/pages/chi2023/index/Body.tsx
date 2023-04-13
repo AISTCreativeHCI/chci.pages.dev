@@ -20,6 +20,45 @@ const description =
   "This page introduces the Special Interest Group on Creativity and Cultures in Computing (SIGCCC) at CHI 2023";
 const image = "/chi2023/chi2023-kato-sigccc.jpg";
 
+const organizers = [
+  {
+    url: "https://junkato.jp",
+    photoPath: "/images/junkato.jpg",
+    name: "Jun Kato",
+    affiliation: "AIST, Japan",
+  },
+  {
+    url: "https://pure.au.dk/portal/en/persons/jonas-frich-pedersen(1f394a37-c0c2-40b9-b2b5-45e5021746c1).html",
+    photoPath: "/images/1-jonas-frich.jpg",
+    name: "Jonas Frich",
+    affiliation: "Aarhus University, Denmark",
+  },
+  {
+    url: "https://www.cs.cityu.edu.hk/~zhiconlu/",
+    photoPath: "/images/1-zhicong-lu.jpg",
+    name: "Zhicong Lu",
+    affiliation: "City University of Hong Kong, China",
+  },
+  {
+    url: "https://pixelmaid.github.io/personalweb/",
+    photoPath: "/images/jenniferjacobs.jpg",
+    name: "Jennifer Jacobs",
+    affiliation: "University of California, Santa Barbara, United States",
+  },
+  {
+    url: "http://www.kidresearch.jp/kumiyonakakoji/index-en.html",
+    photoPath: "/images/kumiyonakakoji.jpg",
+    name: "Kumiyo Nakakoji",
+    affiliation: "Future University Hakodate, Japan",
+  },
+  {
+    url: "https://celinelatulipe.net/",
+    photoPath: "/images/celinelatulipe.jpg",
+    name: "Celine Latulipe",
+    affiliation: "University of Manitoba, Canada",
+  },
+];
+
 export const Body: FC = () => (
   <>
     <Head>
@@ -51,8 +90,18 @@ export const Body: FC = () => (
           <Header
             as="h1"
             content="Special Interest Group on Creativity and Cultures"
-            subheader="SIG meeting at CHI 2023"
+            subheader="Call for participation in SIG meeting at CHI 2023"
           />
+          <div className={styles.images}>
+            {organizers.map((o) => (
+              <Image
+                key={o.name}
+                avatar
+                src={o.photoPath}
+                alt={`[Photo: ${o.name}]`}
+              />
+            ))}
+          </div>
           <div className={styles.share}>
             {createShareButtons(
               "ACM CHI 2023: Special Interest Group on Creativity and Cultures",
@@ -228,85 +277,19 @@ export const Body: FC = () => (
           <Segment color="green">
             <a id="organizers" className="anchor"></a>
             <Header as="h2" content="Organizers" dividing />
-            <List horizontal relaxed>
-              <List.Item
-                as="a"
-                href="https://junkato.jp"
-                image={
-                  <Image
-                    avatar
-                    src="/images/junkato.jpg"
-                    alt="[Jun Kato photo]"
-                  />
-                }
-                header="Jun Kato"
-                description="AIST, Japan"
-              />
-              <List.Item
-                as="a"
-                href="https://pure.au.dk/portal/en/persons/jonas-frich-pedersen(1f394a37-c0c2-40b9-b2b5-45e5021746c1).html"
-                image={
-                  <Image
-                    avatar
-                    src="/images/1-jonas-frich.jpg"
-                    alt="[Jonas Frich photo]"
-                  />
-                }
-                header="Jonas Frich"
-                description="Aarhus University, Denmark"
-              />
-              <List.Item
-                as="a"
-                href="https://www.cs.cityu.edu.hk/~zhiconlu/"
-                image={
-                  <Image
-                    avatar
-                    src="/images/1-zhicong-lu.jpg"
-                    alt="[Zhicong Lu photo]"
-                  />
-                }
-                header="Zhicong Lu"
-                description="City University of Hong Kong, China"
-              />
-              <List.Item
-                as="a"
-                href="https://pixelmaid.github.io/personalweb/"
-                image={
-                  <Image
-                    avatar
-                    src="/images/jenniferjacobs.jpg"
-                    alt="[Jennifer Jacobs photo]"
-                  />
-                }
-                header="Jennifer Jacobs"
-                description="University of California, Santa Barbara, United States"
-              />
-              <List.Item
-                as="a"
-                href="http://www.kidresearch.jp/kumiyonakakoji/index-en.html"
-                image={
-                  <Image
-                    avatar
-                    src="/images/kumiyonakakoji.jpg"
-                    alt="[Kumiyo Nakakoji photo]"
-                  />
-                }
-                header="Kumiyo Nakakoji"
-                description="Future University Hakodate, Japan"
-              />
-              <List.Item
-                as="a"
-                href="https://celinelatulipe.net/"
-                image={
-                  <Image
-                    avatar
-                    src="/images/celinelatulipe.jpg"
-                    alt="[Celine Latulipe photo]"
-                  />
-                }
-                header="Celine Latulipe"
-                description="University of Manitoba, Canada"
-              />
+            <List relaxed selection>
+              {organizers.map((o) => (
+                <List.Item
+                  key={o.name}
+                  as="a"
+                  href={o.url}
+                  image={
+                    <Image avatar src={o.photoPath} alt={`[${o.name} photo]`} />
+                  }
+                  header={o.name}
+                  description={o.affiliation}
+                />
+              ))}
             </List>
           </Segment>
         </Container>
