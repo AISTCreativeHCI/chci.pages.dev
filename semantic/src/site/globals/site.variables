@@ -7,4 +7,7 @@
 @lineHeight: 1.7;
 
 @red: #cf0010;
+@green: #009776;
 @primaryColor: @red;
+
+@pageBackground: transparent;

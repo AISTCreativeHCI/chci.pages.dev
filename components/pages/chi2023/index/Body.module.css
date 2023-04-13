@@ -1,0 +1,69 @@
+:global(.ui.menu) .brand:global(.item) {
+  background: #009776;
+  color: #eee;
+  font-weight: bold;
+}
+:global(.ui.menu) .brand:global(.item):hover {
+  background: #009776cc;
+  color: #eee;
+  font-weight: bold;
+}
+.body {
+  background: #fff;
+}
+.hero {
+  padding: 7.5em 0 1.5em 0;
+  background: #f3f4f5;
+  color: rgba(0, 0, 0, 0.6);
+}
+.hero .share {
+  display: flex;
+  justify-content: flex-end;
+}
+.hero .share :global(.ui.horizontal.list > .item) {
+  margin-right: 0.5em;
+}
+.hero .share :global(.ui.horizontal.list > .item:last-child) {
+  margin-right: 0;
+}
+.content {
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  border-width: 1px 0;
+  padding: 2em 0;
+}
+
+.content :global(.ui.segment h2) {
+  margin-top: 0rem;
+}
+
+.content :global(.ui.table i.icon),
+.content :global(.ui.table strong) {
+  color: #999;
+}
+
+.footer {
+  padding: 2em 0 7em 0;
+}
+
+.alertbox {
+  text-align: center;
+  background-size: auto auto;
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 2px,
+    #dfd 2px,
+    #dfd 28px
+  );
+  color: #5b9286;
+  border: 1px solid #dfd;
+  padding: 1.25em 1em;
+}
+.alertbox > .alert {
+  text-align: left;
+  margin-top: 1em;
+  padding-top: 1em;
+  margin-left: 0 !important;
+  padding-left: 1.25rem;
+}

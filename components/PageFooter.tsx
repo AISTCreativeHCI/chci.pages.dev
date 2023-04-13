@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { Container, Divider, Segment } from "semantic-ui-react";
+import { Segment } from "semantic-ui-react";
 import { createShareButtons } from "./lib/createShareButtons";
 import { useSiteInfo } from "./lib/useSiteInfo";
 

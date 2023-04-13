@@ -8,8 +8,12 @@ export default function Index() {
   return (
     <main className={styles.main}>
       <Head>
-        <title>Creative HCI web pages</title>
-        <meta name="description" content="Web pages for Creative HCI project" />
+        <title key="title">Creative HCI web pages</title>
+        <meta
+          name="description"
+          content="Web pages for Creative HCI project"
+          key="description"
+        />
       </Head>
       <div className={styles.wrapper}>
         <Segment basic>
