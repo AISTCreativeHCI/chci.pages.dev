@@ -15,10 +15,11 @@ import { createShareButtons } from "../../../lib/createShareButtons";
 
 import styles from "./Body.module.css";
 
-const title = "ACM CHI 2023: Special Interest Group on Creativity and Cultures";
+const title =
+  "ACM CHI 2023: Special Interest Group on Creativity and Cultures in Computing";
 const description =
   "This page introduces the Special Interest Group on Creativity and Cultures in Computing (SIGCCC) at CHI 2023";
-const image = "/chi2023/chi2023-kato-sigccc.jpg";
+const image = "/chi2023/chi2023-sigccc.jpg";
 
 const organizers = [
   {
@@ -89,7 +90,7 @@ export const Body: FC = () => (
         <Container>
           <Header
             as="h1"
-            content="Special Interest Group on Creativity and Cultures"
+            content="Special Interest Group on Creativity and Cultures in Computing"
             subheader="Call for participation in SIG meeting at CHI 2023"
           />
           <div className={styles.images}>
@@ -104,7 +105,7 @@ export const Body: FC = () => (
           </div>
           <div className={styles.share}>
             {createShareButtons(
-              "ACM CHI 2023: Special Interest Group on Creativity and Cultures",
+              "ACM CHI 2023: Special Interest Group on Creativity and Cultures in Computing",
               "green"
             )}
           </div>
@@ -267,7 +268,7 @@ export const Body: FC = () => (
             <p>
               More details on why and how we are organizing this SIG meeting can
               be found in{" "}
-              <a href="/chi2023/chi2023-kato-sigccc.pdf">
+              <a href="/chi2023/chi2023-sigccc.pdf">
                 <Icon name="download" />
                 the author version of the special interest group proposal
               </a>

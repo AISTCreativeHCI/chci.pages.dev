@@ -25,8 +25,8 @@ export default function Index() {
               <Link href="/chi2023">
                 <Image
                   bordered
-                  src="/chi2023/chi2023-kato-sigccc.jpg"
-                  alt="ACM CHI 2023: Special Interest Group on Creativity and Cultures"
+                  src="/chi2023/chi2023-sigccc.jpg"
+                  alt="ACM CHI 2023: Special Interest Group on Creativity and Cultures in Computing"
                   fluid
                 />
               </Link>
