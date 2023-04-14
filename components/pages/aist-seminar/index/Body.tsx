@@ -1,19 +1,19 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Button, Container, Divider, Image, List } from "semantic-ui-react";
+import { Button, Container, Image } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
 import { HeroSegment as SecondEditionHeroSegment } from "../2/HeroSegment";
-import { FirstEditionSegment } from "./FirstEditionSegment";
-import { HeroSegment } from "./HeroSegment";
-import { SIGCHISegment } from "../SIGCHISegment";
-import { EditionSegment } from "./EditionSegment";
-import { Alertbox } from "../Alertbox";
 import { InvitedSpeakersSegment } from "../2/InvitedSpeakersSegment";
 import { ReferencesSegment } from "../2/ReferencesSegment";
 import { TimetableSegment } from "../2/TimetableSegment";
+import { Alertbox } from "../Alertbox";
+import { SIGCHISegment } from "../SIGCHISegment";
+import { EditionSegment } from "./EditionSegment";
+import { FirstEditionSegment } from "./FirstEditionSegment";
+import { HeroSegment } from "./HeroSegment";
 
 export const Body: FC = () => {
   const { site, ja } = useSiteInfo();
@@ -84,25 +84,34 @@ export const Body: FC = () => {
             text={
               ja ? (
                 <p>
-                  参加登録時に収集する個人情報は
-                  <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
-                    産総研プライバシーポリシー
-                  </a>
-                  に準じて取り扱います。
+                  <del>
+                    参加登録時に収集する個人情報は
+                    <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
+                      産総研プライバシーポリシー
+                    </a>
+                    に準じて取り扱います。
+                  </del>
+                  <br />
+                  セミナーの参加登録受付は終了しました。
                 </p>
               ) : (
                 <p>
-                  Personal information collected in this form will be utilized
-                  while following the{" "}
-                  <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
-                    AIST privacy policy
-                  </a>
-                  .
+                  <del>
+                    Personal information collected in this form will be utilized
+                    while following the{" "}
+                    <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
+                      AIST privacy policy
+                    </a>
+                    .
+                  </del>
+                  <br />
+                  Registration for the seminar has closed.
                 </p>
               )
             }
           >
             <Button
+              disabled
               icon="edit"
               color="red"
               size="massive"
