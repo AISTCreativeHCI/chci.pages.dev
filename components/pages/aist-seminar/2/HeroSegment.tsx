@@ -1,7 +1,10 @@
 import { FC } from "react";
+import { Button } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
+
+import styles from "./HeroSegment.module.css";
 
 interface IProps {
   fullWidth?: boolean;
@@ -28,6 +31,34 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           photoPath: "/images/2-xingyu-bruce-liu.jpg",
         },
       ]}
-    />
+    >
+      <div className={styles.wrapper}>
+        <iframe
+          className={styles.player}
+          src="https://www.youtube.com/embed/6hEk_qXs_gM"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+        <div className={styles.button}>
+          <Button
+            primary
+            icon="file"
+            size="large"
+            content={
+              <span>
+                <span className="show-on-small-screens" aria-hidden="true">
+                  {ja ? "ノート" : "Notes"}
+                </span>
+                <span className="hide-on-small-screens">
+                  {ja ? "共有ノート" : "Shared notes"}
+                </span>
+              </span>
+            }
+            as="a"
+            href="https://docs.google.com/document/d/11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY/edit"
+          />
+        </div>
+      </div>
+    </GenericHeroSegment>
   );
 };

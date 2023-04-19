@@ -77,5 +77,5 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
     ),
     []
   );
-  return bare ? content : <Segment basic>{bare}</Segment>;
+  return bare ? content : <Segment basic>{content}</Segment>;
 };
