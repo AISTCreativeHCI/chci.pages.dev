@@ -40,23 +40,41 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           allowFullScreen
         ></iframe>
         <div className={styles.button}>
-          <Button
-            primary
-            icon="file"
-            size="large"
-            content={
-              <span>
-                <span className="show-on-small-screens" aria-hidden="true">
-                  {ja ? "ノート" : "Notes"}
+          <Button.Group>
+            <Button
+              primary
+              icon="file"
+              size="large"
+              content={
+                <span>
+                  <span className="show-on-small-screens" aria-hidden="true">
+                    {ja ? "ノート" : "Notes"}
+                  </span>
+                  <span className="hide-on-small-screens">
+                    {ja ? "共有ノート" : "Shared notes"}
+                  </span>
                 </span>
-                <span className="hide-on-small-screens">
-                  {ja ? "共有ノート" : "Shared notes"}
+              }
+              as="a"
+              href="https://docs.google.com/document/d/11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY/edit"
+            />
+            <Button
+              icon="edit"
+              size="large"
+              content={
+                <span>
+                  <span className="show-on-small-screens" aria-hidden="true">
+                    {ja ? "アンケート" : "Questionnaire"}
+                  </span>
+                  <span className="hide-on-small-screens">
+                    {ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"}
+                  </span>
                 </span>
-              </span>
-            }
-            as="a"
-            href="https://docs.google.com/document/d/11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY/edit"
-          />
+              }
+              as="a"
+              href="https://forms.office.com/r/ZB4yGGQTQv"
+            />
+          </Button.Group>
         </div>
       </div>
     </GenericHeroSegment>
