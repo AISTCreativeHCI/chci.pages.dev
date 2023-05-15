@@ -5,15 +5,16 @@ import { Button, Container, Image } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
+import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
 import { HeroSegment as SecondEditionHeroSegment } from "../2/HeroSegment";
-import { InvitedSpeakersSegment } from "../2/InvitedSpeakersSegment";
-import { ReferencesSegment } from "../2/ReferencesSegment";
-import { TimetableSegment } from "../2/TimetableSegment";
+import { InvitedSpeakersSegment } from "../3/InvitedSpeakersSegment";
+import { TimetableSegment } from "../3/TimetableSegment";
 import { Alertbox } from "../Alertbox";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegment } from "./EditionSegment";
 import { FirstEditionSegment } from "./FirstEditionSegment";
 import { HeroSegment } from "./HeroSegment";
+import { ReferencesSegment } from "../3/ReferencesSegment";
 
 export const Body: FC = () => {
   const { site, ja } = useSiteInfo();
@@ -46,6 +47,81 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
+        <EditionSegment>
+          <GenericHeroSegment
+            fullWidth
+            edition={3}
+            editionJa="三"
+            dateTime={
+              ja
+                ? "日時: 2023年5月22日（月）15:00 ～ 17:00"
+                : "Date: May 22nd, 2023 / Time: 15:00-17:00 (Japan Standard Time)"
+            }
+            venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
+            title={
+              ja
+                ? "CHI 2023 が分かる！発表者による振り返り"
+                : "How was your CHI 2023 experience?"
+            }
+            speakers={[
+              { name: "Koya Narumi", photoPath: "/images/3-koya-narumi.jpg" },
+              {
+                name: "Hiromu Yakura",
+                photoPath: "/images/3-hiromu-yakura.jpg",
+              },
+              {
+                name: "Motomura Ami",
+                photoPath: "/images/circle-user-solid.svg",
+              },
+            ]}
+          />
+
+          {ja ? (
+            <>
+              <p>
+                本セミナーの第3回目は、
+                <strong>2023年5月22日（月）午後3時</strong>
+                から開催します。形式は、Zoom
+                Webinarでのオンラインストリーミングをご覧いただくオンラインのワークショップとなります。今回は、
+                <strong>
+                  4月23-29日にドイツのハンブルクで開催された国際会議 ACM CHI
+                  2023
+                </strong>
+                の様々なプログラムで発表した若手研究者をお呼びして、Human-Computer
+                Interaction分野のトップ国際会議 CHI の概要をつかみます。
+              </p>
+              <p>
+                通常の投稿論文（Papers）やデモ・ポスター（Interactivity,
+                Late-Breaking Work）はもちろん、ケーススタディ（Case
+                Studies）や学生の研究コンペティション（Student Research
+                Competition, Student Design Competition
+                など）、ワークショップやコース（Special Interest Group,
+                Workshop,
+                Course）など、盛りだくさんの超巨大会議について、全体像を把握するまたとないチャンスです。（論文セッションの全貌をつかむ{" "}
+                <a href="https://sigchi.jp/seminar/chi2023/">CHI勉強会 2023</a>{" "}
+                も、ぜひどうぞ！）
+              </p>
+              <p>
+                なお、<strong>今回に限り日本語での講演・議論</strong>
+                （講演者のCHIでの発表内容を含む招待講演部分を除く）となります。お気軽にご参加ください。
+              </p>
+            </>
+          ) : (
+            <>
+              <p>
+                The seminar's second edition will be held on{" "}
+                <strong>April 14 (Fri), 2023</strong>. For the second edition,
+                we plan to invite two rising stars on research of applying AI
+                technologies for novel interaction techniques who have actively
+                published papers at top-tier HCI venues. The format will be a
+                one-day online seminar on Zoom Webinar.
+              </p>
+            </>
+          )}
+          <InvitedSpeakersSegment bare />
+          <TimetableSegment bare />
+          <ReferencesSegment bare />
+        </EditionSegment>
         <EditionSegment
           text={ja ? "第二回について詳しく" : "More details"}
           link={ja ? "/aist-seminar/2" : "/aist-seminar/en/2"}

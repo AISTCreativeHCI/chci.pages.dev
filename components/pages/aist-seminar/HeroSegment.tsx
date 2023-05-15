@@ -11,7 +11,8 @@ interface IProps {
   editionJa: string;
   dateTime: string;
   venue: string;
-  topic: string;
+  topic?: string;
+  title?: string;
   speakers: {
     name: string;
     photoPath: string;
@@ -26,6 +27,7 @@ export const HeroSegment: FC<IProps> = ({
   dateTime,
   venue,
   topic,
+  title,
   speakers,
   children,
 }) => {
@@ -42,7 +44,10 @@ export const HeroSegment: FC<IProps> = ({
             as="h2"
             content={
               fullWidth
-                ? `#${edition} ${speakers.map((s) => s.name).join(" & ")}`
+                ? `#${edition} ${
+                    title ||
+                    (speakers ? speakers.map((s) => s.name).join(" & ") : "?")
+                  }`
                 : `AIST Creative HCI Seminar #${edition}`
             }
             subheader={ja && `第${editionJa}回 AIST Creative HCI Seminar`}
@@ -50,7 +55,7 @@ export const HeroSegment: FC<IProps> = ({
           <List>
             <List.Item content={dateTime} />
             <List.Item content={venue} />
-            <List.Item content={topic} />
+            {topic && <List.Item content={topic} />}
           </List>
         </div>
         <div className={styles.images}>
