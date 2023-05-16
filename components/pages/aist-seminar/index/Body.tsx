@@ -109,15 +109,47 @@ export const Body: FC = () => {
           ) : (
             <>
               <p>
-                The seminar's second edition will be held on{" "}
-                <strong>April 14 (Fri), 2023</strong>. For the second edition,
-                we plan to invite two rising stars on research of applying AI
-                technologies for novel interaction techniques who have actively
-                published papers at top-tier HCI venues. The format will be a
-                one-day online seminar on Zoom Webinar.
+                The seminar's third edition will be held on{" "}
+                <strong>May 22 (Mon), 2023</strong>. For the third edition, we
+                plan to invite Japan-based researchers who presented their work
+                at various programs of CHI 2023 (Papers, Case Studies,
+                Interactivity, Special Interest Group, ...) and ask them to
+                share their experiences. The format will be a one-day online
+                seminar on Zoom Webinar.
               </p>
             </>
           )}
+          <Alertbox
+            text={
+              ja ? (
+                <p>
+                  参加登録時に収集する個人情報は
+                  <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
+                    産総研プライバシーポリシー
+                  </a>
+                  に準じて取り扱います。登録後、ZoomからWebinar参加URLを含む確認メールが届きます。
+                </p>
+              ) : (
+                <p>
+                  Personal information collected in this form will be utilized
+                  while following the{" "}
+                  <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
+                    AIST privacy policy
+                  </a>
+                  .
+                </p>
+              )
+            }
+          >
+            <Button
+              icon="edit"
+              color="red"
+              size="massive"
+              content={ja ? "参加登録" : "Registration"}
+              as="a"
+              href="https://us06web.zoom.us/webinar/register/WN_cE43h1SpQsSNMEor5DeCkw"
+            />
+          </Alertbox>
           <InvitedSpeakersSegment bare />
           <TimetableSegment bare />
           <ReferencesSegment bare />
