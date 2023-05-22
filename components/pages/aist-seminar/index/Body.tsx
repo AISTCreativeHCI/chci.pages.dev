@@ -142,6 +142,7 @@ export const Body: FC = () => {
             }
           >
             <Button
+              disabled
               icon="edit"
               color="red"
               size="massive"
