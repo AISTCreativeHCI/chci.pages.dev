@@ -123,20 +123,12 @@ export const Body: FC = () => {
             text={
               ja ? (
                 <p>
-                  参加登録時に収集する個人情報は
-                  <a href="https://www.aist.go.jp/aist_j/privacy_policy/">
-                    産総研プライバシーポリシー
-                  </a>
-                  に準じて取り扱います。登録後、ZoomからWebinar参加URLを含む確認メールが届きます。
+                  参加登録は締め切りました。後日動画アーカイブを公開予定です。
                 </p>
               ) : (
                 <p>
-                  Personal information collected in this form will be utilized
-                  while following the{" "}
-                  <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
-                    AIST privacy policy
-                  </a>
-                  .
+                  The registration is closed; a video archive will be available
+                  soon.
                 </p>
               )
             }
