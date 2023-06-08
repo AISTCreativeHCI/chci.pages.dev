@@ -46,11 +46,15 @@ export const HeroSegment: FC<IProps> = ({
               fullWidth
                 ? `#${edition} ${
                     title ||
-                    (speakers ? speakers.map((s) => s.name).join(" & ") : "?")
+                    (speakers ? speakers.map((s) => s.name).join(", ") : "?")
                   }`
                 : `AIST Creative HCI Seminar #${edition}`
             }
-            subheader={ja && `第${editionJa}回 AIST Creative HCI Seminar`}
+            subheader={
+              ja
+                ? `第${editionJa}回 AIST Creative HCI Seminar`
+                : speakers && title && speakers.map((s) => s.name).join(", ")
+            }
           />
           <List>
             <List.Item content={dateTime} />
