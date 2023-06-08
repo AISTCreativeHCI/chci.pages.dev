@@ -2,9 +2,10 @@ import { FC } from "react";
 import { Button } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
+import { ButtonWrapper } from "../ButtonWrapper";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
-
-import styles from "./HeroSegment.module.css";
+import { HeroSegmentWrapper } from "../HeroSegmentWrapper";
+import { IFramePlayer } from "../IFramePlayer";
 
 interface IProps {
   fullWidth?: boolean;
@@ -32,14 +33,9 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         },
       ]}
     >
-      <div className={styles.wrapper}>
-        <iframe
-          className={styles.player}
-          src="https://www.youtube.com/embed/6hEk_qXs_gM"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-        <div className={styles.button}>
+      <HeroSegmentWrapper>
+        <IFramePlayer src="https://www.youtube.com/embed/6hEk_qXs_gM" />
+        <ButtonWrapper>
           <Button.Group>
             <Button
               primary
@@ -75,8 +71,8 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
               href="https://forms.office.com/r/ZB4yGGQTQv"
             />
           </Button.Group>
-        </div>
-      </div>
+        </ButtonWrapper>
+      </HeroSegmentWrapper>
     </GenericHeroSegment>
   );
 };
