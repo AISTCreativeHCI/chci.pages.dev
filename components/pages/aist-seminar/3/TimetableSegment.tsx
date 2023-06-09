@@ -38,15 +38,15 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>15:05</Table.Cell>
               <Table.Cell>
-                <a href="/files/3-koya-narumi.pdf">
+                <a href="/files/3-ami-motomura.pdf">
                   <Icon name="file" />{" "}
                   {ja
-                    ? "招待講演 #1 / Papers (講演資料ダウンロード可)"
-                    : "Invited talk #1 / Papers"}
+                    ? "招待講演 #3 / Late-Breaking Work & Interactivity (講演資料ダウンロード可)"
+                    : "Invited talk #3 / Late-Breaking Work & Interactivity"}
                 </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "鳴海 紘也" : "Koya Narumi"}
+                {ja ? "元村 愛美" : "Motomura Ami"}
               </Table.Cell>
             </Table.Row>
             <Table.Row>
@@ -66,15 +66,15 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>16:05</Table.Cell>
               <Table.Cell>
-                <a href="/files/3-ami-motomura.pdf">
+                <a href="/files/3-koya-narumi.pdf">
                   <Icon name="file" />{" "}
                   {ja
-                    ? "招待講演 #3 / Late-Breaking Work & Interactivity (講演資料ダウンロード可)"
-                    : "Invited talk #3 / Late-Breaking Work & Interactivity"}
+                    ? "招待講演 #1 / Papers (講演資料ダウンロード可)"
+                    : "Invited talk #1 / Papers"}
                 </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "元村 愛美" : "Motomura Ami"}
+                {ja ? "鳴海 紘也" : "Koya Narumi"}
               </Table.Cell>
             </Table.Row>
             <Table.Row>
