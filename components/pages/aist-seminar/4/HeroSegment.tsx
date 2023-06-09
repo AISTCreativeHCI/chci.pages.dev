@@ -42,7 +42,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       <RegistrationBox />
       <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
-      <ReferencesSegment bare />
+      {/* <ReferencesSegment bare /> */}
     </GenericHeroSegment>
   );
 };
