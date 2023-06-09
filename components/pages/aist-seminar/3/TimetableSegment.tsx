@@ -1,5 +1,5 @@
 import { FC, useMemo } from "react";
-import { Header, Segment, Table } from "semantic-ui-react";
+import { Header, Icon, Segment, Table } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 
@@ -38,7 +38,12 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>15:05</Table.Cell>
               <Table.Cell>
-                {ja ? "招待講演 #1 / Papers" : "Invited talk #1 / Papers"}
+                <a href="/files/3-koya-narumi.pdf">
+                  <Icon name="file" />{" "}
+                  {ja
+                    ? "招待講演 #1 / Papers (講演資料ダウンロード可)"
+                    : "Invited talk #1 / Papers"}
+                </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
                 {ja ? "鳴海 紘也" : "Koya Narumi"}
@@ -47,9 +52,12 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>15:35</Table.Cell>
               <Table.Cell>
-                {ja
-                  ? "招待講演 #2 / Case Studies & Doctoral Consortium"
-                  : "Invited talk #2 / Case Studies & Doctoral Consortium"}
+                <a href="/files/3-hiromu-yakura.pdf">
+                  <Icon name="file" />{" "}
+                  {ja
+                    ? "招待講演 #2 / Case Studies & Doctoral Consortium (講演資料ダウンロード可)"
+                    : "Invited talk #2 / Case Studies & Doctoral Consortium"}
+                </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
                 {ja ? "矢倉 大夢" : "Hiromu Yakura"}
@@ -58,9 +66,12 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>16:05</Table.Cell>
               <Table.Cell>
-                {ja
-                  ? "招待講演 #3 / Late-Breaking Work & Interactivity"
-                  : "Invited talk #3 / Late-Breaking Work & Interactivity"}
+                <a href="/files/3-ami-motomura.pdf">
+                  <Icon name="file" />{" "}
+                  {ja
+                    ? "招待講演 #3 / Late-Breaking Work & Interactivity (講演資料ダウンロード可)"
+                    : "Invited talk #3 / Late-Breaking Work & Interactivity"}
+                </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
                 {ja ? "元村 愛美" : "Motomura Ami"}
@@ -69,9 +80,12 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
             <Table.Row>
               <Table.Cell>16:35</Table.Cell>
               <Table.Cell>
-                {ja
-                  ? "Student Competitions & Special Interest Group"
-                  : "Student Competitions & Special Interest Group"}
+                <a href="/files/3-jun-kato.pdf">
+                  <Icon name="file" />{" "}
+                  {ja
+                    ? "Student Competitions & Special Interest Group (講演資料ダウンロード可)"
+                    : "Student Competitions & Special Interest Group"}
+                </a>
               </Table.Cell>
               <Table.Cell textAlign="right">
                 {ja ? "加藤 淳" : "Jun Kato"}

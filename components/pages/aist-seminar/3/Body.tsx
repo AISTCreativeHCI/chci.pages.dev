@@ -66,6 +66,12 @@ export const Body: FC = () => {
               ? "本ページはアーカイブ目的で提供されており、主に開催前時点での情報が掲載されています。"
               : "This page is provided for archival purposes and contains information as of a point in time prior to the event."}
           </p>
+          {ja && (
+            <p>
+              講演者の厚意により、講演資料がダウンロードできます。
+              <a href="#timetable">プログラム</a>からどうぞ。
+            </p>
+          )}
         </Alertbox>
         <AboutSegment />
         <InvitedSpeakersSegment />
