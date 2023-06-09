@@ -5,12 +5,12 @@ import { Breadcrumb, Container, Divider } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
-import { Alertbox } from "../Alertbox";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { AboutSegment } from "./AboutSegment";
 import { HeroSegment } from "./HeroSegment";
 import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
 import { ReferencesSegment } from "./ReferencesSegment";
+import { RegistrationBox } from "./RegistrationBox";
 import { TimetableSegment } from "./TimetableSegment";
 
 export const Body: FC = () => {
@@ -18,19 +18,19 @@ export const Body: FC = () => {
   const site = ja
     ? {
         ...origSite,
-        title: "AIST Creative HCI Seminar #3",
-        translatedTitle: "第三回 AIST Creative HCI Seminar",
+        title: "AIST Creative HCI Seminar #4",
+        translatedTitle: "第四回 AIST Creative HCI Seminar",
         description:
-          "このサイトでは第三回 AIST Creative HCI Seminarの動画アーカイブと紹介を掲載しています。第三回は「ACM CHI 2023振り返り」がテーマで、CHIの様々なプログラムで発表した若手研究者（鳴海さん、矢倉さん、元村さん）をお呼びして、招待講演とパネルセッションを行いました。",
-        image: "/images/3-hero.jpg",
+          "このサイトでは第四回 AIST Creative HCI Seminarの動画アーカイブと紹介を掲載しています。第三回は「ACM CHI 2023振り返り」がテーマで、CHIの様々なプログラムで発表した若手研究者（鳴海さん、矢倉さん、元村さん）をお呼びして、招待講演とパネルセッションを行いました。",
+        image: "/images/4-hero.jpg",
       }
     : {
         ...origSite,
-        title: "AIST Creative HCI Seminar #3",
+        title: "AIST Creative HCI Seminar #4",
         translatedTitle: undefined,
         description:
-          "This website provides the archived video and introduction of the AIST Creative HCI Seminar #3, held to collectively understand ACM CHI 2023, the premier and huge conference on Human-Computer Interaction. It invited three bright and young Japan-based researchers: Ami Motomura, Hiromu Yakura, and Koya Narumi.",
-        image: "/images/3-hero.jpg",
+          "This website provides the archived video and introduction of the AIST Creative HCI Seminar #4, held to collectively understand ACM CHI 2023, the premier and huge conference on Human-Computer Interaction. It invited three bright and young Japan-based researchers: Ami Motomura, Hiromu Yakura, and Koya Narumi.",
+        image: "/images/4-hero.jpg",
       };
   return (
     <>
@@ -60,13 +60,7 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
-        <Alertbox>
-          <p>
-            {ja
-              ? "本ページはアーカイブ目的で提供されており、主に開催前時点での情報が掲載されています。"
-              : "This page is provided for archival purposes and contains information as of a point in time prior to the event."}
-          </p>
-        </Alertbox>
+        <RegistrationBox />
         <AboutSegment />
         <InvitedSpeakersSegment />
         <TimetableSegment />

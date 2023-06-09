@@ -25,7 +25,7 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
           </Table.Header>
           <Table.Body>
             <Table.Row>
-              <Table.Cell>15:00</Table.Cell>
+              <Table.Cell>10:30</Table.Cell>
               <Table.Cell>
                 {ja
                   ? "「AIST Creative HCI Seminar」の開催経緯"
@@ -36,58 +36,37 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>15:05</Table.Cell>
-              <Table.Cell>
-                {ja ? "招待講演 #1 / Papers" : "Invited talk #1 / Papers"}
-              </Table.Cell>
+              <Table.Cell>10:35</Table.Cell>
+              <Table.Cell>{ja ? "招待講演 #1" : "Invited talk #1"}</Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "鳴海 紘也" : "Koya Narumi"}
+                {ja ? "原 航太郎" : "Kotaro Hara"}
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>15:35</Table.Cell>
-              <Table.Cell>
-                {ja
-                  ? "招待講演 #2 / Case Studies & Doctoral Consortium"
-                  : "Invited talk #2 / Case Studies & Doctoral Consortium"}
-              </Table.Cell>
+              <Table.Cell>11:10</Table.Cell>
+              <Table.Cell>{ja ? "招待講演 #2" : "Invited talk #2"}</Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "矢倉 大夢" : "Hiromu Yakura"}
+                {ja ? "荒川 陸" : "Riku Arakawa"}
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>16:05</Table.Cell>
-              <Table.Cell>
-                {ja
-                  ? "招待講演 #3 / Late-Breaking Work & Interactivity"
-                  : "Invited talk #3 / Late-Breaking Work & Interactivity"}
-              </Table.Cell>
+              <Table.Cell>11:35</Table.Cell>
+              <Table.Cell>{ja ? "招待講演 #3" : "Invited talk #3"}</Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "元村 愛美" : "Motomura Ami"}
+                {ja ? "中川 茉奈美" : "Manami Nakagawa"}
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>16:35</Table.Cell>
-              <Table.Cell>
-                {ja
-                  ? "Student Competitions & Special Interest Group"
-                  : "Student Competitions & Special Interest Group"}
-              </Table.Cell>
-              <Table.Cell textAlign="right">
-                {ja ? "加藤 淳" : "Jun Kato"}
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
-              <Table.Cell>16:45</Table.Cell>
+              <Table.Cell>11:55</Table.Cell>
               <Table.Cell>
                 {ja ? "パネルディスカッション" : "Panel discussion"}
               </Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "鳴海, 矢倉, 元村, 加藤" : "Koya, Hiromu, Ami, Jun"}
+                {ja ? "原, 荒川, 中川, 加藤" : "Kotaro, Riku, Manami, Jun"}
               </Table.Cell>
             </Table.Row>
             <Table.Row disabled>
-              <Table.Cell>16:55</Table.Cell>
+              <Table.Cell>12:25</Table.Cell>
               <Table.Cell>{ja ? "クロージング" : "Closing"}</Table.Cell>
               <Table.Cell textAlign="right">
                 {ja ? "セミナー運営" : "Organizers"}

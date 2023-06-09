@@ -13,23 +13,22 @@ export const InvitedSpeakersSegment: FC<IProps> = ({ bare }) => {
   const speakers = useMemo(
     () => [
       {
-        name: ja ? "鳴海 紘也" : "Koya Narumi",
+        name: ja ? "原 航太郎" : "Kotaro Hara",
         affiliation:
-          "Project Assistant Professor, Graduate School of Engineering, The University of Tokyo",
-        photoPath: "/images/3-koya-narumi.jpg",
-        link: "https://narumi.me/profile",
+          "Assistant Professor, School of Computing and Information Systems, Singapore Management University",
+        photoPath: "/images/circle-user-solid.svg",
+        link: "https://kotarohara.com",
       },
       {
-        name: ja ? "矢倉 大夢" : "Hiromu Yakura",
-        affiliation: "University of Tsukuba",
-        photoPath: "/images/3-hiromu-yakura.jpg",
-        link: ja
-          ? "https://yumetaro.info/index.ja.xhtml"
-          : "https://yumetaro.info",
+        name: ja ? "荒川 陸" : "Riku Arakawa",
+        affiliation:
+          "Human-Computer Interaction Institute, Carnegie Mellon University",
+        photoPath: "/images/circle-user-solid.svg",
+        link: "https://rikky0611.github.io",
       },
       {
-        name: ja ? "元村 愛美" : "Motomura Ami",
-        affiliation: "Ochanomizu University",
+        name: ja ? "中川 茉奈美" : "Manami Nakagawa",
+        affiliation: "Dept. of Computer Science, University of Bristol",
         photoPath: "/images/circle-user-solid.svg",
       },
     ],

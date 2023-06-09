@@ -42,7 +42,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       ]}
     >
       <HeroSegmentWrapper>
-        <IFramePlayer src="https://www.youtube.com/embed/pX9f6ugTavo" />
+        <IFramePlayer src="https://www.youtube.com/embed/N5wicg8ge0o" />
         <ButtonWrapper>
           <Button
             primary
