@@ -23,13 +23,13 @@ export const InvitedSpeakersSegment: FC<IProps> = ({ bare }) => {
         name: ja ? "荒川 陸" : "Riku Arakawa",
         affiliation:
           "Human-Computer Interaction Institute, Carnegie Mellon University",
-        photoPath: "/images/circle-user-solid.svg",
+        photoPath: "/images/4-riku-arakawa.jpg",
         link: "https://rikky0611.github.io",
       },
       {
         name: ja ? "中川 茉奈美" : "Manami Nakagawa",
         affiliation: "Dept. of Computer Science, University of Bristol",
-        photoPath: "/images/circle-user-solid.svg",
+        photoPath: "/images/4-manami-nakagawa.jpg",
       },
     ],
     []

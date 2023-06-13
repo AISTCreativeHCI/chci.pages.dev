@@ -30,11 +30,11 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         { name: "Kotaro Hara", photoPath: "/images/circle-user-solid.svg" },
         {
           name: "Riku Arakawa",
-          photoPath: "/images/circle-user-solid.svg",
+          photoPath: "/images/4-riku-arakawa.jpg",
         },
         {
           name: "Manami Nakagawa",
-          photoPath: "/images/circle-user-solid.svg",
+          photoPath: "/images/4-manami-nakagawa.jpg",
         },
       ]}
     >
@@ -42,7 +42,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       <RegistrationBox />
       <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
-      {/* <ReferencesSegment bare /> */}
+      <ReferencesSegment bare />
     </GenericHeroSegment>
   );
 };
