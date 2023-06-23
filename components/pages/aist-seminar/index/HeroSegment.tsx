@@ -15,7 +15,7 @@ export const HeroSegment: FC = () => {
           </p>
           <p>
             本セミナーシリーズでは、国際的に活躍する Human-Computer Interaction
-            分野の新星を招き、創造性支援研究に直接/間接に関わる多様なトピックを取り上げます。
+            分野の研究者を招き、創造性支援研究に直接/間接に関わる多様なトピックを取り上げます。
             本セミナーは、日本を拠点とする著名なHCI研究者のアドバイザリーボードに支えられています。
           </p>
         </>
@@ -28,7 +28,7 @@ export const HeroSegment: FC = () => {
             human beings in the age of AI.
           </p>
           <p>
-            This seminar series will invite rising stars in the Human-Computer
+            This seminar series will invite bright minds in the Human-Computer
             Interaction field and cover diverse topics which are
             directly/indirectly connected to creativity support research. The
             seminar series is supported by the advisory board of senior and
