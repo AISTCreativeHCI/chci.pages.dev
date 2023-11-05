@@ -12,7 +12,7 @@ export const SIGCHISegment: FC<SegmentProps> = (props) => {
       {ja ? (
         <>
           <p>
-            本セミナーは{" "}
+            本セミナーシリーズは{" "}
             <a href="https://sigchi.jp/">Japan ACM SIGCHI Chapter</a>{" "}
             の共催イベントです。
           </p>
@@ -25,7 +25,7 @@ export const SIGCHISegment: FC<SegmentProps> = (props) => {
       ) : (
         <>
           <p>
-            This seminar is co-organized by{" "}
+            This seminar series is co-organized by{" "}
             <a href="https://sigchi.jp/">Japan ACM SIGCHI Chapter</a>.
           </p>
           <img

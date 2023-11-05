@@ -26,14 +26,14 @@ export const Body: FC = () => {
             {ja ? (
               <>
                 <p>
-                  本セミナーは、運営チームおよびアドバイザリーボードのご協力のもと、産総研が主催しています。
+                  本セミナーシリーズは、運営チームおよびアドバイザリーボードのご協力のもと、産総研が主催しています。
                 </p>
               </>
             ) : (
               <>
                 <p>
-                  This seminar is brought to you by AIST with support from the
-                  following team and advisory board.
+                  This seminar series is brought to you by AIST with the support
+                  of the following team and advisory board.
                 </p>
               </>
             )}
