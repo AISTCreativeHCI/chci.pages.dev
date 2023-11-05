@@ -1,12 +1,11 @@
 import { FC } from "react";
+import { Button } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
+import { ButtonWrapper } from "../ButtonWrapper";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
-import { AboutSegment } from "./AboutSegment";
-import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
-import { ReferencesSegment } from "./ReferencesSegment";
-import { RegistrationBox } from "./RegistrationBox";
-import { TimetableSegment } from "./TimetableSegment";
+import { HeroSegmentWrapper } from "../HeroSegmentWrapper";
+import { IFramePlayer } from "../IFramePlayer";
 
 interface IProps {
   fullWidth?: boolean;
@@ -38,11 +37,28 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         },
       ]}
     >
-      <AboutSegment bare />
-      <RegistrationBox />
-      <InvitedSpeakersSegment bare />
-      <TimetableSegment bare />
-      <ReferencesSegment bare />
+      <HeroSegmentWrapper>
+        <IFramePlayer src="https://www.youtube.com/embed/HhPiRMgv_jc" />
+        <ButtonWrapper>
+          <Button
+            primary
+            icon="file"
+            size="large"
+            content={
+              <span>
+                <span className="show-on-small-screens" aria-hidden="true">
+                  {ja ? "ノート" : "Notes"}
+                </span>
+                <span className="hide-on-small-screens">
+                  {ja ? "共有ノート" : "Shared notes"}
+                </span>
+              </span>
+            }
+            as="a"
+            href="https://docs.google.com/document/d/1XuDKn68tWXmnduTqJB0TqpqdvhAVIWQ7NjytxjvVEyQ/edit"
+          />
+        </ButtonWrapper>
+      </HeroSegmentWrapper>
     </GenericHeroSegment>
   );
 };

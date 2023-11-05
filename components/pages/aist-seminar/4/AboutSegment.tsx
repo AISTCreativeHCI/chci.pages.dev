@@ -1,17 +1,19 @@
-import { FC, useMemo } from "react";
+import { FC } from "react";
 import { Header, Segment } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 
-interface IProps {
-  bare?: boolean;
-}
-
-export const AboutSegment: FC<IProps> = ({ bare }) => {
+export const AboutSegment: FC = () => {
   const { ja } = useSiteInfo();
-  const content = useMemo(
-    () =>
-      ja ? (
+  return (
+    <Segment basic>
+      <a id="about" className="anchor"></a>
+      <Header
+        as="h2"
+        dividing
+        content={ja ? "第四回セミナーについて" : "About the fourth edition"}
+      />
+      {ja ? (
         <>
           <p>
             本セミナーの第4回目は、
@@ -39,20 +41,7 @@ export const AboutSegment: FC<IProps> = ({ bare }) => {
             one-day online seminar on Zoom Webinar.
           </p>
         </>
-      ),
-    [ja]
-  );
-  return bare ? (
-    content
-  ) : (
-    <Segment basic>
-      <a id="about" className="anchor"></a>
-      <Header
-        as="h2"
-        dividing
-        content={ja ? "第三回セミナーについて" : "About the third edition"}
-      />
-      {content}
+      )}
     </Segment>
   );
 };
