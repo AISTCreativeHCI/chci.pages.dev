@@ -47,7 +47,7 @@ export const RegistrationBox: FC<IProps> = ({ disabled }) => {
           size="massive"
           content={ja ? "参加登録" : "Registration"}
           as="a"
-          href=""
+          href="https://us06web.zoom.us/webinar/register/WN_ndqBtVvMRIKs9v6UDpFe6Q"
           disabled={disabled}
         />
       </Alertbox>

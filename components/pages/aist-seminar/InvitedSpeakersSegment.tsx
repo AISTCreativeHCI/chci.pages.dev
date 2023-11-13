@@ -40,7 +40,7 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
           content={ja ? "招待講演者" : "Invited speakers"}
         />
         {list ? (
-          <List relaxed>
+          <List relaxed className={styles.speakers}>
             {speakers.map((s) => (
               <List.Item>
                 <Image avatar src={s.photoPath} alt={`[Photo: ${s.name}]`} />

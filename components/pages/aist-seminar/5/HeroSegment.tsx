@@ -24,21 +24,33 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "日時: 2023年11月23日（木）17:30 ～ 19:30"
           : "Date: November 23rd, 2023 / Time: 17:30-19:30 (Japan Standard Time)"
       }
-      // venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
-      venue={ja ? "会場: （近日公開）" : "Venue: TBA"}
-      // title={(ja && "海外で研究するということ") || undefined}
-      title={ja ? "（近日公開）" : "TBA"}
+      venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
+      // venue={ja ? "会場: （近日公開）" : "Venue: TBA"}
+      title={
+        ja
+          ? "芸術表現のための創造性支援ツール"
+          : "Creativity support tools for artistic work"
+      }
       speakers={[
-        { name: "TBA", photoPath: "/images/circle-user-solid.svg" },
-        { name: "TBA", photoPath: "/images/circle-user-solid.svg" },
-        { name: "TBA", photoPath: "/images/circle-user-solid.svg" },
+        {
+          name: "Xavier Lambein",
+          photoPath: "/images/5-xavier-lambein.jpg",
+        },
+        {
+          name: ja ? "松浦 知也" : "Tomoya Matsuura",
+          photoPath: "/images/5-tomoya-matsuura.jpg",
+        },
+        {
+          name: ja ? "橋本 麦" : "Baku Hashmoto",
+          photoPath: "/images/5-baku-hashimoto.png",
+        },
       ]}
     >
       <AboutSegment bare />
-      <RegistrationBox disabled />
-      {/* <InvitedSpeakersSegment bare />
+      <RegistrationBox />
+      <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
-      <ReferencesSegment bare /> */}
+      <ReferencesSegment bare />
     </GenericHeroSegment>
   );
 };

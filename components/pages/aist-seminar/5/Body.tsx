@@ -18,19 +18,19 @@ export const Body: FC = () => {
   const site = ja
     ? {
         ...origSite,
-        title: "AIST Creative HCI Seminar #4",
-        translatedTitle: "第四回 AIST Creative HCI Seminar",
+        title: "AIST Creative HCI Seminar #5",
+        translatedTitle: "第五回 AIST Creative HCI Seminar",
         description:
-          "このサイトでは第四回 AIST Creative HCI Seminarの動画アーカイブと紹介を掲載しています。第三回は「ACM CHI 2023振り返り」がテーマで、CHIの様々なプログラムで発表した若手研究者（鳴海さん、矢倉さん、元村さん）をお呼びして、招待講演とパネルセッションを行いました。",
-        image: "/images/4-hero.jpg",
+          "このサイトでは第五回 AIST Creative HCI Seminarの紹介を掲載しています。第五回は「芸術表現のための創造性支援ツール」がテーマで、芸術表現、とくに音楽や映像を制作するためのツールの研究開発に取り組まれてきた三名をお呼びして、招待講演とパネルセッションを行いました。",
+        image: "/images/5-hero.jpg",
       }
     : {
         ...origSite,
-        title: "AIST Creative HCI Seminar #4",
+        title: "AIST Creative HCI Seminar #5",
         translatedTitle: undefined,
         description:
-          "This website provides the archived video and introduction of the AIST Creative HCI Seminar #4, held to collectively understand ACM CHI 2023, the premier and huge conference on Human-Computer Interaction. It invited three bright and young Japan-based researchers: Ami Motomura, Hiromu Yakura, and Koya Narumi.",
-        image: "/images/4-hero.jpg",
+          "This website provides the archived video and introduction of the AIST Creative HCI Seminar #5, held to discuss creativity support tools for artistic work. It invited three researchers: Xavier Lambein, Tomoya Matsuura, and Baku Hashimoto.",
+        image: "/images/5-hero.jpg",
       };
   return (
     <>
