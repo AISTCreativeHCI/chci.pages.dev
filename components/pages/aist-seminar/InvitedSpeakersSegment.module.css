@@ -2,3 +2,6 @@
   border-radius: 0.2em;
   border: 1px solid rgba(34, 36, 38, 0.15);
 }
+.speakers:global(.ui.list > .item > img.image) {
+  margin-bottom: 0.3em;
+}
