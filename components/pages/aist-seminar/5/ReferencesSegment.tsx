@@ -1,29 +1,45 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 
 import { ReferencesSegment as GenericReferencesSegment } from "../ReferencesSegment";
+import { useSiteInfo } from "../../../lib/useSiteInfo";
 
 interface IProps {
   bare?: boolean;
 }
 
-export const ReferencesSegment: FC<IProps> = ({ bare }) => (
-  <GenericReferencesSegment
-    bare={bare}
-    description={null}
-    publications={[
+export const ReferencesSegment: FC<IProps> = ({ bare }) => {
+  const { ja } = useSiteInfo();
+  const publications = useMemo(() => {
+    const pubs = [
       {
-        pre: "Jon E. Froehlich, Anke M. Brock, Anat Caspi, João Guerreiro, Kotaro Hara, Reuben Kirkham, Johannes Schöning, and Benjamin Tannert. 2019",
-        title: "Grand Challenges in Accessible Maps",
-        post: "Interactions 26, 2 (March - April 2019). Association for Computing Machinery, New York, NY, USA, 78–81.",
-        url: "https://doi.org/10.1145/3301657",
+        pre: "Xavier Lambein. 2023.",
+        title: "PAW: a programmable and visual audio workstation",
+        post: "In Proceedings of the 9th Workshop on Live Programming Systems (LIVE 2023, October 2023).",
+        url: "https://lambein.xyz/paw-live2023",
       },
       {
-        pre: "Riku Arakawa, Karan Ahuja, Kristie Mak, Gwendolyn Thompson, Sam Shaaban, Oliver Lindhiem, and Mayank Goel",
+        pre: "Matsuura, Tomoya, and Kazuhiro Jo. 2021.",
         title:
-          "LemurDx: Using Unconstrained Passive Sensing for an Objective Measurement of Hyperactivity in Children with no Parent Input",
-        post: "In Proceedings of the ACM on Interactive Mobile Wearable Ubiquitous Technology, Volume 7, Issue 2 (PACM IMWUT, Ubicomp'23). Association for Computing Machinery, New York, NY, USA, Article No. 46, 1–23.",
-        url: "https://doi.org/10.1145/3596244",
+          "Mimium: A Self-Extensible Programming Language for Sound and Music",
+        post: "In Proceedings of the ACM SIGPLAN International Workshop on Functional Art, Music, Modeling, and Design (FARM 2021, August 2021).",
+        url: "https://doi.org/10.1145/3471872.3472969",
       },
-    ]}
-  />
-);
+    ];
+    if (ja) {
+      pubs.push({
+        pre: "[著] 松浦 知也 [編著] 永冨真梨/忠聡太/日高良祐. 2022.",
+        title: "クリティカル・ワード　ポピュラー音楽",
+        post: "フィルムアート社, 第3部-8  「プログラミング」の項.",
+        url: "",
+      });
+    }
+    return pubs;
+  }, [ja]);
+  return (
+    <GenericReferencesSegment
+      bare={bare}
+      description={null}
+      publications={publications}
+    />
+  );
+};
