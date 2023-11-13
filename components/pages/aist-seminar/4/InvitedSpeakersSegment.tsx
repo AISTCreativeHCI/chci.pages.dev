@@ -29,6 +29,7 @@ export const InvitedSpeakersSegment: FC<IProps> = ({ bare }) => {
         name: ja ? "中川 茉奈美" : "Manami Nakagawa",
         affiliation: "Dept. of Computer Science, University of Bristol",
         photoPath: "/images/4-manami-nakagawa.jpg",
+        link: "https://manami-bunbun.github.io/",
       },
     ],
     []
