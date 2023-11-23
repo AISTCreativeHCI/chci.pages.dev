@@ -9,6 +9,7 @@ import { HeroSegment as SecondEditionHeroSegment } from "../2/HeroSegment";
 import { HeroSegment as ThirdEditionHeroSegment } from "../3/HeroSegment";
 import { HeroSegment as FourthEditionHeroSegment } from "../4/HeroSegment";
 import { HeroSegment as FifthEditionHeroSegment } from "../5/HeroSegment";
+import { HeroSegment as SixthEditionHeroSegment } from "../6/HeroSegment";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegment } from "./EditionSegment";
 import { FirstEditionSegment } from "./FirstEditionSegment";
@@ -45,6 +46,9 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
+        <EditionSegment>
+          <SixthEditionHeroSegment fullWidth />
+        </EditionSegment>
         <EditionSegment
           text={ja ? "第五回について詳しく" : "More details"}
           link={ja ? "/aist-seminar/5" : "/aist-seminar/en/5"}
