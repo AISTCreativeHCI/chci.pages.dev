@@ -1,12 +1,8 @@
 import { FC } from "react";
 
+import { Message } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
-import { AboutSegment } from "./AboutSegment";
-import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
-import { ReferencesSegment } from "./ReferencesSegment";
-import { RegistrationBox } from "./RegistrationBox";
-import { TimetableSegment } from "./TimetableSegment";
 
 interface IProps {
   fullWidth?: boolean;
@@ -46,11 +42,11 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         },
       ]}
     >
-      <AboutSegment bare />
-      <RegistrationBox />
-      <InvitedSpeakersSegment bare />
-      <TimetableSegment bare />
-      <ReferencesSegment bare />
+      <Message>
+        {ja
+          ? "動画のアーカイブ配信までもうしばらくお待ちください。"
+          : "The video archive will be available soon."}
+      </Message>
     </GenericHeroSegment>
   );
 };

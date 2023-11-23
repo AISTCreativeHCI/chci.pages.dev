@@ -2,15 +2,15 @@ import Head from "next/head";
 import { FC } from "react";
 import { Breadcrumb, Container, Divider } from "semantic-ui-react";
 
-import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
+import { useSiteInfo } from "../../../lib/useSiteInfo";
+import { Alertbox } from "../Alertbox";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { AboutSegment } from "./AboutSegment";
 import { HeroSegment } from "./HeroSegment";
 import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
 import { ReferencesSegment } from "./ReferencesSegment";
-import { RegistrationBox } from "./RegistrationBox";
 import { TimetableSegment } from "./TimetableSegment";
 
 export const Body: FC = () => {
@@ -60,7 +60,13 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
-        <RegistrationBox />
+        <Alertbox>
+          <p>
+            {ja
+              ? "本ページはアーカイブ目的で提供されており、主に開催前時点での情報が掲載されています。"
+              : "This page is provided for archival purposes and contains information as of a point in time prior to the event."}
+          </p>
+        </Alertbox>
         <AboutSegment />
         <InvitedSpeakersSegment />
         <TimetableSegment />
