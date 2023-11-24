@@ -4,6 +4,7 @@ import { Divider, Header, Image, List } from "semantic-ui-react";
 import { useSiteInfo } from "../../lib/useSiteInfo";
 
 import styles from "./HeroSegment.module.css";
+import speakers from "./invited-speakers.json";
 
 interface IProps {
   fullWidth?: boolean;
@@ -13,10 +14,12 @@ interface IProps {
   venue: string;
   topic?: string;
   title?: string;
-  speakers: {
-    name: string;
-    photoPath: string;
-  }[];
+  speakers:
+    | {
+        name: string;
+        photoPath: string;
+      }[]
+    | number;
   children?: ReactNode;
 }
 
@@ -28,10 +31,14 @@ export const HeroSegment: FC<IProps> = ({
   venue,
   topic,
   title,
-  speakers,
+  speakers: speakersOrIndex,
   children,
 }) => {
   const { ja } = useSiteInfo();
+  const ss =
+    typeof speakersOrIndex === "number"
+      ? speakers[speakersOrIndex]
+      : speakersOrIndex;
   return (
     <>
       <div
@@ -46,12 +53,26 @@ export const HeroSegment: FC<IProps> = ({
               fullWidth
                 ? `${ja ? `第${editionJa}回` : `#${edition}`} ${
                     title ||
-                    (speakers ? speakers.map((s) => s.name).join(", ") : "?")
+                    (ss
+                      ? ss
+                          .map((s) =>
+                            typeof s.name === "string"
+                              ? s.name
+                              : s.name[ja ? "ja" : "en"]
+                          )
+                          .join(", ")
+                      : "?")
                   }`
                 : `AIST Creative HCI Seminar #${edition}`
             }
             subheader={
-              speakers && title && speakers.map((s) => s.name).join(", ")
+              ss &&
+              title &&
+              ss
+                .map((s) =>
+                  typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+                )
+                .join(", ")
             }
           />
           <List>
@@ -61,12 +82,14 @@ export const HeroSegment: FC<IProps> = ({
           </List>
         </div>
         <div className={styles.images}>
-          {speakers.map((s) => (
+          {ss.map((s) => (
             <Image
               key={s.photoPath}
               avatar
               src={s.photoPath}
-              alt={`[Photo: ${s.name}]`}
+              alt={`[Photo: ${
+                typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+              }]`}
             />
           ))}
         </div>

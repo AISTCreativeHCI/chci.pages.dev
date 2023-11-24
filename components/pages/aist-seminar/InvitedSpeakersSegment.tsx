@@ -11,25 +11,34 @@ import {
 import { useSiteInfo } from "../../lib/useSiteInfo";
 
 import styles from "./InvitedSpeakersSegment.module.css";
+import speakers from "./invited-speakers.json";
 
 interface IProps {
   bare?: boolean;
   list?: boolean;
-  speakers: {
-    name: string;
-    affiliation: string;
-    photoPath: string;
-    link?: string;
-    bio?: ReactNode;
-  }[];
+  speakers:
+    | {
+        name: string;
+        affiliation: string;
+        photoPath: string;
+        link?: string;
+        bio?: ReactNode;
+      }[]
+    | number;
+  bios?: ReactNode[];
 }
 
 export const InvitedSpeakersSegment: FC<IProps> = ({
   bare,
   list,
-  speakers,
+  speakers: speakersOrIndex,
+  bios,
 }) => {
   const { ja } = useSiteInfo();
+  const ss =
+    typeof speakersOrIndex === "number"
+      ? speakers[speakersOrIndex]
+      : speakersOrIndex;
   const content = useMemo(
     () => (
       <>
@@ -41,20 +50,36 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
         />
         {list ? (
           <List relaxed className={styles.speakers}>
-            {speakers.map((s) => (
+            {ss.map((s, i) => (
               <List.Item>
-                <Image avatar src={s.photoPath} alt={`[Photo: ${s.name}]`} />
+                <Image
+                  avatar
+                  src={s.photoPath}
+                  alt={`[Photo: ${
+                    typeof s.name === "string"
+                      ? s.name
+                      : s.name[ja ? "ja" : "en"]
+                  }]`}
+                />
                 <List.Content>
                   <List.Header
-                    content={s.name}
+                    content={
+                      typeof s.name === "string"
+                        ? s.name
+                        : s.name[ja ? "ja" : "en"]
+                    }
                     as={s.link ? "a" : "div"}
                     href={s.link || undefined}
                   />
                   <List.Description
                     content={
                       <>
-                        <p>{s.affiliation}</p>
-                        {s.bio}
+                        <p>
+                          {typeof s.affiliation === "string"
+                            ? s.affiliation
+                            : s.affiliation[ja ? "ja" : "en"]}
+                        </p>
+                        {(s as any).bio || (bios && bios[i])}
                       </>
                     }
                   />
@@ -64,26 +89,39 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
           </List>
         ) : (
           <Grid
-            columns={speakers.length as SemanticWIDTHS}
+            columns={ss.length as SemanticWIDTHS}
             stackable
             className={styles.speakers}
           >
-            {speakers.map((s) => (
+            {ss.map((s, i) => (
               <Grid.Column key={s.photoPath}>
                 <Header
                   as="h4"
-                  image={<Image src={s.photoPath} alt={`[Photo: ${s.name}]`} />}
-                  content={s.name}
+                  image={
+                    <Image
+                      src={s.photoPath}
+                      alt={`[Photo: ${
+                        typeof s.name === "string"
+                          ? s.name
+                          : s.name[ja ? "ja" : "en"]
+                      }]`}
+                    />
+                  }
+                  content={
+                    typeof s.name === "string"
+                      ? s.name
+                      : s.name[ja ? "ja" : "en"]
+                  }
                   subheader={s.affiliation}
                 />
-                {s.bio}
+                {(s as any).bio || (bios && bios[i])}
               </Grid.Column>
             ))}
           </Grid>
         )}
       </>
     ),
-    [speakers]
+    [speakersOrIndex, bios]
   );
   return bare ? content : <Segment basic>{content}</Segment>;
 };

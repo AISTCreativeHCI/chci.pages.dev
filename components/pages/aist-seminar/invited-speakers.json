@@ -1,0 +1,107 @@
+[
+  [
+    {
+      "name": "Jonas Frich",
+      "affiliation": "Assistant Professor, Digital Design & Information Studies, Aarhus University",
+      "photoPath": "/images/1-jonas-frich.jpg"
+    },
+    {
+      "name": "Zhicong Lu",
+      "affiliation": "Assistant Professor, Department of Computer Science, City University of Hong Kong",
+      "photoPath": "/images/1-zhicong-lu.jpg"
+    }
+  ],
+  [
+    {
+      "name": "Amy Pavel",
+      "affiliation": "Assistant Professor, Department of Computer Science, The University of Texas at Austin",
+      "photoPath": "/images/2-amy-pavel.png"
+    },
+    {
+      "name": "Xingyu Bruce Liu",
+      "affiliation": "Department of Electrical & Computer Engineering, University of California, Los Angeles",
+      "photoPath": "/images/2-xingyu-bruce-liu.jpg"
+    }
+  ],
+  [
+    {
+      "name": { "ja": "鳴海 紘也", "en": "Koya Narumi" },
+      "affiliation": "Project Assistant Professor, Graduate School of Engineering, The University of Tokyo",
+      "photoPath": "/images/3-koya-narumi.jpg",
+      "link": "https://narumi.me/profile"
+    },
+    {
+      "name": { "ja": "矢倉 大夢", "en": "Hiromu Yakura" },
+      "affiliation": "University of Tsukuba",
+      "photoPath": "/images/3-hiromu-yakura.jpg",
+      "link": {
+        "ja": "https://yumetaro.info/index.ja.xhtml",
+        "en": "https://yumetaro.info"
+      }
+    },
+    {
+      "name": { "ja": "元村 愛美", "en": "Motomura Ami" },
+      "affiliation": "Ochanomizu University",
+      "photoPath": "/images/circle-user-solid.svg"
+    }
+  ],
+  [
+    {
+      "name": { "ja": "原 航太郎", "en": "Kotaro Hara" },
+      "affiliation": "Assistant Professor, School of Computing and Information Systems, Singapore Management University",
+      "photoPath": "/images/circle-user-solid.svg",
+      "link": "https://kotarohara.com"
+    },
+    {
+      "name": { "ja": "荒川 陸", "en": "Riku Arakawa" },
+      "affiliation": "Human-Computer Interaction Institute, Carnegie Mellon University",
+      "photoPath": "/images/4-riku-arakawa.jpg",
+      "link": "https://rikky0611.github.io"
+    },
+    {
+      "name": { "ja": "中川 茉奈美", "en": "Manami Nakagawa" },
+      "affiliation": "Dept. of Computer Science, University of Bristol",
+      "photoPath": "/images/4-manami-nakagawa.jpg",
+      "link": "https://manami-bunbun.github.io/"
+    }
+  ],
+  [
+    {
+      "name": "Xavier Lambein",
+      "affiliation": "Artist and programmer",
+      "photoPath": "/images/5-xavier-lambein.jpg",
+      "link": "https://lambein.xyz"
+    },
+    {
+      "name": { "ja": "松浦 知也", "en": "Tomoya Matsuura" },
+      "affiliation": {
+        "ja": "サウンドメイカー / 東京藝術大学 芸術情報センター",
+        "en": "SoundMaker / Art Media Center, Tokyo University of the Arts"
+      },
+      "photoPath": "/images/5-tomoya-matsuura.jpg",
+      "link": "https://matsuuratomoya.com"
+    },
+    {
+      "name": { "ja": "橋本 麦", "en": "Baku Hashmoto" },
+      "affiliation": {
+        "ja": "映像作家 / INS Studio, 産業技術総合研究所",
+        "en": "Visual artist / INS Studio, AIST"
+      },
+      "photoPath": "/images/5-baku-hashimoto.png",
+      "link": "https://baku89.com"
+    }
+  ],
+  [
+    {
+      "name": "Jennifer Jacobs",
+      "affiliation": "Assistant Professor, Media Arts and Technology, University of California Santa Barbara",
+      "photoPath": "/images/jenniferjacobs.jpg"
+    },
+    {
+      "name": { "ja": "鳴海 紘也", "en": "Koya Narumi" },
+      "affiliation": "Project Assistant Professor, Graduate School of Engineering, The University of Tokyo",
+      "photoPath": "/images/3-koya-narumi.jpg",
+      "link": "https://narumi.me/profile"
+    }
+  ]
+]

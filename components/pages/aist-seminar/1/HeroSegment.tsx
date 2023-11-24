@@ -29,13 +29,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           : "Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)"
       }
       title={ja ? "Creativity Support（創造性支援）" : "Creativity Support"}
-      speakers={[
-        { name: "Jonas Frich", photoPath: "/images/1-jonas-frich.jpg" },
-        {
-          name: "Zhicong Lu",
-          photoPath: "/images/1-zhicong-lu.jpg",
-        },
-      ]}
+      speakers={0}
     >
       <HeroSegmentWrapper>
         <IFramePlayer src="https://www.youtube.com/embed/HYGUCwoOHCk" />
