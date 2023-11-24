@@ -24,7 +24,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           : "Date: June 23rd, 2023 / Time: 10:30-12:30 (Japan Standard Time)"
       }
       venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
-      title={(ja && "海外で研究するということ") || undefined}
+      title={ja ? "海外で研究するということ" : "Working abroad"}
       speakers={[
         { name: "Kotaro Hara", photoPath: "/images/circle-user-solid.svg" },
         {

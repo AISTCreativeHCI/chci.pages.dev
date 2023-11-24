@@ -24,7 +24,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       title={
         ja
           ? "芸術表現のための創造性支援ツール"
-          : "Creativity support tools for artistic work"
+          : "Creativity Support Tools for artistic work"
       }
       speakers={[
         {
