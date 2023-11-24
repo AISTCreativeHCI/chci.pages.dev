@@ -28,11 +28,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "会場: 東京大学本郷キャンパス 福武ラーニングシアター / YouTube Live"
           : "Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)"
       }
-      topic={
-        ja
-          ? "テーマ: Creativity Support（創造性支援）"
-          : "Topic: Creativity Support"
-      }
+      title={ja ? "Creativity Support（創造性支援）" : "Creativity Support"}
       speakers={[
         { name: "Jonas Frich", photoPath: "/images/1-jonas-frich.jpg" },
         {

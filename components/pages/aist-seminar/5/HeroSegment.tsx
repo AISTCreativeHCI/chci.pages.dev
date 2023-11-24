@@ -21,7 +21,6 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           : "Date: November 23rd, 2023 / Time: 17:30-19:30 (Japan Standard Time)"
       }
       venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
-      // venue={ja ? "会場: （近日公開）" : "Venue: TBA"}
       title={
         ja
           ? "芸術表現のための創造性支援ツール"
