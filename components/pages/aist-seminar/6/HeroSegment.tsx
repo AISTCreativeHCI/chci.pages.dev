@@ -24,7 +24,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       venue={
         ja
           ? "会場: 東京大学関連施設（予定） / Zoom Webinar"
-          : "The University of Tokyo venue (TBA) / Zoom Webinar (Hybrid)"
+          : "Venue: The University of Tokyo (details TBA) / Zoom Webinar (Hybrid)"
       }
       title={
         ja ? '"In the wild" なHCI研究（仮）' : 'HCI Research "in the wild"'

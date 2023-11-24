@@ -26,7 +26,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       venue={
         ja
           ? "会場: 東京大学本郷キャンパス 福武ラーニングシアター / YouTube Live"
-          : "Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)"
+          : "Venue: Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)"
       }
       title={ja ? "Creativity Support（創造性支援）" : "Creativity Support"}
       speakers={0}

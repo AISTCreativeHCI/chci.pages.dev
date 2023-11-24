@@ -23,7 +23,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       venue={
         ja
           ? "会場: Zoom Webinar（収録会場: 東京藝術大学）"
-          : "Zoom Webinar (Japan-based panelists: Tokyo University of the Arts)"
+          : "Venue: Zoom Webinar (Japan-based panelists: Tokyo University of the Arts)"
       }
       title={
         ja

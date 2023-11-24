@@ -23,7 +23,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "日時: 2023年5月22日（月）15:00 ～ 17:00"
           : "Date: May 22nd, 2023 / Time: 15:00-17:00 (Japan Standard Time)"
       }
-      venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
+      venue={ja ? "会場: Zoom Webinar" : "Venue: Zoom Webinar (Online)"}
       title={
         ja
           ? "CHI 2023 が分かる！発表者による振り返り"
