@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Icon, List } from "semantic-ui-react";
+
 import { TeamIface } from "../../../lib/TeamIface";
 
 interface IProps {

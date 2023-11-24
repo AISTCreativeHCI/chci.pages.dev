@@ -1,15 +1,14 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Container, Icon, List, Segment } from "semantic-ui-react";
+import { Container, Segment } from "semantic-ui-react";
 
-import { TeamIface } from "../../../lib/TeamIface";
-import { useSiteInfo } from "../../../lib/useSiteInfo";
-import { PageHeader } from "../../../PageHeader";
 import { PageFooter } from "../../../PageFooter";
+import { PageHeader } from "../../../PageHeader";
+import { useSiteInfo } from "../../../lib/useSiteInfo";
 
-import team from "./team.json";
-import advisors from "./advisory-board.json";
 import { Team } from "./Team";
+import advisors from "./advisory-board.json";
+import team from "./team.json";
 
 export const Body: FC = () => {
   const { language, ja, site } = useSiteInfo();
