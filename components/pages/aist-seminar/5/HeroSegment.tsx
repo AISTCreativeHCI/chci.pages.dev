@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { Message } from "semantic-ui-react";
+import { Grid, Image, Message } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
 
@@ -20,7 +20,11 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "日時: 2023年11月23日（木）17:30 ～ 19:30"
           : "Date: November 23rd, 2023 / Time: 17:30-19:30 (Japan Standard Time)"
       }
-      venue={ja ? "会場: Zoom Webinar" : "Zoom Webinar (Online)"}
+      venue={
+        ja
+          ? "会場: Zoom Webinar（収録会場: 東京藝術大学）"
+          : "Zoom Webinar (Japan-based panelists: Tokyo University of the Arts)"
+      }
       title={
         ja
           ? "芸術表現のための創造性支援ツール"
@@ -46,6 +50,20 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "動画のアーカイブ配信までもうしばらくお待ちください。"
           : "The video archive will be available soon."}
       </Message>
+      <Grid stackable columns={4}>
+        <Grid.Column>
+          <Image src="/images/5/20231123-DSC06376.jpg" fluid bordered />
+        </Grid.Column>
+        <Grid.Column>
+          <Image src="/images/5/20231123-DSC06437.jpg" fluid bordered />
+        </Grid.Column>
+        <Grid.Column>
+          <Image src="/images/5/20231123-DSC06306.jpg" fluid bordered />
+        </Grid.Column>
+        <Grid.Column>
+          <Image src="/images/5/20231123-DSC06392.jpg" fluid bordered />
+        </Grid.Column>
+      </Grid>
     </GenericHeroSegment>
   );
 };
