@@ -16,7 +16,11 @@ import { FirstEditionSegment } from "./FirstEditionSegment";
 import { HeroSegment } from "./HeroSegment";
 
 export const Body: FC = () => {
-  const { site, ja } = useSiteInfo();
+  const { site: origSite, ja } = useSiteInfo();
+  const site = {
+    ...origSite,
+    image: "/images/6-hero.jpg",
+  };
   return (
     <>
       <Head>

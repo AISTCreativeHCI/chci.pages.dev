@@ -4,6 +4,7 @@ import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
 import { AboutSegment } from "./AboutSegment";
 import { RegistrationBox } from "./RegistrationBox";
+import { VenueSegment } from "./VenueSegment";
 
 interface IProps {
   fullWidth?: boolean;
@@ -23,8 +24,8 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       }
       venue={
         ja
-          ? "会場: 東京大学関連施設（予定） / Zoom Webinar"
-          : "Venue: The University of Tokyo (details TBA) / Zoom Webinar (Hybrid)"
+          ? "会場: 東京大学 目白台インターナショナル・ビレッジ / Zoom Webinar"
+          : "Venue: Mejirodai International Village, The University of Tokyo / Zoom Webinar (Hybrid)"
       }
       title={ja ? '"In the wild" なHCI研究' : 'HCI Research "in the wild"'}
       speakers={[
@@ -40,6 +41,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       {/* <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
       <ReferencesSegment bare /> */}
+      <VenueSegment />
     </GenericHeroSegment>
   );
 };

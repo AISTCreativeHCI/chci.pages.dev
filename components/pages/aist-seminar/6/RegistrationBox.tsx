@@ -26,11 +26,6 @@ export const RegistrationBox: FC<IProps> = ({ disabled }) => {
               <strong>現地参加の場合も参加登録が必要</strong>
               ですのでご注意ください。（フォームに参加方法として「現地参加」を選ぶ欄があります。）
             </List.Item>
-            <List.Item>
-              登録フォーム内のセミナーの日付が12月15日になっていますが、
-              <strong>正しくは12月13日です</strong>
-              のでご注意ください。（近日中に修正予定です。）
-            </List.Item>
           </List>
         ) : (
           <p>
@@ -39,8 +34,7 @@ export const RegistrationBox: FC<IProps> = ({ disabled }) => {
             <a href="https://www.aist.go.jp/aist_e/privacy_policy/index_en.html">
               AIST privacy policy
             </a>
-            . <strong>The date on the form is incorrectly displayed</strong> as
-            Dec. 15, but the correct date is Dec. 13.
+            .
           </p>
         )
       }
