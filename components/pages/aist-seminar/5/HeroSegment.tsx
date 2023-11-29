@@ -1,8 +1,11 @@
 import { FC } from "react";
 
-import { Grid, Image, Message } from "semantic-ui-react";
+import { Button, Divider, Grid, Image, Message } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
+import { HeroSegmentWrapper } from "../HeroSegmentWrapper";
+import { IFramePlayer } from "../IFramePlayer";
+import { ButtonWrapper } from "../ButtonWrapper";
 
 interface IProps {
   fullWidth?: boolean;
@@ -45,11 +48,29 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
         },
       ]}
     >
-      <Message>
-        {ja
-          ? "動画のアーカイブ配信までもうしばらくお待ちください。"
-          : "The video archive will be available soon."}
-      </Message>
+      <HeroSegmentWrapper>
+        <IFramePlayer src="https://www.youtube.com/embed/btYXHR22mv8" />
+        <ButtonWrapper>
+          <Button
+            primary
+            icon="file"
+            size="large"
+            content={
+              <span>
+                <span className="show-on-small-screens" aria-hidden="true">
+                  {ja ? "ノート" : "Notes"}
+                </span>
+                <span className="hide-on-small-screens">
+                  {ja ? "共有ノート" : "Shared notes"}
+                </span>
+              </span>
+            }
+            as="a"
+            href="https://docs.google.com/document/d/1AGf1oMvDumAxJfmSMAjx-4gXNrhsNNe6-ZUONalM5pU/edit"
+          />
+        </ButtonWrapper>
+      </HeroSegmentWrapper>
+      <Divider />
       <Grid stackable columns={4}>
         <Grid.Column>
           <Image src="/images/5/20231123-DSC06376.jpg" fluid bordered />
