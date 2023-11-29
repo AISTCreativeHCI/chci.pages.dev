@@ -19,8 +19,8 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       editionJa="六"
       dateTime={
         ja
-          ? "日時: 2023年12月13日（水）午後"
-          : "Date: Dec. 13th, 2023 / Time: TBA (afternoon in Japan Standard Time)"
+          ? "日時: 2023年12月13日（水）13:00 ～ 16:30 / 開場 12:30"
+          : "Date: Dec. 13th, 2023 / Time: 13:00-16:30 (Japan Standard Time)"
       }
       venue={
         ja
