@@ -25,13 +25,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       }
       venue={ja ? "会場: Zoom Webinar" : "Venue: Zoom Webinar (Online)"}
       title={ja ? "AI × HCI（HCIのためのAI）" : "AI for HCI"}
-      speakers={[
-        { name: "Amy Pavel", photoPath: "/images/2-amy-pavel.png" },
-        {
-          name: "Xingyu Bruce Liu",
-          photoPath: "/images/2-xingyu-bruce-liu.jpg",
-        },
-      ]}
+      speakers={1}
     >
       <HeroSegmentWrapper>
         <IFramePlayer src="https://www.youtube.com/embed/6hEk_qXs_gM" />

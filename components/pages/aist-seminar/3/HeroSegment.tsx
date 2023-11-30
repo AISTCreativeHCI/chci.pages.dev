@@ -29,17 +29,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "CHI 2023 が分かる！発表者による振り返り"
           : "How was your CHI 2023 experience?"
       }
-      speakers={[
-        { name: "Koya Narumi", photoPath: "/images/3-koya-narumi.jpg" },
-        {
-          name: "Hiromu Yakura",
-          photoPath: "/images/3-hiromu-yakura.jpg",
-        },
-        {
-          name: "Motomura Ami",
-          photoPath: "/images/circle-user-solid.svg",
-        },
-      ]}
+      speakers={2}
     >
       <HeroSegmentWrapper>
         <IFramePlayer src="https://www.youtube.com/embed/N5wicg8ge0o" />

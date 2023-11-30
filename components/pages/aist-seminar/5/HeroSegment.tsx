@@ -33,20 +33,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           ? "芸術表現のための創造性支援ツール"
           : "Creativity Support Tools for artistic work"
       }
-      speakers={[
-        {
-          name: "Xavier Lambein",
-          photoPath: "/images/5-xavier-lambein.jpg",
-        },
-        {
-          name: ja ? "松浦 知也" : "Tomoya Matsuura",
-          photoPath: "/images/5-tomoya-matsuura.jpg",
-        },
-        {
-          name: ja ? "橋本 麦" : "Baku Hashmoto",
-          photoPath: "/images/5-baku-hashimoto.png",
-        },
-      ]}
+      speakers={4}
     >
       <HeroSegmentWrapper>
         <IFramePlayer src="https://www.youtube.com/embed/btYXHR22mv8" />
