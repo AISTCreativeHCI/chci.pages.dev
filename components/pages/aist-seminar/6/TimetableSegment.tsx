@@ -43,35 +43,28 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
               </Table.Cell>
             </Table.Row>
             <Table.Row>
-              <Table.Cell>13:10</Table.Cell>
-              <Table.Cell>
-                {ja
-                  ? "共催「Japan ACM SIGCHI Chapter」の紹介"
-                  : "Introduction of Japan ACM SIGCHI Chapter"}
-              </Table.Cell>
-              <Table.Cell textAlign="right">
-                {ja ? "中小路 久美代" : "Nakakoji Kumiyo"}
-              </Table.Cell>
-            </Table.Row>
-            <Table.Row>
               <Table.Cell>13:15</Table.Cell>
               <Table.Cell>{ja ? "招待講演 #1" : "Invited talk #1"}</Table.Cell>
-              <Table.Cell textAlign="right">Jonas Frich</Table.Cell>
+              <Table.Cell textAlign="right">Jennifer Jacobs</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>14:15</Table.Cell>
               <Table.Cell>{ja ? "質疑応答 #1" : "Q&A #1"}</Table.Cell>
-              <Table.Cell textAlign="right">Jonas Frich</Table.Cell>
+              <Table.Cell textAlign="right">Jennifer Jacobs</Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>14:30</Table.Cell>
               <Table.Cell>{ja ? "招待講演 #2" : "Invited talk #2"}</Table.Cell>
-              <Table.Cell textAlign="right">Zhicong Lu</Table.Cell>
+              <Table.Cell textAlign="right">
+                {ja ? "鳴海 紘也" : "Koya Narumi"}
+              </Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>15:30</Table.Cell>
               <Table.Cell>{ja ? "質疑応答 #2" : "Q&A #2"}</Table.Cell>
-              <Table.Cell textAlign="right">Zhicong Lu</Table.Cell>
+              <Table.Cell textAlign="right">
+                {ja ? "鳴海 紘也" : "Koya Narumi"}
+              </Table.Cell>
             </Table.Row>
             <Table.Row>
               <Table.Cell>15:45</Table.Cell>
@@ -79,7 +72,7 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
                 {ja ? "パネルディスカッション" : "Panel discussion"}
               </Table.Cell>
               <Table.Cell textAlign="right">
-                {ja ? "Frich, Lu, 加藤" : "Jonas, Zhicong, Jun"}
+                {ja ? "Jacobs, 鳴海, 加藤" : "Jennifer, Koya, Jun"}
               </Table.Cell>
             </Table.Row>
             <Table.Row disabled>

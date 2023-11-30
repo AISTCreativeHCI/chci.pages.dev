@@ -5,6 +5,9 @@ import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
 import { AboutSegment } from "./AboutSegment";
 import { RegistrationBox } from "./RegistrationBox";
 import { VenueSegment } from "./VenueSegment";
+import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
+import { TimetableSegment } from "./TimetableSegment";
+import { ReferencesSegment } from "./ReferencesSegment";
 
 interface IProps {
   fullWidth?: boolean;
@@ -28,19 +31,13 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
           : "Venue: Mejirodai International Village, The University of Tokyo / Zoom Webinar (Hybrid)"
       }
       title={ja ? '"In the wild" なHCI研究' : 'HCI Research "in the wild"'}
-      speakers={[
-        {
-          name: "Jennifer Jacobs",
-          photoPath: "/images/jenniferjacobs.jpg",
-        },
-        { name: "Koya Narumi", photoPath: "/images/3-koya-narumi.jpg" },
-      ]}
+      speakers={5}
     >
       <AboutSegment bare />
       <RegistrationBox />
-      {/* <InvitedSpeakersSegment bare />
+      <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
-      <ReferencesSegment bare /> */}
+      <ReferencesSegment bare />
       <VenueSegment />
     </GenericHeroSegment>
   );
