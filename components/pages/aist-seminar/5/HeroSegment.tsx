@@ -1,6 +1,6 @@
 import { FC } from "react";
+import { Button, Divider, Grid, Image } from "semantic-ui-react";
 
-import { Button, Divider, Grid, Image, Message } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
 import { HeroSegmentWrapper } from "../HeroSegmentWrapper";

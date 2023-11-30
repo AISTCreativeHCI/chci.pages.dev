@@ -1,5 +1,4 @@
 import { FC, useMemo } from "react";
-import { Icon } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { InvitedSpeakersSegment as GenericInvitedSpeakersSegment } from "../InvitedSpeakersSegment";
