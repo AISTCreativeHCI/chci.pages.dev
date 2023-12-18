@@ -34,7 +34,7 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       speakers={5}
     >
       <AboutSegment bare />
-      <RegistrationBox />
+      <RegistrationBox disabled />
       <InvitedSpeakersSegment bare />
       <TimetableSegment bare />
       <ReferencesSegment bare />
