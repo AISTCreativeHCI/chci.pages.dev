@@ -34,12 +34,7 @@ export const GenericBodyComponent: FC<IProps> = ({
     description: ja
       ? `このサイトでは${editionTitle}の動画アーカイブと紹介を掲載しています。${si.description.ja}`
       : `This website provides the archived video and introduction of the ${editionTitle}. ${si.description.en}`,
-    image:
-      typeof si.thumbnail === "string"
-        ? si.thumbnail
-        : ja
-        ? si.thumbnail.ja
-        : si.thumbnail.en,
+    image: si.thumbnail,
   };
   return (
     <>
