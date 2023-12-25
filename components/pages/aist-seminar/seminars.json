@@ -1,0 +1,131 @@
+[
+  {
+    "edition": {
+      "en": 1,
+      "ja": "一"
+    },
+    "dateTime": {
+      "en": "13:00-16:30 (Japan Standard Time), Mar. 7th, 2023",
+      "ja": "2023年3月7日（火）13:00 ～ 16:30 / 開場 12:30"
+    },
+    "venue": {
+      "en": "Fukutake Learning Theater, The University of Tokyo / YouTube Live (Hybrid)",
+      "ja": "東京大学本郷キャンパス 福武ラーニングシアター / YouTube Live",
+      "embedMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.576638462137!2d139.75883396612772!3d35.71203448588789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c307e317f31%3A0xa5a4e210ad6b021e!2z5p2x5Lqs5aSn5a2m5aSn5a2m6ZmiIOaDheWgseWtpueSsOODu-emj-atpuODm-ODvOODqw!5e0!3m2!1sja!2sjp!4v1675821575074!5m2!1sja!2sjp"
+    },
+    "title": {
+      "en": "Creativity Support",
+      "ja": "Creativity Support（創造性支援）"
+    },
+    "youTubeVideoId": "HYGUCwoOHCk",
+    "sharedNoteId": "1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY"
+  },
+  {
+    "edition": {
+      "en": 2,
+      "ja": "二"
+    },
+    "dateTime": {
+      "en": "10:00-12:00 (Japan Standard Time), Apr. 14th, 2023",
+      "ja": "2023年4月14日（金）10:00 ～ 12:00"
+    },
+    "venue": {
+      "en": "Zoom Webinar (Online)",
+      "ja": "Zoom Webinar"
+    },
+    "title": {
+      "en": "AI for HCI",
+      "ja": "AI × HCI（HCIのためのAI）"
+    },
+    "youTubeVideoId": "6hEk_qXs_gM",
+    "sharedNoteId": "11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY"
+  },
+  {
+    "edition": {
+      "en": 3,
+      "ja": "三"
+    },
+    "dateTime": {
+      "en": "15:00-17:00 (Japan Standard Time), May 22nd, 2023",
+      "ja": "2023年5月22日（月）15:00 ～ 17:00"
+    },
+    "venue": {
+      "en": "Zoom Webinar (Online)",
+      "ja": "Zoom Webinar"
+    },
+    "title": {
+      "en": "How was your CHI 2023 experience?",
+      "ja": "CHI 2023 が分かる！発表者による振り返り"
+    },
+    "youTubeVideoId": "N5wicg8ge0o",
+    "sharedNoteId": "1Y_E-aiA0X30H1aBbhNi0oUhSyS9MTQFzfvXcks5QC0o"
+  },
+  {
+    "edition": {
+      "en": 4,
+      "ja": "四"
+    },
+    "dateTime": {
+      "en": "10:30-12:30 (Japan Standard Time), Jun. 23rd, 2023",
+      "ja": "2023年6月23日（金）10:30 ～ 12:30"
+    },
+    "venue": {
+      "en": "Zoom Webinar (Online)",
+      "ja": "Zoom Webinar",
+      "embedMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.576638462137!2d139.75883396612772!3d35.71203448588789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c307e317f31%3A0xa5a4e210ad6b021e!2z5p2x5Lqs5aSn5a2m5aSn5a2m6ZmiIOaDheWgseWtpueSsOODu-emj-atpuODm-ODvOODqw!5e0!3m2!1sja!2sjp!4v1675821575074!5m2!1sja!2sjp"
+    },
+    "title": {
+      "en": "Working abroad",
+      "ja": "海外で研究するということ"
+    },
+    "youTubeVideoId": "HhPiRMgv_jc",
+    "sharedNoteId": "1XuDKn68tWXmnduTqJB0TqpqdvhAVIWQ7NjytxjvVEyQ"
+  },
+  {
+    "edition": {
+      "en": 5,
+      "ja": "五"
+    },
+    "dateTime": {
+      "en": "17:30-19:30 (Japan Standard Time), Nov. 23rd, 2023",
+      "ja": "2023年11月23日（木）17:30 ～ 19:30"
+    },
+    "venue": {
+      "en": "Zoom Webinar (Japan-based panelists: Tokyo University of the Arts)",
+      "ja": "Zoom Webinar（収録会場: 東京藝術大学）"
+    },
+    "title": {
+      "en": "Creativity Support Tools for artistic work",
+      "ja": "芸術表現のための創造性支援ツール"
+    },
+    "youTubeVideoId": "btYXHR22mv8",
+    "sharedNoteId": "1AGf1oMvDumAxJfmSMAjx-4gXNrhsNNe6-ZUONalM5pU",
+    "photos": [
+      "/images/5/20231123-DSC06376.jpg",
+      "/images/5/20231123-DSC06437.jpg",
+      "/images/5/20231123-DSC06306.jpg",
+      "/images/5/20231123-DSC06392.jpg"
+    ]
+  },
+  {
+    "edition": {
+      "en": 6,
+      "ja": "六"
+    },
+    "dateTime": {
+      "en": "13:00-16:30 (Japan Standard Time), Dec. 13th, 2023",
+      "ja": "2023年12月13日（水）13:00 ～ 16:30 / 開場 12:30"
+    },
+    "venue": {
+      "en": "Mejirodai International Village, The University of Tokyo / Zoom Webinar (Hybrid)",
+      "ja": "東京大学 目白台インターナショナル・ビレッジ / Zoom Webinar",
+      "embedMapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.576638462137!2d139.75883396612772!3d35.71203448588789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c307e317f31%3A0xa5a4e210ad6b021e!2z5p2x5Lqs5aSn5a2m5aSn5a2m6ZmiIOaDheWgseWtpueSsOODu-emj-atpuODm-ODvOODqw!5e0!3m2!1sja!2sjp!4v1675821575074!5m2!1sja!2sjp"
+    },
+    "title": {
+      "en": "HCI Research \"in the wild\"",
+      "ja": "\"In the wild\" なHCI研究"
+    },
+    "youTubeVideoId": "R3H4Ehgt8dI",
+    "sharedNoteId": "1hUxK_EvYnGG7OgKiPAqVuGd6C_90SQsfNW1qohWjldI"
+  }
+]

@@ -6,9 +6,9 @@ import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { Alertbox } from "../Alertbox";
+import { GenericHeroSegment } from "../GenericHeroSegment";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { AboutSegment } from "./AboutSegment";
-import { HeroSegment } from "./HeroSegment";
 import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
 import { ReferencesSegment } from "./ReferencesSegment";
 import { TimetableSegment } from "./TimetableSegment";
@@ -56,7 +56,7 @@ export const Body: FC = () => {
       <PageHeader />
       <div className="hero">
         <Container>
-          <HeroSegment />
+          <GenericHeroSegment index={4} />
         </Container>
       </div>
       <Container>
