@@ -23,7 +23,13 @@
     },
     "thumbnail": "/images/1-hero.jpg",
     "youTubeVideoId": "HYGUCwoOHCk",
-    "sharedNoteId": "1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY"
+    "sharedNoteId": "1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY",
+    "photos": [
+      "/images/1/_DSC4154.jpg",
+      "/images/1/_DSC4060.jpg",
+      "/images/1/_DSC4149.jpg",
+      "/images/1/_DSC4193.jpg"
+    ]
   },
   {
     "edition": {
@@ -156,6 +162,12 @@
     },
     "thumbnail": "/images/6-hero.jpg",
     "youTubeVideoId": "R3H4Ehgt8dI",
-    "sharedNoteId": "1hUxK_EvYnGG7OgKiPAqVuGd6C_90SQsfNW1qohWjldI"
+    "sharedNoteId": "1hUxK_EvYnGG7OgKiPAqVuGd6C_90SQsfNW1qohWjldI",
+    "photos": [
+      "/images/6/20231213-DSC06976.jpg",
+      "/images/6/20231213-DSC06989.jpg",
+      "/images/6/20231213-DSC06993.jpg",
+      "/images/6/DSC06049-2.jpg"
+    ]
   }
 ]
