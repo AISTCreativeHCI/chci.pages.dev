@@ -4,12 +4,14 @@
       "name": "Jonas Frich",
       "affiliation": "Assistant Professor, Digital Design & Information Studies, Aarhus University",
       "photoPath": "/images/1-jonas-frich.jpg",
+      "link": "https://pure.au.dk/portal/en/persons/frich%40cc.au.dk",
       "talkUrl": "https://www.youtube.com/watch?v=HYGUCwoOHCk&t=300s"
     },
     {
       "name": "Zhicong Lu",
       "affiliation": "Assistant Professor, Department of Computer Science, City University of Hong Kong",
       "photoPath": "/images/1-zhicong-lu.jpg",
+      "link": "https://www.cs.cityu.edu.hk/~zhiconlu/",
       "talkUrl": "https://www.youtube.com/watch?v=HYGUCwoOHCk&t=3968s"
     }
   ],
@@ -18,12 +20,14 @@
       "name": "Amy Pavel",
       "affiliation": "Assistant Professor, Department of Computer Science, The University of Texas at Austin",
       "photoPath": "/images/2-amy-pavel.png",
+      "link": "https://amypavel.com/",
       "talkUrl": "https://www.youtube.com/watch?v=6hEk_qXs_gM&t=175s"
     },
     {
       "name": "Xingyu Bruce Liu",
       "affiliation": "Department of Electrical & Computer Engineering, University of California, Los Angeles",
       "photoPath": "/images/2-xingyu-bruce-liu.jpg",
+      "link": "https://liubruce.me/",
       "talkUrl": "https://www.youtube.com/watch?v=6hEk_qXs_gM&t=2895s"
     }
   ],

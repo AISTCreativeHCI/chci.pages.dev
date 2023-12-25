@@ -68,8 +68,14 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
                         ? s.name
                         : s.name[ja ? "ja" : "en"]
                     }
-                    as={s.link ? "a" : "div"}
-                    href={s.link || undefined}
+                    as={typeof s.link !== "undefined" ? "a" : "div"}
+                    href={
+                      typeof s.link === "undefined"
+                        ? undefined
+                        : typeof s.link === "string"
+                        ? s.link
+                        : s.link[ja ? "ja" : "en"]
+                    }
                   />
                   <List.Description
                     content={
