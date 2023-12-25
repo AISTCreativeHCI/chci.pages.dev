@@ -56,7 +56,7 @@
     "en": {
       "name": "Yui Atarashi",
       "affiliation": "Tamwood International College, Vancouver, Canada",
-      "website": "https://atarapi.com/"
+      "website": "https://atarapi.com"
     }
   },
   {
@@ -74,21 +74,25 @@
   {
     "ja": {
       "name": "元村 愛美",
-      "affiliation": "お茶の水女子大学"
+      "affiliation": "お茶の水女子大学",
+      "website": "https://sites.google.com/view/amimotomura"
     },
     "en": {
       "name": "Ami Motomura",
-      "affiliation": "Ochanomizu University"
+      "affiliation": "Ochanomizu University",
+      "website": "https://sites.google.com/view/amimotomura"
     }
   },
   {
     "ja": {
       "name": "石田 瑞季",
-      "affiliation": "お茶の水女子大学"
+      "affiliation": "お茶の水女子大学",
+      "website": "https://sites.google.com/view/mizukiishida"
     },
     "en": {
       "name": "Mizuki Ishida",
-      "affiliation": "Ochanomizu University"
+      "affiliation": "Ochanomizu University",
+      "website": "https://sites.google.com/view/mizukiishida"
     }
   }
 ]

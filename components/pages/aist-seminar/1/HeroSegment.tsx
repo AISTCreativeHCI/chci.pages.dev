@@ -34,41 +34,23 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       <HeroSegmentWrapper>
         <IFramePlayer src="https://www.youtube.com/embed/HYGUCwoOHCk" />
         <ButtonWrapper>
-          <Button.Group>
-            <Button
-              primary
-              icon="file"
-              size="large"
-              content={
-                <span>
-                  <span className="show-on-small-screens" aria-hidden="true">
-                    {ja ? "ノート" : "Notes"}
-                  </span>
-                  <span className="hide-on-small-screens">
-                    {ja ? "共有ノート" : "Shared notes"}
-                  </span>
+          <Button
+            primary
+            icon="file"
+            size="large"
+            content={
+              <span>
+                <span className="show-on-small-screens" aria-hidden="true">
+                  {ja ? "ノート" : "Notes"}
                 </span>
-              }
-              as="a"
-              href="https://docs.google.com/document/d/1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY/edit"
-            />
-            <Button
-              icon="edit"
-              size="large"
-              content={
-                <span>
-                  <span className="show-on-small-screens" aria-hidden="true">
-                    {ja ? "アンケート" : "Questionnaire"}
-                  </span>
-                  <span className="hide-on-small-screens">
-                    {ja ? "視聴者向けアンケート" : "Post-seminar Questionnaire"}
-                  </span>
+                <span className="hide-on-small-screens">
+                  {ja ? "共有ノート" : "Shared notes"}
                 </span>
-              }
-              as="a"
-              href="https://forms.office.com/r/iMbrDZrttL"
-            />
-          </Button.Group>
+              </span>
+            }
+            as="a"
+            href="https://docs.google.com/document/d/1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY/edit"
+          />
         </ButtonWrapper>
       </HeroSegmentWrapper>
     </GenericHeroSegment>

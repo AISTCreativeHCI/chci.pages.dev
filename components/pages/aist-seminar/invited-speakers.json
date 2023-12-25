@@ -3,24 +3,28 @@
     {
       "name": "Jonas Frich",
       "affiliation": "Assistant Professor, Digital Design & Information Studies, Aarhus University",
-      "photoPath": "/images/1-jonas-frich.jpg"
+      "photoPath": "/images/1-jonas-frich.jpg",
+      "talkUrl": "https://www.youtube.com/watch?v=HYGUCwoOHCk&t=300s"
     },
     {
       "name": "Zhicong Lu",
       "affiliation": "Assistant Professor, Department of Computer Science, City University of Hong Kong",
-      "photoPath": "/images/1-zhicong-lu.jpg"
+      "photoPath": "/images/1-zhicong-lu.jpg",
+      "talkUrl": "https://www.youtube.com/watch?v=HYGUCwoOHCk&t=3968s"
     }
   ],
   [
     {
       "name": "Amy Pavel",
       "affiliation": "Assistant Professor, Department of Computer Science, The University of Texas at Austin",
-      "photoPath": "/images/2-amy-pavel.png"
+      "photoPath": "/images/2-amy-pavel.png",
+      "talkUrl": "https://www.youtube.com/watch?v=6hEk_qXs_gM&t=175s"
     },
     {
       "name": "Xingyu Bruce Liu",
       "affiliation": "Department of Electrical & Computer Engineering, University of California, Los Angeles",
-      "photoPath": "/images/2-xingyu-bruce-liu.jpg"
+      "photoPath": "/images/2-xingyu-bruce-liu.jpg",
+      "talkUrl": "https://www.youtube.com/watch?v=6hEk_qXs_gM&t=2895s"
     }
   ],
   [
@@ -28,7 +32,11 @@
       "name": { "ja": "鳴海 紘也", "en": "Koya Narumi" },
       "affiliation": "Project Assistant Professor, Graduate School of Engineering, The University of Tokyo",
       "photoPath": "/images/3-koya-narumi.jpg",
-      "link": "https://narumi.me/profile"
+      "link": "https://narumi.me/profile",
+      "talkUrl": {
+        "ja": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=4016s",
+        "en": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=4199s"
+      }
     },
     {
       "name": { "ja": "矢倉 大夢", "en": "Hiromu Yakura" },
@@ -37,12 +45,21 @@
       "link": {
         "ja": "https://yumetaro.info/index.ja.xhtml",
         "en": "https://yumetaro.info"
+      },
+      "talkUrl": {
+        "ja": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=1777s",
+        "en": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=1992s"
       }
     },
     {
       "name": { "ja": "元村 愛美", "en": "Motomura Ami" },
       "affiliation": "Ochanomizu University",
-      "photoPath": "/images/circle-user-solid.svg"
+      "photoPath": "/images/circle-user-solid.svg",
+      "link": "https://sites.google.com/view/amimotomura",
+      "talkUrl": {
+        "ja": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=201s",
+        "en": "https://www.youtube.com/watch?v=N5wicg8ge0o&t=254s"
+      }
     }
   ],
   [
@@ -50,19 +67,22 @@
       "name": { "ja": "原 航太郎", "en": "Kotaro Hara" },
       "affiliation": "Assistant Professor, School of Computing and Information Systems, Singapore Management University",
       "photoPath": "/images/circle-user-solid.svg",
-      "link": "https://kotarohara.com"
+      "link": "https://kotarohara.com",
+      "talkUrl": "https://www.youtube.com/watch?v=HhPiRMgv_jc&t=146s"
     },
     {
       "name": { "ja": "荒川 陸", "en": "Riku Arakawa" },
       "affiliation": "Human-Computer Interaction Institute, Carnegie Mellon University",
       "photoPath": "/images/4-riku-arakawa.jpg",
-      "link": "https://rikky0611.github.io"
+      "link": "https://rikky0611.github.io",
+      "talkUrl": "https://www.youtube.com/watch?v=HhPiRMgv_jc&t=2291s"
     },
     {
       "name": { "ja": "中川 茉奈美", "en": "Manami Nakagawa" },
       "affiliation": "Dept. of Computer Science, University of Bristol",
       "photoPath": "/images/4-manami-nakagawa.jpg",
-      "link": "https://manami-bunbun.github.io/"
+      "link": "https://manami-bunbun.github.io/",
+      "talkurl": "https://www.youtube.com/watch?v=HhPiRMgv_jc&t=3681s"
     }
   ],
   [
@@ -70,7 +90,8 @@
       "name": "Xavier Lambein",
       "affiliation": "Artist and programmer",
       "photoPath": "/images/5-xavier-lambein.jpg",
-      "link": "https://lambein.xyz"
+      "link": "https://lambein.xyz",
+      "talkUrl": "https://www.youtube.com/watch?v=btYXHR22mv8&t=343s"
     },
     {
       "name": { "ja": "松浦 知也", "en": "Tomoya Matsuura" },
@@ -79,7 +100,8 @@
         "en": "SoundMaker / Art Media Center, Tokyo University of the Arts"
       },
       "photoPath": "/images/5-tomoya-matsuura.jpg",
-      "link": "https://matsuuratomoya.com"
+      "link": "https://matsuuratomoya.com",
+      "talkUrl": "https://www.youtube.com/watch?v=btYXHR22mv8&t=2327s"
     },
     {
       "name": { "ja": "橋本 麦", "en": "Baku Hashmoto" },
@@ -88,20 +110,24 @@
         "en": "Visual artist / INS Studio, AIST"
       },
       "photoPath": "/images/5-baku-hashimoto.png",
-      "link": "https://baku89.com"
+      "link": "https://baku89.com",
+      "talkUrl": "https://www.youtube.com/watch?v=btYXHR22mv8&t=4136s"
     }
   ],
   [
     {
       "name": "Jennifer Jacobs",
       "affiliation": "Assistant Professor, Media Arts and Technology, University of California Santa Barbara",
-      "photoPath": "/images/jenniferjacobs.jpg"
+      "photoPath": "/images/jenniferjacobs.jpg",
+      "link": "https://pixelmaid.github.io/personalweb/",
+      "talkUrl": "https://www.youtube.com/watch?v=R3H4Ehgt8dI&t=447s"
     },
     {
       "name": { "ja": "鳴海 紘也", "en": "Koya Narumi" },
       "affiliation": "Project Assistant Professor, Graduate School of Engineering, The University of Tokyo",
       "photoPath": "/images/3-koya-narumi.jpg",
-      "link": "https://narumi.me/profile"
+      "link": "https://narumi.me/profile",
+      "talkUrl": "https://www.youtube.com/watch?v=R3H4Ehgt8dI&t=5383s"
     }
   ]
 ]

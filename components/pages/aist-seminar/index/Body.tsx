@@ -50,7 +50,10 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
-        <EditionSegment>
+        <EditionSegment
+          text={ja ? "第六回について詳しく" : "More details"}
+          link={ja ? "/aist-seminar/6" : "/aist-seminar/en/6"}
+        >
           <SixthEditionHeroSegment fullWidth />
         </EditionSegment>
         <EditionSegment

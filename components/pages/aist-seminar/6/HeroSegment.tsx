@@ -1,13 +1,11 @@
 import { FC } from "react";
+import { Button } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../../lib/useSiteInfo";
+import { ButtonWrapper } from "../ButtonWrapper";
 import { HeroSegment as GenericHeroSegment } from "../HeroSegment";
-import { AboutSegment } from "./AboutSegment";
-import { RegistrationBox } from "./RegistrationBox";
-import { VenueSegment } from "./VenueSegment";
-import { InvitedSpeakersSegment } from "./InvitedSpeakersSegment";
-import { TimetableSegment } from "./TimetableSegment";
-import { ReferencesSegment } from "./ReferencesSegment";
+import { HeroSegmentWrapper } from "../HeroSegmentWrapper";
+import { IFramePlayer } from "../IFramePlayer";
 
 interface IProps {
   fullWidth?: boolean;
@@ -33,12 +31,28 @@ export const HeroSegment: FC<IProps> = ({ fullWidth }) => {
       title={ja ? '"In the wild" なHCI研究' : 'HCI Research "in the wild"'}
       speakers={5}
     >
-      <AboutSegment bare />
-      <RegistrationBox disabled />
-      <InvitedSpeakersSegment bare />
-      <TimetableSegment bare />
-      <ReferencesSegment bare />
-      <VenueSegment />
+      <HeroSegmentWrapper>
+        <IFramePlayer src="https://www.youtube.com/embed/R3H4Ehgt8dI" />
+        <ButtonWrapper>
+          <Button
+            primary
+            icon="file"
+            size="large"
+            content={
+              <span>
+                <span className="show-on-small-screens" aria-hidden="true">
+                  {ja ? "ノート" : "Notes"}
+                </span>
+                <span className="hide-on-small-screens">
+                  {ja ? "共有ノート" : "Shared notes"}
+                </span>
+              </span>
+            }
+            as="a"
+            href="https://docs.google.com/document/d/1hUxK_EvYnGG7OgKiPAqVuGd6C_90SQsfNW1qohWjldI/edit"
+          />
+        </ButtonWrapper>
+      </HeroSegmentWrapper>
     </GenericHeroSegment>
   );
 };
