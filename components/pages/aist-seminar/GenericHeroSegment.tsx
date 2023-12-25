@@ -1,5 +1,5 @@
-import { FC } from "react";
-import { Button, Divider, Header, Image, List } from "semantic-ui-react";
+import { FC, ReactNode } from "react";
+import { Button, Divider, Grid, Header, Image, List } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 import { ButtonWrapper } from "./ButtonWrapper";
@@ -13,9 +13,14 @@ import seminars from "./seminars.json";
 interface IProps {
   fullWidth?: boolean;
   index: number;
+  children?: ReactNode;
 }
 
-export const GenericHeroSegment: FC<IProps> = ({ fullWidth, index }) => {
+export const GenericHeroSegment: FC<IProps> = ({
+  fullWidth,
+  index,
+  children,
+}) => {
   const { ja } = useSiteInfo();
   const si = seminars[index];
   const ss = speakers[index];
@@ -44,7 +49,7 @@ export const GenericHeroSegment: FC<IProps> = ({ fullWidth, index }) => {
           <Header
             as="h2"
             content={fullWidth ? `${edition} ${title}` : editionTitle}
-            subheader={subtitle}
+            subheader={fullWidth ? subtitle : `${title}: ${subtitle}`}
           />
           <List>
             <List.Item content={dateTime} />
@@ -58,13 +63,20 @@ export const GenericHeroSegment: FC<IProps> = ({ fullWidth, index }) => {
               avatar
               src={s.photoPath}
               alt={`[Photo: ${
-                typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+                typeof s.name === "string" ? s.name : ja ? s.name.ja : s.name.en
               }]`}
             />
           ))}
         </div>
       </div>
-      {!fullWidth && <Divider hidden />}
+      {fullWidth ? (
+        <>
+          <p>{ja ? si.description.ja : si.description.en}</p>
+          <Divider />
+        </>
+      ) : (
+        <Divider hidden />
+      )}
       <HeroSegmentWrapper>
         <IFramePlayer
           src={`https://www.youtube.com/embed/${si.youTubeVideoId}`}
@@ -88,7 +100,20 @@ export const GenericHeroSegment: FC<IProps> = ({ fullWidth, index }) => {
             href={`https://docs.google.com/document/d/${si.sharedNoteId}/edit`}
           />
         </ButtonWrapper>
+        {children}
       </HeroSegmentWrapper>
+      {si.photos && (
+        <>
+          <Divider />
+          <Grid stackable columns={4}>
+            {si.photos.map((photo) => (
+              <Grid.Column>
+                <Image key={photo} src={photo} fluid bordered />
+              </Grid.Column>
+            ))}
+          </Grid>
+        </>
+      )}
     </>
   );
 };

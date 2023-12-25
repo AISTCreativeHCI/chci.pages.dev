@@ -17,6 +17,14 @@
       "en": "Creativity Support",
       "ja": "Creativity Support（創造性支援）"
     },
+    "description": {
+      "en": "This edition was held under the theme of \"Creativity Support.\" It invited world-class young researchers from abroad: Jonas Frich on the history and prospects of creativity support research in HCI and Zhicong Lu on socio-cultural studies of live-streamers such as VTubers.",
+      "ja": "第一回は「創造性支援（Creativity Support）」がテーマで、コンピュータによる創造性支援研究の歴史と展望、VTuberなど動画配信者の文化研究、それぞれに関し国際的に活躍している若手研究者（Jonas Frich、Zhicong Lu）を海外から招聘して、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": {
+      "en": "/images/1-hero-en.png",
+      "ja": "/images/1-hero-ja.png"
+    },
     "youTubeVideoId": "HYGUCwoOHCk",
     "sharedNoteId": "1GAOBgEtpCBINNIjNGwp56U5k-3atFPVTpeJ27wrEudY"
   },
@@ -37,6 +45,11 @@
       "en": "AI for HCI",
       "ja": "AI × HCI（HCIのためのAI）"
     },
+    "description": {
+      "en": "This edition was held under the theme of applications of AI technologies for novel interaction techniques. It invited world-class young researchers: Amy Pavel and Xingyu Bruce Liu.",
+      "ja": "第二回は「AI × HCI（HCIのためのAI）」がテーマで、AI技術の応用によって初めて可能になるインタラクションに関し国際的に活躍している若手研究者（Amy Pavel、Xingyu Bruce Liu）をお呼びして、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": "/images/2-hero.jpg",
     "youTubeVideoId": "6hEk_qXs_gM",
     "sharedNoteId": "11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY"
   },
@@ -57,6 +70,11 @@
       "en": "How was your CHI 2023 experience?",
       "ja": "CHI 2023 が分かる！発表者による振り返り"
     },
+    "description": {
+      "en": "This edition was held to collectively understand ACM CHI 2023, the premier and huge conference on Human-Computer Interaction. It invited three bright and young Japan-based researchers: Ami Motomura, Hiromu Yakura, and Koya Narumi.",
+      "ja": "第三回は「ACM CHI 2023振り返り」がテーマで、CHIの様々なプログラムで発表した若手研究者（鳴海さん、矢倉さん、元村さん）をお呼びして、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": "/images/3-hero.jpg",
     "youTubeVideoId": "N5wicg8ge0o",
     "sharedNoteId": "1Y_E-aiA0X30H1aBbhNi0oUhSyS9MTQFzfvXcks5QC0o"
   },
@@ -78,6 +96,11 @@
       "en": "Working abroad",
       "ja": "海外で研究するということ"
     },
+    "description": {
+      "en": "This edition invited Japanese researchers studying and researching abroad and asked them to share their experiences: Kotaro Hara, Riku Arakawa, Manami Nakagawa.",
+      "ja": "第四回は「海外で研究するということ」がテーマで、海外へ留学し、海外で研究者として活躍している若手の方々（原さん、荒川さん、中川さん）をお呼びして、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": "/images/4-hero.jpg",
     "youTubeVideoId": "HhPiRMgv_jc",
     "sharedNoteId": "1XuDKn68tWXmnduTqJB0TqpqdvhAVIWQ7NjytxjvVEyQ"
   },
@@ -98,6 +121,11 @@
       "en": "Creativity Support Tools for artistic work",
       "ja": "芸術表現のための創造性支援ツール"
     },
+    "description": {
+      "en": "This edition was held to discuss creativity support tools for artistic work. It invited three researchers/artists: Xavier Lambein, Tomoya Matsuura, and Baku Hashimoto.",
+      "ja": "第五回は「芸術表現のための創造性支援ツール」がテーマで、芸術表現、とくに音楽や映像を制作するためのツールの研究開発に取り組まれてきた三名の研究者・アーティスト（Xavier、松浦さん、麦さん）をお呼びして、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": "/images/5-hero.jpg",
     "youTubeVideoId": "btYXHR22mv8",
     "sharedNoteId": "1AGf1oMvDumAxJfmSMAjx-4gXNrhsNNe6-ZUONalM5pU",
     "photos": [
@@ -125,6 +153,11 @@
       "en": "HCI Research \"in the wild\"",
       "ja": "\"In the wild\" なHCI研究"
     },
+    "description": {
+      "en": "This edition was held to discuss HCI research \"in the wild.\" It invited two researchers: Jennifer Jacobs and Koya Narumi, who share a research approach of conducting research in close collaboration with practitioners and industry.",
+      "ja": "第六回は「\"In the wild\" なHCI研究」がテーマで、芸術家や産業界などの「現場 (in the wild)」を志向する研究アプローチを採用し、論文だけに終わらない研究開発に取り組まれてきた二名（Jennifer、鳴海さん）をお呼びして、招待講演とパネルセッションを行いました。"
+    },
+    "thumbnail": "/images/6-hero.jpg",
     "youTubeVideoId": "R3H4Ehgt8dI",
     "sharedNoteId": "1hUxK_EvYnGG7OgKiPAqVuGd6C_90SQsfNW1qohWjldI"
   }
