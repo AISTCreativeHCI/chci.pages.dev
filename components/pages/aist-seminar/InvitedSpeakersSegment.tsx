@@ -51,14 +51,16 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
         {list ? (
           <List relaxed className={styles.speakers}>
             {ss.map((s, i) => (
-              <List.Item>
+              <List.Item key={i}>
                 <Image
                   avatar
                   src={s.photoPath}
                   alt={`[Photo: ${
                     typeof s.name === "string"
                       ? s.name
-                      : s.name[ja ? "ja" : "en"]
+                      : ja
+                      ? s.name.ja
+                      : s.name.en
                   }]`}
                 />
                 <List.Content>
@@ -66,7 +68,9 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
                     content={
                       typeof s.name === "string"
                         ? s.name
-                        : s.name[ja ? "ja" : "en"]
+                        : ja
+                        ? s.name.ja
+                        : s.name.en
                     }
                     as={typeof s.link !== "undefined" ? "a" : "div"}
                     href={
@@ -74,7 +78,9 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
                         ? undefined
                         : typeof s.link === "string"
                         ? s.link
-                        : s.link[ja ? "ja" : "en"]
+                        : ja
+                        ? s.link.ja
+                        : s.link.en
                     }
                   />
                   <List.Description
@@ -83,7 +89,9 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
                         <p>
                           {typeof s.affiliation === "string"
                             ? s.affiliation
-                            : s.affiliation[ja ? "ja" : "en"]}
+                            : ja
+                            ? s.affiliation.ja
+                            : s.affiliation.en}
                         </p>
                         {(s as any).bio || (bios && bios[i])}
                       </>

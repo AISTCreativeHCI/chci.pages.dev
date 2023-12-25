@@ -1,23 +1,21 @@
 import Head from "next/head";
 import { FC } from "react";
-import { Container, Image } from "semantic-ui-react";
+import { Container, Image, Menu } from "semantic-ui-react";
 
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { SIGCHISegment } from "../SIGCHISegment";
-import { EditionSegment } from "./EditionSegment";
+import { EditionSegments } from "./EditionSegments";
 import { HeroSegment } from "./HeroSegment";
+import { SpeakersList } from "./SpeakersList";
 
-export const Body: FC = () => {
-  const { site: origSite, ja } = useSiteInfo();
-  const site = {
-    ...origSite,
-    image: "/images/6-hero.jpg",
-  };
-  const editionSegments = new Array(6)
-    .fill(null)
-    .map((_, i) => <EditionSegment key={i} index={5 - i} />);
+interface IProps {
+  bySpeaker?: boolean;
+}
+
+export const Body: FC<IProps> = ({ bySpeaker }) => {
+  const { site, ja } = useSiteInfo();
   return (
     <>
       <Head>
@@ -47,7 +45,26 @@ export const Body: FC = () => {
         </Container>
       </div>
       <Container>
-        {editionSegments}
+        <Menu fluid>
+          {!ja && <Menu.Item disabled>View</Menu.Item>}
+          <Menu.Item
+            active={!bySpeaker}
+            as={bySpeaker ? "a" : undefined}
+            href={bySpeaker ? `/aist-seminar${ja ? "" : "/en"}` : undefined}
+          >
+            {ja ? "各回の紹介" : "By edition"}
+          </Menu.Item>
+          <Menu.Item
+            active={bySpeaker}
+            as={bySpeaker ? undefined : "a"}
+            href={
+              bySpeaker ? undefined : `/aist-seminar${ja ? "" : "/en"}/speakers`
+            }
+          >
+            {ja ? "講演者の紹介" : "By speaker"}
+          </Menu.Item>
+        </Menu>
+        {bySpeaker ? <SpeakersList /> : <EditionSegments />}
         <SIGCHISegment />
       </Container>
       <PageFooter />
