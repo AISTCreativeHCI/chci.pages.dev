@@ -30,7 +30,13 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
                   labelPosition="right"
                   content={ja ? "講演" : "Talk"}
                   as="a"
-                  href={s.talkUrl}
+                  href={
+                    typeof s.talkUrl === "string"
+                      ? s.talkUrl
+                      : ja
+                      ? s.talkUrl.ja
+                      : s.talkUrl.en
+                  }
                   disabled={!s.talkUrl}
                 />
               </List.Content>
