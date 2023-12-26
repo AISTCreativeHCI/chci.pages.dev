@@ -1,5 +1,8 @@
-import { Body } from "../../components/pages/aist-seminar/index/Body";
+import {
+  Body,
+  ListingMode,
+} from "../../components/pages/aist-seminar/index/Body";
 
 export default function Index() {
-  return <Body />;
+  return <Body mode={ListingMode.ByEdition} />;
 }

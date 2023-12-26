@@ -7,7 +7,7 @@ export const IFramePlayer: FC<IframeHTMLAttributes<HTMLIFrameElement>> = (
 ) => (
   <iframe
     className={styles.player}
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
     allowFullScreen
     {...props}
   ></iframe>

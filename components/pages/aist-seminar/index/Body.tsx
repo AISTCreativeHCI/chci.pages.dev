@@ -8,23 +8,36 @@ import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegments } from "./EditionSegments";
 import { HeroSegment } from "./HeroSegment";
-import { SpeakersList } from "./SpeakersList";
+import { PanelTopicSegments } from "./PanelTopicSegments";
+import { SpeakersSegments } from "./SpeakersSegments";
 
-interface IProps {
-  bySpeaker?: boolean;
+export enum ListingMode {
+  ByEdition,
+  BySpeaker,
+  ByPanelTopic,
 }
 
-export const Body: FC<IProps> = ({ bySpeaker }) => {
+interface IProps {
+  mode: ListingMode;
+}
+
+export const Body: FC<IProps> = ({ mode }) => {
   const { site, ja } = useSiteInfo();
+  const title =
+    mode === ListingMode.ByEdition
+      ? site.title
+      : mode === ListingMode.BySpeaker
+      ? `${site.title}: ${ja ? "講演者の紹介" : "By speaker"}`
+      : `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`;
   return (
     <>
       <Head>
-        <title key="title">{site.title}</title>
+        <title key="title">{title}</title>
         <meta name="description" content={site.description} key="description" />
-        <meta property="og:title" content={site.title} />
+        <meta property="og:title" content={title} />
         <meta property="og:description" content={site.description} />
         <meta property="og:image" content={site.image} />
-        <meta property="twitter:title" content={site.title} />
+        <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={site.description} />
         <meta property="twitter:image" content={site.image} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,23 +61,42 @@ export const Body: FC<IProps> = ({ bySpeaker }) => {
         <Menu fluid>
           {!ja && <Menu.Item disabled>View</Menu.Item>}
           <Menu.Item
-            active={!bySpeaker}
-            as={bySpeaker ? "a" : undefined}
-            href={bySpeaker ? `/aist-seminar${ja ? "" : "/en"}` : undefined}
+            active={mode === ListingMode.ByEdition}
+            as={mode !== ListingMode.ByEdition ? "a" : undefined}
+            href={
+              mode !== ListingMode.ByEdition
+                ? `/aist-seminar${ja ? "" : "/en"}`
+                : undefined
+            }
           >
             {ja ? "各回の紹介" : "By edition"}
           </Menu.Item>
           <Menu.Item
-            active={bySpeaker}
-            as={bySpeaker ? undefined : "a"}
+            active={mode === ListingMode.BySpeaker}
+            as={mode !== ListingMode.BySpeaker ? "a" : undefined}
             href={
-              bySpeaker ? undefined : `/aist-seminar${ja ? "" : "/en"}/speakers`
+              mode !== ListingMode.BySpeaker
+                ? `/aist-seminar${ja ? "" : "/en"}/speakers`
+                : undefined
             }
           >
             {ja ? "講演者の紹介" : "By speaker"}
           </Menu.Item>
+          <Menu.Item
+            active={mode === ListingMode.ByPanelTopic}
+            as={mode !== ListingMode.ByPanelTopic ? "a" : undefined}
+            href={
+              mode !== ListingMode.ByPanelTopic
+                ? `/aist-seminar${ja ? "" : "/en"}/panel-topics`
+                : undefined
+            }
+          >
+            {ja ? "パネルトピック" : "By panel topics"}
+          </Menu.Item>
         </Menu>
-        {bySpeaker ? <SpeakersList /> : <EditionSegments />}
+        {mode === ListingMode.ByEdition && <EditionSegments />}
+        {mode === ListingMode.BySpeaker && <SpeakersSegments />}
+        {mode === ListingMode.ByPanelTopic && <PanelTopicSegments />}
         <SIGCHISegment />
       </Container>
       <PageFooter />

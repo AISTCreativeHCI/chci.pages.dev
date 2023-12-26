@@ -4,7 +4,10 @@ import {
   SiteContext,
   SiteContextIface,
 } from "../../../components/contexts/SiteContext";
-import { Body } from "../../../components/pages/aist-seminar/index/Body";
+import {
+  Body,
+  ListingMode,
+} from "../../../components/pages/aist-seminar/index/Body";
 
 export default function Index() {
   const scx = useContext(SiteContext);
@@ -16,7 +19,7 @@ export default function Index() {
   }, [scx]);
   return (
     <SiteContext.Provider value={scx_}>
-      <Body bySpeaker />
+      <Body mode={ListingMode.BySpeaker} />
     </SiteContext.Provider>
   );
 }

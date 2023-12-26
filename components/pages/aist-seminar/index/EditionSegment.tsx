@@ -20,7 +20,7 @@ export const EditionSegment: FC<IProps> = ({ children, index, text, link }) => {
       : "More details";
   }
   if (!link && typeof index === "number") {
-    link = ja ? `/aist-seminar/${index + 1}` : `/aist-seminar/en/${index + 1}`;
+    link = `/aist-seminar${ja ? "" : "/en"}/${index + 1}`;
   }
   return (
     <Segment.Group>

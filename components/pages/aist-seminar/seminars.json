@@ -29,7 +29,12 @@
       "/images/1/_DSC4060.jpg",
       "/images/1/_DSC4149.jpg",
       "/images/1/_DSC4193.jpg"
-    ]
+    ],
+    "panelIndexTime": 9153,
+    "panelTopics": {
+      "en": "Source of Creativity and Role of Computers: Disembodiment as Tools vs. Integration; Collaborative Creativity and Its Dynamics; Benefits of Creativity Research in HCI: Interventional Approach; AI, Technology, and Society: Intersecting Impacts; Productivity vs. Creativity Support; Japanese Game and Creative Culture: Unique Insights; Researcher-Developer Community Distance; Anthropological Approaches in HCI.",
+      "ja": "創造性の源泉とコンピュータの役割：切り離されたツールか統合か; 共同創造性とそのダイナミクス; HCIにおける創造性研究の利点：介入的アプローチ; AI、テクノロジー、社会：研究のインパクト; 生産性支援か創造性支援か; 日本のゲームとクリエイティブカルチャー; 研究者と開発者コミュニティの距離; HCIにおける人類学的アプローチ"
+    }
   },
   {
     "edition": {
@@ -54,7 +59,12 @@
     },
     "thumbnail": "/images/2-hero.jpg",
     "youTubeVideoId": "6hEk_qXs_gM",
-    "sharedNoteId": "11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY"
+    "sharedNoteId": "11IjtlIVx-Cfr8vDg2bgY7B7o6MxY4VZDNU7sKglNptY",
+    "panelIndexTime": 5175,
+    "panelTopics": {
+      "en": "Balance between Performance Evaluation and Exploratory Study: Qualitative vs. Quantitative; Importance of Understanding Target Users: Co-Design Workshops and Online Communities; Diversity in Visual Impairments; Human-AI Collaboration Guidelines for Visually-Impaired; Creativity in Accessibility Research; Real-World Application and Impact of HCI Research; Long-Term Evaluation of Systems.",
+      "ja": "性能評価と探索的研究のバランス：質的vs量的評価; ユーザ理解の重要性：ワークショップの共同デザインとオンラインコミュニティ; 視覚障害の多様性; 人間とAIの共同作業ガイドラインは視覚障害者向けに適用可能か？; アクセシビリティ研究における創造性; 研究の実応用とそのインパクト; システムの長期評価"
+    }
   },
   {
     "edition": {
@@ -136,7 +146,12 @@
       "/images/5/20231123-DSC06437.jpg",
       "/images/5/20231123-DSC06306.jpg",
       "/images/5/20231123-DSC06392.jpg"
-    ]
+    ],
+    "panelIndexTime": 6171,
+    "panelTopics": {
+      "en": "Designing Tools for Designers; Funding \"Fringe\" Tool Development for Artists; Sustainability of Creativity Support Tools; Distinction between Creative and Problem-solving Modes in Creative Process; Defining \"Kernels\" in Creativity Support Tools; Design Philosophy behind Programmable Tools; Experimental vs Popular Artistic Styles; Communication Gaps in Highly Customized Tools; Impact of Programming on Artists",
+      "ja": "デザイナ向けツールのデザイン; アーティストのための「周縁」ツール開発をどう支えるか; 創造性支援ツールの持続可能性; 創造的プロセスにおける創造モードと問題解決モード; 創造性支援ツールにおける「カーネル」; プログラマブルツールのデザイン哲学; 実験的な・大衆受けする芸術表現; 高度にカスタマイズされたツール利用時のコミュニケーションギャップ; アーティストにとってのプログラミング"
+    }
   },
   {
     "edition": {
@@ -168,6 +183,11 @@
       "/images/6/20231213-DSC06989.jpg",
       "/images/6/20231213-DSC06993.jpg",
       "/images/6/DSC06049-2.jpg"
-    ]
+    ],
+    "panelIndexTime": 10502,
+    "panelTopics": {
+      "en": "HCI Research in the Wild: \"Why Not\" Rather Than \"Why\"; Value of Field Approach from Funding Agency's Perspective; Successful Collaboration Strategies with Artists and Industry; Adapting to Different Research Languages; Selecting the Right CHI Subcommittee; Domain-Specific vs. General Tools and Generalizability of Their Research Insights; Evaluating and Discussing Artistic Artifacts: Methodologies and Challenges.",
+      "ja": "\"In the wild\" な研究: 「なぜするのか」より「なぜしないのか」; 資金提供機関から見た研究の価値; 芸術家や産業界とのコラボレーション戦略; 異なる言語体系にどう適応するか; CHI Subcommitteeの選び方; ドメイン固有ツールと汎用ツール、あるいは研究上の知見の汎用性について; 芸術的成果物をどう評価し、どう取り扱うか"
+    }
   }
 ]

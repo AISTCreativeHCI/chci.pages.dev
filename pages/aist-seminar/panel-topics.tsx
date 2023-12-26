@@ -4,5 +4,5 @@ import {
 } from "../../components/pages/aist-seminar/index/Body";
 
 export default function Index() {
-  return <Body mode={ListingMode.BySpeaker} />;
+  return <Body mode={ListingMode.ByPanelTopic} />;
 }

@@ -19,7 +19,7 @@ export default function Index() {
   }, [scx]);
   return (
     <SiteContext.Provider value={scx_}>
-      <Body mode={ListingMode.ByEdition} />
+      <Body mode={ListingMode.ByPanelTopic} />
     </SiteContext.Provider>
   );
 }
