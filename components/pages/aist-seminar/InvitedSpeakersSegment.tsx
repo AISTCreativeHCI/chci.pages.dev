@@ -51,7 +51,7 @@ export const InvitedSpeakersSegment: FC<IProps> = ({
         {list ? (
           <List relaxed className={styles.speakers}>
             {ss.map((s, i) => (
-              <List.Item key={i}>
+              <List.Item key={`invited-speaker-${i}`}>
                 <Image
                   avatar
                   src={s.photoPath}

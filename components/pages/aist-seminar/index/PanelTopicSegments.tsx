@@ -39,7 +39,10 @@ export const PanelTopicSegments: FC = () => {
       {new Array(seminars.length).fill(null).map((_, i) => (
         <>
           {seminars[i].panelTopics && (
-            <PanelTopicSegment key={i} index={seminars.length - 1 - i} />
+            <PanelTopicSegment
+              key={`panel-topic-${i}`}
+              index={seminars.length - 1 - i}
+            />
           )}
         </>
       ))}

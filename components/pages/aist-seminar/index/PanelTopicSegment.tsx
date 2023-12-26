@@ -64,6 +64,14 @@ export const PanelTopicSegment: FC<IProps> = ({ children, index }) => {
       </Segment>
       <Segment secondary attached="bottom" textAlign="right">
         <Button
+          color="red"
+          size="tiny"
+          content={ja ? "共有ノート" : "Shared notes"}
+          as="a"
+          href={`https://docs.google.com/document/d/${si.sharedNoteId}/edit`}
+        />
+        <Button
+          color="blue"
           icon="arrow right"
           labelPosition="right"
           size="tiny"

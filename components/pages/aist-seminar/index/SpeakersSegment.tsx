@@ -19,15 +19,16 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
   const link = `/aist-seminar${ja ? "" : "/en"}/${edition + 1}`;
   return (
     <Segment.Group>
-      <Segment key={edition}>
+      <Segment key={`invited-speakers-${edition}`}>
         <List relaxed>
           {list.map((s, i) => (
-            <List.Item key={`${edition}-${i}`}>
+            <List.Item key={`invited-speakers-${edition}-${i}`}>
               <List.Content floated="right">
                 <Button
                   primary
                   icon="youtube"
                   labelPosition="right"
+                  size="tiny"
                   content={ja ? "講演" : "Talk"}
                   as="a"
                   href={
