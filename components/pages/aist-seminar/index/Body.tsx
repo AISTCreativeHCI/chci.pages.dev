@@ -58,7 +58,7 @@ export const Body: FC<IProps> = ({ mode }) => {
         </Container>
       </div>
       <Container>
-        <Menu fluid>
+        <Menu fluid stackable>
           {!ja && <Menu.Item disabled>View</Menu.Item>}
           <Menu.Item
             active={mode === ListingMode.ByEdition}

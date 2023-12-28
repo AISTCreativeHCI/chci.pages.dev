@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Segment, SegmentProps } from "semantic-ui-react";
+import { Image, Segment, SegmentProps } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 
@@ -16,7 +16,8 @@ export const SIGCHISegment: FC<SegmentProps> = (props) => {
             <a href="https://sigchi.jp/">Japan ACM SIGCHI Chapter</a>{" "}
             の共催イベントです。
           </p>
-          <img
+          <Image
+            fluid
             src="/images/japan-sigchi-chapter.png"
             alt=""
             className={styles.logo}
@@ -28,7 +29,8 @@ export const SIGCHISegment: FC<SegmentProps> = (props) => {
             This seminar series is co-organized by{" "}
             <a href="https://sigchi.jp/">Japan ACM SIGCHI Chapter</a>.
           </p>
-          <img
+          <Image
+            fluid
             src="/images/japan-sigchi-chapter.png"
             alt=""
             className={styles.logo}

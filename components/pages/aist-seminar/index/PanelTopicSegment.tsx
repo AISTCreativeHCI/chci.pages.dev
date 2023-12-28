@@ -13,6 +13,7 @@ import { IFramePlayer } from "../IFramePlayer";
 
 import speakers from "../invited-speakers.json";
 import seminars from "../seminars.json";
+import styles from "./PanelTopicSegment.module.css";
 
 interface IProps {
   children?: ReactNode;
@@ -63,22 +64,24 @@ export const PanelTopicSegment: FC<IProps> = ({ children, index }) => {
         {children}
       </Segment>
       <Segment secondary attached="bottom" textAlign="right">
-        <Button
-          color="red"
-          size="tiny"
-          content={ja ? "共有ノート" : "Shared notes"}
-          as="a"
-          href={`https://docs.google.com/document/d/${si.sharedNoteId}/edit`}
-        />
-        <Button
-          color="blue"
-          icon="arrow right"
-          labelPosition="right"
-          size="tiny"
-          content={text}
-          as="a"
-          href={link}
-        />
+        <div className={styles.buttons}>
+          <Button
+            color="red"
+            size="tiny"
+            content={ja ? "共有ノート" : "Shared notes"}
+            as="a"
+            href={`https://docs.google.com/document/d/${si.sharedNoteId}/edit`}
+          />
+          <Button
+            color="blue"
+            icon="arrow right"
+            labelPosition="right"
+            size="tiny"
+            content={text}
+            as="a"
+            href={link}
+          />
+        </div>
       </Segment>
     </Segment.Group>
   );

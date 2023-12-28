@@ -71,10 +71,7 @@ export const GenericBodyComponent: FC<IProps> = ({
         <SIGCHISegment basic />
         <Divider />
         <Breadcrumb>
-          <Breadcrumb.Section
-            link
-            href={ja ? "/aist-seminar" : "/aist-seminar/en"}
-          >
+          <Breadcrumb.Section href={ja ? "/aist-seminar" : "/aist-seminar/en"}>
             AIST Creative HCI Seminar
           </Breadcrumb.Section>
           <Breadcrumb.Divider icon="right angle" />
