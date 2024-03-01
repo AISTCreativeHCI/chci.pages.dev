@@ -20,19 +20,21 @@ export enum ListingMode {
 }
 
 interface IProps {
+  title?: string;
   mode: ListingMode;
 }
 
-export const Body: FC<IProps> = ({ mode }) => {
+export const Body: FC<IProps> = ({ title: t, mode }) => {
   const { site, ja } = useSiteInfo();
   const title =
-    mode === ListingMode.ByEdition
+    t ||
+    (mode === ListingMode.ByEdition
       ? site.title
       : mode === ListingMode.BySpeaker
       ? `${site.title}: ${ja ? "講演者の紹介" : "By speaker"}`
       : mode === ListingMode.ByPanelTopic
       ? `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`
-      : `${site.title}: ${ja ? "ワークショップ" : "Workshop"}`;
+      : `${site.title}: ${ja ? "ワークショップ" : "Workshop"}`);
   return (
     <>
       <Head>

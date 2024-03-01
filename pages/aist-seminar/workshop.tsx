@@ -4,5 +4,7 @@ import {
 } from "../../components/pages/aist-seminar/index/Body";
 
 export default function Index() {
-  return <Body mode={ListingMode.Workshop} />;
+  return (
+    <Body title="AIST Creative HCI Workshop" mode={ListingMode.Workshop} />
+  );
 }
