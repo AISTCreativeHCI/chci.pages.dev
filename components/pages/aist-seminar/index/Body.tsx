@@ -2,19 +2,21 @@ import Head from "next/head";
 import { FC } from "react";
 import { Container, Image, Menu } from "semantic-ui-react";
 
+import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { PageFooter } from "../../../PageFooter";
 import { PageHeader } from "../../../PageHeader";
-import { useSiteInfo } from "../../../lib/useSiteInfo";
 import { SIGCHISegment } from "../SIGCHISegment";
 import { EditionSegments } from "./EditionSegments";
 import { HeroSegment } from "./HeroSegment";
 import { PanelTopicSegments } from "./PanelTopicSegments";
 import { SpeakersSegments } from "./SpeakersSegments";
+import { WorkshopSegment } from "./WorkshopSegment";
 
 export enum ListingMode {
   ByEdition,
   BySpeaker,
   ByPanelTopic,
+  Workshop,
 }
 
 interface IProps {
@@ -28,7 +30,9 @@ export const Body: FC<IProps> = ({ mode }) => {
       ? site.title
       : mode === ListingMode.BySpeaker
       ? `${site.title}: ${ja ? "講演者の紹介" : "By speaker"}`
-      : `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`;
+      : mode === ListingMode.ByPanelTopic
+      ? `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`
+      : `${site.title}: ${ja ? "ワークショップ" : "Workshop"}`;
   return (
     <>
       <Head>
@@ -93,11 +97,25 @@ export const Body: FC<IProps> = ({ mode }) => {
           >
             {ja ? "パネルトピック" : "By panel topics"}
           </Menu.Item>
+          {ja && (
+            <Menu.Item
+              active={mode === ListingMode.Workshop}
+              as={mode !== ListingMode.Workshop ? "a" : undefined}
+              href={
+                mode !== ListingMode.Workshop
+                  ? "/aist-seminar/workshop"
+                  : undefined
+              }
+            >
+              {ja ? "ワークショップ" : "Workshop"}
+            </Menu.Item>
+          )}
         </Menu>
         {mode === ListingMode.ByEdition && <EditionSegments />}
         {mode === ListingMode.BySpeaker && <SpeakersSegments />}
         {mode === ListingMode.ByPanelTopic && <PanelTopicSegments />}
-        <SIGCHISegment />
+        {mode === ListingMode.Workshop && <WorkshopSegment />}
+        {mode !== ListingMode.Workshop && <SIGCHISegment />}
       </Container>
       <PageFooter />
     </>

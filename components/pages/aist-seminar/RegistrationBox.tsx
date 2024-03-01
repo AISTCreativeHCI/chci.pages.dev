@@ -1,14 +1,15 @@
 import { FC } from "react";
 import { Button, List } from "semantic-ui-react";
 
-import { useSiteInfo } from "../../../lib/useSiteInfo";
-import { Alertbox } from "../Alertbox";
+import { useSiteInfo } from "../../lib/useSiteInfo";
+import { Alertbox } from "./Alertbox";
 
 interface IProps {
+  href: string;
   disabled?: boolean;
 }
 
-export const RegistrationBox: FC<IProps> = ({ disabled }) => {
+export const RegistrationBox: FC<IProps> = ({ href, disabled }) => {
   const { ja } = useSiteInfo();
   return (
     <Alertbox
@@ -45,7 +46,7 @@ export const RegistrationBox: FC<IProps> = ({ disabled }) => {
         size="massive"
         content={ja ? "参加登録" : "Registration"}
         as="a"
-        href="https://us06web.zoom.us/webinar/register/WN_3wFTdqKtQBSQW-MfTCGN0w"
+        href={href}
         disabled={disabled}
       />
     </Alertbox>
