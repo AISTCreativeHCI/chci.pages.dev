@@ -1,12 +1,12 @@
 import { FC, ReactNode } from "react";
-import { Button, Divider, Grid, Header, Image, List } from "semantic-ui-react";
+import { Button, Divider, Grid, Image } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
 import { ButtonWrapper } from "./ButtonWrapper";
+import { HeroSegment } from "./HeroSegment";
 import { HeroSegmentWrapper } from "./HeroSegmentWrapper";
 import { IFramePlayer } from "./IFramePlayer";
 
-import styles from "./HeroSegment.module.css";
 import speakers from "./invited-speakers.json";
 import seminars from "./seminars.json";
 
@@ -39,43 +39,19 @@ export const GenericHeroSegment: FC<IProps> = ({
     : `Date and time: ${si.dateTime.en}`;
   const venue = ja ? `会場: ${si.venue.ja}` : `Venue: ${si.venue.en}`;
   return (
-    <>
-      <div
-        className={`${styles.details}${
-          fullWidth ? ` ${styles.fullwidth}` : ""
-        }`}
-      >
-        <div className={styles.title}>
-          <Header
-            as="h2"
-            content={fullWidth ? `${edition} ${title}` : editionTitle}
-            subheader={fullWidth ? subtitle : `${title}: ${subtitle}`}
-          />
-          <List>
-            <List.Item content={dateTime} />
-            <List.Item content={venue} />
-          </List>
-        </div>
-        <div className={styles.images}>
-          {ss.map((s) => (
-            <Image
-              key={s.photoPath}
-              avatar
-              src={s.photoPath}
-              alt={`[Photo: ${
-                typeof s.name === "string" ? s.name : ja ? s.name.ja : s.name.en
-              }]`}
-            />
-          ))}
-        </div>
-      </div>
-      {fullWidth ? (
+    <HeroSegment
+      fullWidth={fullWidth}
+      header={fullWidth ? `${edition} ${title}` : editionTitle}
+      subheader={fullWidth ? subtitle : `${title}: ${subtitle}`}
+      dateTime={dateTime}
+      venue={venue}
+      speakers={ss}
+    >
+      {fullWidth && (
         <>
           <p>{ja ? si.description.ja : si.description.en}</p>
           <Divider />
         </>
-      ) : (
-        <Divider hidden />
       )}
       <HeroSegmentWrapper>
         <IFramePlayer
@@ -114,6 +90,6 @@ export const GenericHeroSegment: FC<IProps> = ({
           </Grid>
         </>
       )}
-    </>
+    </HeroSegment>
   );
 };

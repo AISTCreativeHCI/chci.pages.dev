@@ -8,15 +8,17 @@ import speakers from "./invited-speakers.json";
 
 interface IProps {
   fullWidth?: boolean;
-  edition: number;
-  editionJa: string;
+  header?: string;
+  subheader?: string;
+  edition?: number;
+  editionJa?: string;
   dateTime: string;
   venue: string;
   topic?: string;
   title?: string;
-  speakers:
+  speakers?:
     | {
-        name: string;
+        name: string | { ja: string; en: string };
         photoPath: string;
       }[]
     | number;
@@ -25,6 +27,8 @@ interface IProps {
 
 export const HeroSegment: FC<IProps> = ({
   fullWidth,
+  header,
+  subheader,
   edition,
   editionJa,
   dateTime,
@@ -50,7 +54,8 @@ export const HeroSegment: FC<IProps> = ({
           <Header
             as="h2"
             content={
-              fullWidth
+              header ||
+              (fullWidth
                 ? `${ja ? `第${editionJa}回` : `#${edition}`} ${
                     title ||
                     (ss
@@ -63,16 +68,21 @@ export const HeroSegment: FC<IProps> = ({
                           .join(", ")
                       : "?")
                   }`
-                : `AIST Creative HCI Seminar #${edition}`
+                : `AIST Creative HCI Seminar #${edition}`)
             }
             subheader={
-              ss &&
-              title &&
-              ss
-                .map((s) =>
-                  typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
-                )
-                .join(", ")
+              subheader ||
+              (ss &&
+                title &&
+                ss
+                  .map((s) =>
+                    typeof s.name === "string"
+                      ? s.name
+                      : ja
+                      ? s.name.ja
+                      : s.name.en
+                  )
+                  .join(", "))
             }
           />
           <List>
@@ -81,18 +91,20 @@ export const HeroSegment: FC<IProps> = ({
             <List.Item content={venue} />
           </List>
         </div>
-        <div className={styles.images}>
-          {ss.map((s) => (
-            <Image
-              key={s.photoPath}
-              avatar
-              src={s.photoPath}
-              alt={`[Photo: ${
-                typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
-              }]`}
-            />
-          ))}
-        </div>
+        {ss && (
+          <div className={styles.images}>
+            {ss.map((s) => (
+              <Image
+                key={s.photoPath}
+                avatar
+                src={s.photoPath}
+                alt={`[Photo: ${
+                  typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+                }]`}
+              />
+            ))}
+          </div>
+        )}
       </div>
       {!fullWidth && children && <Divider hidden />}
       {children}
