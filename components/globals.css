@@ -1,3 +1,6 @@
+a {
+  text-decoration: underline;
+}
 .show-on-small-screens {
   display: none;
 }
