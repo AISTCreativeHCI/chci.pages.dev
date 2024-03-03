@@ -74,9 +74,12 @@ export const WorkshopSegment: FC = () => {
           </Table.Row>
           <Table.Row>
             <Table.Cell>14:15</Table.Cell>
-            <Table.Cell>メタバースプラットフォームでのVR実験（仮）</Table.Cell>
+            <Table.Cell>
+              メタバースプラットフォーム clusterを活用したVR・ML研究
+            </Table.Cell>
             <Table.Cell textAlign="right">
-              平木 剛史（クラスター株式会社 Senior Research Scientist）
+              平木 剛史（クラスター株式会社 メタバース研究所
+              シニアリサーチサイエンティスト）
             </Table.Cell>
           </Table.Row>
           <Table.Row>
