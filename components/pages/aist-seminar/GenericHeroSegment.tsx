@@ -83,8 +83,8 @@ export const GenericHeroSegment: FC<IProps> = ({
           <Divider />
           <Grid stackable columns={4}>
             {si.photos.map((photo) => (
-              <Grid.Column>
-                <Image key={photo} src={photo} fluid bordered />
+              <Grid.Column key={photo}>
+                <Image src={photo} fluid bordered />
               </Grid.Column>
             ))}
           </Grid>
