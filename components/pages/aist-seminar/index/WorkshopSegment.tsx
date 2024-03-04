@@ -57,7 +57,7 @@ export const WorkshopSegment: FC = () => {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>13:10</Table.Cell>
+            <Table.Cell>13:05</Table.Cell>
             <Table.Cell>
               絵コンテのデジタル化から始めるアニメ制作支援
             </Table.Cell>
@@ -66,7 +66,7 @@ export const WorkshopSegment: FC = () => {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>13:25</Table.Cell>
+            <Table.Cell>13:15</Table.Cell>
             <Table.Cell>アニメスタジオ OLMでの研究開発</Table.Cell>
             <Table.Cell textAlign="right">
               四倉 達夫, 前島 謙宣（株式会社オー・エル・エム・デジタル 取締役,
@@ -74,14 +74,14 @@ export const WorkshopSegment: FC = () => {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>13:55</Table.Cell>
+            <Table.Cell>13:45</Table.Cell>
             <Table.Cell>LLM時代のマンガ機械翻訳</Table.Cell>
             <Table.Cell textAlign="right">
               石渡 祥之佑（Mantra株式会社 CEO）
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>14:15</Table.Cell>
+            <Table.Cell>14:05</Table.Cell>
             <Table.Cell>
               メタバースプラットフォーム clusterを活用したVR・ML研究
             </Table.Cell>
@@ -91,7 +91,7 @@ export const WorkshopSegment: FC = () => {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
-            <Table.Cell>14:15</Table.Cell>
+            <Table.Cell>14:25</Table.Cell>
             <Table.Cell>
               <abbr title="to be announced">TBA</abbr>
             </Table.Cell>
