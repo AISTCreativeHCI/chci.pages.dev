@@ -46,10 +46,10 @@ export const Body: FC<IProps> = ({ title: t, description: d, mode }) => {
           key="description"
         />
         <meta property="og:title" content={title} />
-        <meta property="og:description" content={site.description} />
+        <meta property="og:description" content={d || site.description} />
         <meta property="og:image" content={site.image} />
         <meta property="twitter:title" content={title} />
-        <meta property="twitter:description" content={site.description} />
+        <meta property="twitter:description" content={d || site.description} />
         <meta property="twitter:image" content={site.image} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta charSet="utf-8" />
