@@ -21,10 +21,11 @@ export enum ListingMode {
 
 interface IProps {
   title?: string;
+  description?: string;
   mode: ListingMode;
 }
 
-export const Body: FC<IProps> = ({ title: t, mode }) => {
+export const Body: FC<IProps> = ({ title: t, description: d, mode }) => {
   const { site, ja } = useSiteInfo();
   const title =
     t ||
@@ -39,7 +40,11 @@ export const Body: FC<IProps> = ({ title: t, mode }) => {
     <>
       <Head>
         <title key="title">{title}</title>
-        <meta name="description" content={site.description} key="description" />
+        <meta
+          name="description"
+          content={d || site.description}
+          key="description"
+        />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={site.description} />
         <meta property="og:image" content={site.image} />
