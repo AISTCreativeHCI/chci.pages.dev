@@ -18,7 +18,7 @@ export const WorkshopSegment: FC = () => {
       />
       <p>
         Human-Computer InteractionやComputer
-        Graphics、自然言語処理などの分野で学術的にも活躍しながら、コンテンツ産業（アニメ、漫画、メタバース）の研究開発の現場で、クリエータと共に創造性支援の課題に取り組んでいる方々をお呼びして講演いただき、パネルディスカッションします。言語は日本語です。
+        Graphics、ソフトウェア工学、自然言語処理などの分野で学術的にも活躍しながら、コンテンツ産業（アニメ、漫画、メタバース、ゲーム）の研究開発の現場で、クリエータと共に創造性支援の課題に取り組んでいる方々をお呼びして講演いただき、パネルディスカッションします。言語は日本語です。
       </p>
       <a id="timetable" className="anchor"></a>
       <Header as="h2" dividing content={ja ? "プログラム" : "Timetable"} />
@@ -83,14 +83,23 @@ export const WorkshopSegment: FC = () => {
             </Table.Cell>
           </Table.Row>
           <Table.Row>
+            <Table.Cell>14:15</Table.Cell>
+            <Table.Cell>
+              <abbr title="to be announced">TBA</abbr>
+            </Table.Cell>
+            <Table.Cell textAlign="right">
+              長谷川 勇（株式会社スクウェア・エニックス General Manager）
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row>
             <Table.Cell>14:35</Table.Cell>
             <Table.Cell>
               {ja ? "パネルディスカッション" : "Panel discussion"}
             </Table.Cell>
             <Table.Cell textAlign="right">
               {ja
-                ? "加藤, 四倉, 前島, 石渡, 平木"
-                : "Jun, Tatsuo, Akinobu, Shonosuke, Takefumi"}
+                ? "加藤, 四倉, 前島, 石渡, 平木, 長谷川"
+                : "Jun, Tatsuo, Akinobu, Shonosuke, Takefumi, Isamu"}
             </Table.Cell>
           </Table.Row>
           <Table.Row disabled>
