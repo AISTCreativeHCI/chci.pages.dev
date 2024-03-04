@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { FC } from "react";
 import { Header, Segment, Table } from "semantic-ui-react";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
@@ -10,6 +11,13 @@ export const WorkshopSegment: FC = () => {
   const { ja } = useSiteInfo();
   return (
     <Segment color="red">
+      <Head>
+        <meta
+          name="description"
+          content="コンテンツ産業（アニメ、漫画、メタバース、ゲーム）の研究開発担当者をお呼びして講演いただき、パネルディスカッションするイベント「AIST Creative HCI Workshop」の紹介ページです。"
+          key="description"
+        />
+      </Head>
       <HeroSegment
         fullWidth
         dateTime="2024年3月5日（火）13:00 ～ 15:00 / 開場 12:45"
