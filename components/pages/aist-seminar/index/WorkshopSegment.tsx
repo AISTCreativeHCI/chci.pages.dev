@@ -111,7 +111,10 @@ export const WorkshopSegment: FC = () => {
           </Table.Row>
         </Table.Body>
       </Table>
-      <RegistrationBox href="https://us06web.zoom.us/webinar/register/WN_9fSX5PZhQHu7nZ1xy-5EeA" />
+      <RegistrationBox
+        href="https://us06web.zoom.us/webinar/register/WN_9fSX5PZhQHu7nZ1xy-5EeA"
+        disabled
+      />
       <a id="venue" className="anchor"></a>
       <Header as="h2" dividing content={ja ? "現地会場" : "Onsite venue"} />
       <p>
