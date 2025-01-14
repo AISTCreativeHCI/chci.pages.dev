@@ -3,6 +3,7 @@ import { FC } from "react";
 import {
   Container,
   Divider,
+  Grid,
   Header,
   Image,
   List,
@@ -73,36 +74,74 @@ export const Body: FC = () => (
           <Segment color={workshopColor}>
             <a id="about" className="anchor"></a>
             <Header as="h2" content="About" dividing />
-            <p>
-              This event brings together researchers and artists from Japan and
-              France, two countries where the culturally rich yet distinct
-              practices of anime, animation, manga, and bande dessinée are
-              deeply rooted and actively pursued. Through presentations,
-              lightning talks, and panel discussions, the workshop aims to
-              deepen mutual understanding of hand-drawn artistic practices and
-              explore the potential of building creativity support tools from a
-              Human-Computer Interaction perspective.
-            </p>
-            <p>
-              This event seeks to deepen understanding of the production
-              workflows of hand-drawn visual arts such as anime and manga, which
-              have evolved to meet the demands of commercial art. It also
-              broadens its scope to address activities such as translation,
-              which are essential for distributing content across cultural
-              boundaries. By gathering experts in industry and academia on these
-              diverse topics, the event aims to serve as a starting point for
-              comprehensive research into artistic practices&mdash;an area that
-              has traditionally been challenging to explore within the narrower
-              confines of computer science.
-            </p>
-            <Divider />
-            <p>
-              本イベントは、アニメとアニメーション、漫画とバンド＝デシネという、共通点の多い、しかし異なる文化活動が共に盛んな日本とフランスの研究者・アーティストによって開催されます。招待講演、ライトニングトーク、パネルセッションを通して、手描きの芸術実践について相互理解を深め、情報技術による創造性支援の可能性、とくにHuman-Computer
-              Interaction研究の観点で創造性支援ツールが果たせる可能性を探求します。
-            </p>
-            <p>
-              本イベントでは、アニメや漫画などの表現形態が商業芸術としての要請に応えるかたちで育んできた制作ワークフローについての理解を深めるとともに、文化圏を超えてコンテンツを流通させるための、翻訳をはじめとする活動にまで射程を広げて扱います。これにより、これまで狭義のコンピュータ科学では難しかった芸術活動の総体的な研究のきっかけとすることを目指します。
-            </p>
+            <Grid stackable>
+              <Grid.Row columns={3}>
+                <Grid.Column>
+                  <p>
+                    This event brings together researchers and artists from
+                    Japan and France, two countries where the culturally rich
+                    yet distinct practices of anime, animation, manga, and bande
+                    dessinée are deeply rooted and actively pursued. Through
+                    presentations, lightning talks, and panel discussions, the
+                    workshop aims to deepen mutual understanding of hand-drawn
+                    artistic practices and explore the potential of building
+                    creativity support tools from a Human-Computer Interaction
+                    perspective.
+                  </p>
+                  <p>
+                    This event seeks to deepen understanding of the production
+                    workflows of hand-drawn visual arts such as anime and manga,
+                    which have evolved to meet the demands of commercial art. It
+                    also broadens its scope to address activities such as
+                    translation, which are essential for distributing content
+                    across cultural boundaries. By gathering experts in industry
+                    and academia on these diverse topics, the event aims to
+                    serve as a starting point for comprehensive research into
+                    artistic practices&mdash;an area that has traditionally been
+                    challenging to explore within the narrower confines of
+                    computer science.
+                  </p>
+                </Grid.Column>
+                <Grid.Column>
+                  <p>
+                    本イベントは、アニメとアニメーション、漫画とバンド＝デシネという、共通点の多い、しかし異なる文化活動が共に盛んな日本とフランスの研究者・アーティストによって開催されます。招待講演、ライトニングトーク、パネルセッションを通して、手描きの芸術実践について相互理解を深め、情報技術による創造性支援の可能性、とくにHuman-Computer
+                    Interaction研究の観点で創造性支援ツールが果たせる可能性を探求します。
+                  </p>
+                  <p>
+                    本イベントでは、アニメや漫画などの表現形態が商業芸術としての要請に応えるかたちで育んできた制作ワークフローについての理解を深めるとともに、文化圏を超えてコンテンツを流通させるための、翻訳をはじめとする活動にまで射程を広げて扱います。これにより、これまで狭義のコンピュータ科学では難しかった芸術活動の総体的な研究のきっかけとすることを目指します。
+                  </p>
+                </Grid.Column>
+                <Grid.Column>
+                  <p>
+                    Cet événement vise à rassembler chercheur·euse·s et artistes
+                    du Japon et de France, deux pays où les pratiques de
+                    l'animation/anime et bande dessinée/manga sont riches,
+                    actives et profondément ancrées dans la culture populaire et
+                    artistique. A travers des présentations et table rondes, ce
+                    workshop a pour but d'approfondir la compréhension mutuelle
+                    entre ces pratiques artistiques centrées sur le dessin à la
+                    main, et d'explorer la possibilité de construire des outils
+                    supportant ces activités créatives d'un point de vue
+                    Interaction Humain-Machine.
+                  </p>
+                  <p>
+                    Cet événement cherche à étendre la connaissance du processus
+                    de production des arts visuels dessinés à la main tels que
+                    l'anime et le manga, dont l'évolution répond aux contraintes
+                    commerciales de leur diffusion. Le sujet du workshop pourra
+                    aussi être étendu à des activités connexes telles que la
+                    traduction, qui est essentielle pour la distribution de
+                    contenu au-delà des frontières linguistique et culturelle.
+                    En réunissant des experts issus de milieux industriels et
+                    académiques de diverses disciplines, cet événement devrait
+                    servir de point de départ pour une recherche exhaustive,
+                    centrée sur ces pratiques artistiques &mdash; domaine
+                    traditionnellement ardu à explorer dans le cadre de
+                    l'informatique.
+                  </p>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Segment>
           <Segment color={workshopColor}>
             <a id="schedule" className="anchor"></a>
