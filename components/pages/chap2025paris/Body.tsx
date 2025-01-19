@@ -1,10 +1,11 @@
 import Head from "next/head";
 import { FC } from "react";
 import {
+  Button,
   Container,
-  Divider,
   Grid,
   Header,
+  Icon,
   Image,
   List,
   Menu,
@@ -12,9 +13,10 @@ import {
   SemanticCOLORS,
 } from "semantic-ui-react";
 
-import { createShareButtons } from "../../lib/createShareButtons";
+import { VenueSegment } from "./VenueSegment";
 
 import styles from "./Body.module.css";
+import { Alertbox } from "../aist-seminar/Alertbox";
 
 const workshopTitle =
   "A Workshop on Creativity support for Hand-drawn Art Practices (CHAP)";
@@ -22,6 +24,106 @@ const workshopDescription =
   "A Workshop on Creativity Support for Hand-drawn Art Practices (CHAP) will be held in Paris in February 2025, organised by researchers from Japan and France who share an interest in creativity support for animation and comics. The workshop is dedicated to understanding and supporting creative practices in such hand-drawn arts.";
 // const workshopImage = "/hand-drawn-art/workshop.jpg";
 const workshopColor: SemanticCOLORS = "orange";
+
+const workshopRegistrationUrl =
+  "https://sondages.inria.fr/index.php/449649?newtest=Y&lang=en";
+
+const organizers = [
+  {
+    name: "Jun Kato",
+    affiliation:
+      "Senior Researcher, AIST and Visiting Scientist, Universite Paris-Saclay",
+    url: "https://junkato.jp",
+    image: "https://junkato.jp/images/junkato.jpg",
+  },
+  {
+    name: "Takayuki Nakatsuka",
+    affiliation: "Researcher, AIST",
+    url: "https://sites.google.com/site/ntakayuki9359/",
+    image: "/chap2025paris/takayuki-nakatsuka.png",
+  },
+  {
+    name: "Capucine Ngheim",
+    affiliation: "Doctorate Student, Université Paris-Saclay",
+  },
+  {
+    name: "Theophanis Tsandilas",
+    affiliation: "Research Scientist, Inria & Université Paris-Saclay",
+    url: "https://www.lri.fr/~fanis/",
+    image: "/chap2025paris/theophanis-tsandilas.jpg",
+  },
+  {
+    name: "Samuel Huron",
+    affiliation: "Associate Professor, Institute Polytechnique de Paris",
+    url: "https://samuel-huron.github.io/",
+    image: "/chap2025paris/samuel-huron.png",
+  },
+  {
+    name: "Martin Tricaud",
+    affiliation: "Lecturer, Gobelins Paris",
+    image: "/chap2025paris/martin-tricaud.jpg",
+  },
+  {
+    name: "Baptiste Caramiaux",
+    affiliation: "Researcher, CNRS & Sorbonne Université",
+    url: "https://baptistecaramiaux.com/",
+    image: "/chap2025paris/baptiste-caramiaux.jpg",
+  },
+];
+
+const scheduleContent = [
+  { time: "1:00 PM", activity: "Doors Open", icon: "coffee" },
+  {
+    time: "1:30 PM",
+    activity: "Welcome and Introduction",
+    icon: "comment alternate",
+  },
+  {
+    time: "1:45 PM",
+    activity: "How manga is made and how it might differ from bande dessinée",
+    presenter: "Akira Shinohara (comic artist)",
+    icon: "chat",
+  },
+  {
+    time: "2:00 PM",
+    activity: "How anime is made with help of computers",
+    presenter: "Marc Salvati (OLM Digital Inc.) and Jun Kato (AIST)",
+    icon: "chat",
+  },
+  {
+    time: "2:20 PM",
+    activity:
+      "Building digital tools to gain unique styles from analog practices",
+    presenter: "Baku Hashimoto (visual artist)",
+    icon: "chat",
+  },
+  {
+    time: "2:35 PM",
+    activity: "Lightning talks",
+    presenter: "Various researchers and artists",
+    icon: "chat",
+  },
+  { time: "3:15 PM", activity: "Coffee Break", icon: "coffee" },
+  {
+    time: "3:30 PM",
+    activity: "Creating, translating, and delivering cultural content",
+    presenter: "TBA",
+    icon: "chat",
+  },
+  {
+    time: "3:50 PM",
+    activity: "CG research for creativity",
+    presenter: "TBA",
+    icon: "chat",
+  },
+  {
+    time: "4:10 PM",
+    activity:
+      "Panel discussion: CG and HCI, research and practice, France and Japan, … collaboration opportunities",
+    icon: "comments",
+  },
+  { time: "4:55 PM", activity: "Closing Remarks", icon: "comment alternate" },
+];
 
 export const Body: FC = () => (
   <>
@@ -46,15 +148,10 @@ export const Body: FC = () => (
       >
         CHAP
       </Menu.Item>
-      <Menu.Item as="a" href="#about">
-        About
-      </Menu.Item>
-      <Menu.Item as="a" href="#schedule">
-        Schedule
-      </Menu.Item>
-      <Menu.Item as="a" href="#organizers">
-        Organizers
-      </Menu.Item>
+      <Menu.Item as="a" href="#about" icon="paint brush" />
+      <Menu.Item as="a" href="#schedule" icon="calendar" />
+      <Menu.Item as="a" href="#venue" icon="map marker alternate" />
+      <Menu.Item as="a" href="#organizers" icon="users" />
     </Menu>
     <div className={styles.body} id="top">
       <div className={styles.hero}>
@@ -64,16 +161,17 @@ export const Body: FC = () => (
             content={workshopTitle}
             subheader="Connecting France and Japan, animation and comics, and research and practice."
           />
-          <div className={styles.share}>
-            {createShareButtons(workshopTitle, workshopColor)}
-          </div>
         </Container>
       </div>
       <div className={styles.content}>
         <Container>
-          <Segment color={workshopColor}>
+          <Segment color={workshopColor} basic>
             <a id="about" className="anchor"></a>
-            <Header as="h2" content="About" dividing />
+            <Header
+              as="h2"
+              icon={<Icon name="paint brush" color={workshopColor} />}
+              content="About"
+            />
             <Grid stackable>
               <Grid.Row columns={3}>
                 <Grid.Column>
@@ -143,34 +241,99 @@ export const Body: FC = () => (
               </Grid.Row>
             </Grid>
           </Segment>
-          <Segment color={workshopColor}>
-            <a id="schedule" className="anchor"></a>
-            <Header as="h2" content="Schedule" dividing />
-            <List>
-              <List.Item icon="clock" content="1:00 PM - Doors Open" />
-              <List.Item
-                icon="clock"
-                content="1:30 PM - Welcome and Introduction"
+          <Segment color={workshopColor} basic>
+            <a id="registration" className="anchor"></a>
+            <Header
+              as="h2"
+              content="Registration"
+              icon={<Icon name="user plus" color={workshopColor} />}
+            />
+            <Alertbox
+              text={
+                <List bulleted>
+                  <List.Item>
+                    The event will be held in hybrid format, and registration is
+                    required to attend the event.
+                  </List.Item>
+                  <List.Item>
+                    An online registration link will be available soon.
+                  </List.Item>
+                  <List.Item>
+                    Please note that the number of attendees for the onsite
+                    event is limited and seats will be allocated on a
+                    first-come, first-served basis.
+                  </List.Item>
+                </List>
+              }
+            >
+              <Button
+                icon="map marker alternate"
+                color={workshopColor}
+                size="massive"
+                content="Onsite registration"
+                as="a"
+                href={workshopRegistrationUrl}
               />
+            </Alertbox>
+          </Segment>
+          <Segment color={workshopColor} basic>
+            <a id="schedule" className="anchor"></a>
+            <Header
+              as="h2"
+              content="Tentative schedule"
+              icon={<Icon name="calendar" color={workshopColor} />}
+            />
+            <List relaxed celled className={styles.scheduleList}>
+              {scheduleContent.map(
+                ({ time, activity, presenter, icon }, index) => (
+                  <List.Item
+                    key={index}
+                    icon={icon}
+                    header={time}
+                    description={
+                      <List
+                        horizontal
+                        divided
+                        className={styles.scheduleListItem}
+                      >
+                        <List.Item content={activity} />
+                        {presenter && <List.Item content={presenter} />}
+                      </List>
+                    }
+                  />
+                )
+              )}
             </List>
           </Segment>
-          <Segment color={workshopColor}>
+          <VenueSegment
+            color={workshopColor}
+            icon={<Icon name="map marker alternate" color={workshopColor} />}
+            dividing={false}
+          />
+          <Segment color={workshopColor} basic>
             <a id="organizers" className="anchor"></a>
-            <Header as="h2" content="Organizers" dividing />
-            <List relaxed selection>
-              <List.Item
-                as="a"
-                href="https://junkato.jp"
-                image={
-                  <Image
-                    avatar
-                    src="https://junkato.jp/images/junkato.jpg"
-                    alt="[Jun Kato: photo]"
-                  />
-                }
-                header="Jun Kato"
-                description="Senior Researcher, AIST and Visiting Scientist, Universite Paris-Saclay"
-              />
+            <Header
+              as="h2"
+              content="Organizers"
+              icon={<Icon name="users" color={workshopColor} />}
+            />
+            <List relaxed selection size="small">
+              {organizers.map(({ name, affiliation, image, url }) => (
+                <List.Item
+                  key={name}
+                  as={url ? "a" : undefined}
+                  href={url || undefined}
+                  image={
+                    <Image
+                      avatar
+                      src={image || "/chap2025paris/circle-user-solid.svg"}
+                      alt={`[${name}: photo]`}
+                    />
+                  }
+                  header={name}
+                  description={affiliation}
+                />
+              ))}
             </List>
           </Segment>
         </Container>

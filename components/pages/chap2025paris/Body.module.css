@@ -12,7 +12,7 @@
   background: #fff;
 }
 .hero {
-  padding: 7.5em 0 1.5em 0;
+  padding: 7.5rem 0 3rem 0;
   background: #f3f4f5;
   color: rgba(0, 0, 0, 0.6);
 }
@@ -55,28 +55,18 @@
 }
 
 .footer {
-  padding: 2em 0 7em 0;
+  padding: 2rem 0 7rem 0;
 }
 
-.alertbox {
-  text-align: center;
-  background-size: auto auto;
-  background-color: #fff;
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent,
-    transparent 2px,
-    #dfd 2px,
-    #dfd 28px
-  );
-  color: #5b9286;
-  border: 1px solid #dfd;
-  padding: 1.25em 1em;
+.scheduleList :global(> .item) {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.2em !important;
 }
-.alertbox > .alert {
-  text-align: left;
-  margin-top: 1em;
-  padding-top: 1em;
-  margin-left: 0 !important;
-  padding-left: 1.25rem;
+
+.scheduleList .scheduleListItem :global(> .item) {
+  border-right-width: 1px !important;
+}
+
+.scheduleList .scheduleListItem :global(> .item:not(:first-child)) {
+  color: #f2711c;
 }

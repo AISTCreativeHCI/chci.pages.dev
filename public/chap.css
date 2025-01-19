@@ -2,3 +2,7 @@ html,
 body {
   background: #f2711c;
 }
+h2.ui.header {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
