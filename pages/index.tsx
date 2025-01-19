@@ -18,17 +18,17 @@ export default function Index() {
       <div className={styles.wrapper}>
         <Segment basic>
           <Header content="Welcome!" />
-          <p>This is a home page for the following two projects.</p>
+          <p>This is a home page for the following three projects.</p>
           <Divider />
-          <Grid stackable columns={2}>
+          <Grid stackable columns={3}>
             <Grid.Column>
-              <Link href="/chi2023">
-                <Image
-                  bordered
-                  src="/chi2023/chi2023-sigccc.jpg"
-                  alt="ACM CHI 2023: Special Interest Group on Creativity and Cultures in Computing"
-                  fluid
-                />
+              <Link href="/chap2025paris">
+                <div className={styles.thumbnail}>
+                  <Header
+                    content="CHAP 2025 Paris"
+                    subheader="A Workshop on Creativity support for Hand-drawn Art Practices (CHAP)"
+                  />
+                </div>
               </Link>
             </Grid.Column>
             <Grid.Column>
@@ -37,6 +37,16 @@ export default function Index() {
                   bordered
                   src="/aist-creative-hci-seminar-hero.png"
                   alt="AIST Creative HCI Seminar"
+                  fluid
+                />
+              </Link>
+            </Grid.Column>
+            <Grid.Column>
+              <Link href="/chi2023">
+                <Image
+                  bordered
+                  src="/chi2023/chi2023-sigccc.jpg"
+                  alt="ACM CHI 2023: Special Interest Group on Creativity and Cultures in Computing"
                   fluid
                 />
               </Link>
