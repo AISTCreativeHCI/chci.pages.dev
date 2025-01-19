@@ -12,9 +12,14 @@
   background: #fff;
 }
 .hero {
-  padding: 7.5rem 0 3rem 0;
+  padding: 7.5rem 0 2rem 0;
   background: #f3f4f5;
   color: rgba(0, 0, 0, 0.6);
+}
+.hero .heroList {
+  border: 1px solid rgba(34, 36, 38, 0.1);
+  border-width: 1px 0 0 0;
+  padding-top: 0.5rem !important;
 }
 .hero .share {
   display: flex;

@@ -161,6 +161,14 @@ export const Body: FC = () => (
             content={workshopTitle}
             subheader="Connecting France and Japan, animation and comics, and research and practice."
           />
+          <List horizontal className={styles.heroList}>
+            <List.Item
+              icon="map marker alternate"
+              content="Inria Paris (or Zoom Webinar)"
+            />
+            <List.Item icon="clock" content="1:30 PM - 5:00 PM" />
+            <List.Item icon="calendar" content="Monday, February 10, 2025" />
+          </List>
         </Container>
       </div>
       <div className={styles.content}>
@@ -280,9 +288,19 @@ export const Body: FC = () => (
             <a id="schedule" className="anchor"></a>
             <Header
               as="h2"
-              content="Tentative schedule"
+              content="Tentative Schedule"
+              subheader="Public Seminar: Monday, February 10, 2025"
               icon={<Icon name="calendar" color={workshopColor} />}
             />
+            <p>
+              The workshop spans three days, beginning with a public seminar on
+              the first day (Monday), followed by two invitation-only workshops
+              focusing on animation (Tuesday) and comics (Wednesday),
+              respectively. The schedule of the public seminar is provided
+              below. If you are interested in participating in the
+              invitation-only workshops, please feel free to contact{" "}
+              <a href="mailto:jun.kato@aist.go.jp">Jun</a>.
+            </p>
             <List relaxed celled className={styles.scheduleList}>
               {scheduleContent.map(
                 ({ time, activity, presenter, icon }, index) => (
@@ -345,7 +363,7 @@ export const Body: FC = () => (
           <List horizontal divided>
             <List.Item>CHAP Workshop announcement website</List.Item>
             <List.Item>© Workshop Organizers</List.Item>
-            <List.Item>Last update: January 1, 2025</List.Item>
+            <List.Item>Last update: January 19, 2025</List.Item>
           </List>
         </Container>
       </Segment>
