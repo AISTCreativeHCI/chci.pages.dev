@@ -6,17 +6,19 @@ import {
   Grid,
   Header,
   Icon,
-  Image,
   List,
   Menu,
   Segment,
   SemanticCOLORS,
+  Image,
 } from "semantic-ui-react";
 
 import { VenueSegment } from "./VenueSegment";
-
 import styles from "./Body.module.css";
 import { Alertbox } from "../aist-seminar/Alertbox";
+
+import organizers from "./organizers.json";
+import scheduleContent from "./scheduleContent.json";
 
 const workshopTitle =
   "A Workshop on Creativity support for Hand-drawn Art Practices (CHAP)";
@@ -27,103 +29,6 @@ const workshopColor: SemanticCOLORS = "orange";
 
 const workshopRegistrationUrl =
   "https://sondages.inria.fr/index.php/449649?newtest=Y&lang=en";
-
-const organizers = [
-  {
-    name: "Jun Kato",
-    affiliation:
-      "Senior Researcher, AIST and Visiting Scientist, Universite Paris-Saclay",
-    url: "https://junkato.jp",
-    image: "https://junkato.jp/images/junkato.jpg",
-  },
-  {
-    name: "Takayuki Nakatsuka",
-    affiliation: "Researcher, AIST",
-    url: "https://sites.google.com/site/ntakayuki9359/",
-    image: "/chap2025paris/takayuki-nakatsuka.png",
-  },
-  {
-    name: "Capucine Ngheim",
-    affiliation: "Doctorate Student, Université Paris-Saclay",
-  },
-  {
-    name: "Theophanis Tsandilas",
-    affiliation: "Research Scientist, Inria & Université Paris-Saclay",
-    url: "https://www.lri.fr/~fanis/",
-    image: "/chap2025paris/theophanis-tsandilas.jpg",
-  },
-  {
-    name: "Samuel Huron",
-    affiliation: "Associate Professor, Institute Polytechnique de Paris",
-    url: "https://samuel-huron.github.io/",
-    image: "/chap2025paris/samuel-huron.png",
-  },
-  {
-    name: "Martin Tricaud",
-    affiliation: "Lecturer, Gobelins Paris",
-    image: "/chap2025paris/martin-tricaud.jpg",
-  },
-  {
-    name: "Baptiste Caramiaux",
-    affiliation: "Researcher, CNRS & Sorbonne Université",
-    url: "https://baptistecaramiaux.com/",
-    image: "/chap2025paris/baptiste-caramiaux.jpg",
-  },
-];
-
-const scheduleContent = [
-  { time: "1:00 PM", activity: "Doors Open", icon: "coffee" },
-  {
-    time: "1:30 PM",
-    activity: "Welcome and Introduction",
-    icon: "comment alternate",
-  },
-  {
-    time: "1:45 PM",
-    activity: "How manga is made and how it might differ from bande dessinée",
-    presenter: "Akira Shinohara (comic artist)",
-    icon: "chat",
-  },
-  {
-    time: "2:00 PM",
-    activity: "How anime is made with help of computers",
-    presenter: "Marc Salvati (OLM Digital Inc.) and Jun Kato (AIST)",
-    icon: "chat",
-  },
-  {
-    time: "2:20 PM",
-    activity:
-      "Building digital tools to gain unique styles from analog practices",
-    presenter: "Baku Hashimoto (visual artist)",
-    icon: "chat",
-  },
-  {
-    time: "2:35 PM",
-    activity: "Lightning talks",
-    presenter: "Various researchers and artists",
-    icon: "chat",
-  },
-  { time: "3:15 PM", activity: "Coffee Break", icon: "coffee" },
-  {
-    time: "3:30 PM",
-    activity: "Creating, translating, and delivering cultural content",
-    presenter: "TBA",
-    icon: "chat",
-  },
-  {
-    time: "3:50 PM",
-    activity: "CG research for creativity",
-    presenter: "TBA",
-    icon: "chat",
-  },
-  {
-    time: "4:10 PM",
-    activity:
-      "Panel discussion: CG and HCI, research and practice, France and Japan, … collaboration opportunities",
-    icon: "comments",
-  },
-  { time: "4:55 PM", activity: "Closing Remarks", icon: "comment alternate" },
-];
 
 export const Body: FC = () => (
   <>

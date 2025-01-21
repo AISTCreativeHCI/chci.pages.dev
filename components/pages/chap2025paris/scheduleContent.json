@@ -1,0 +1,55 @@
+[
+  { "time": "1:00 PM", "activity": "Doors Open", "icon": "coffee" },
+  {
+    "time": "1:30 PM",
+    "activity": "Welcome and Introduction",
+    "icon": "comment alternate"
+  },
+  {
+    "time": "1:45 PM",
+    "activity": "How manga is made and how it differs from bande dessinée",
+    "presenter": "Akira Shinohara (comic artist)",
+    "icon": "chat"
+  },
+  {
+    "time": "2:00 PM",
+    "activity": "How anime is made with the help of computers",
+    "presenter": "Marc Salvati (OLM Digital Inc.) and Jun Kato (AIST)",
+    "icon": "chat"
+  },
+  {
+    "time": "2:20 PM",
+    "activity": "Building digital tools to gain unique styles from analog practices",
+    "presenter": "Baku Hashimoto (visual artist)",
+    "icon": "chat"
+  },
+  {
+    "time": "2:35 PM",
+    "activity": "Lightning talks",
+    "presenter": "Various researchers and artists",
+    "icon": "chat"
+  },
+  { "time": "3:15 PM", "activity": "Coffee Break", "icon": "coffee" },
+  {
+    "time": "3:30 PM",
+    "activity": "Creating, translating, and delivering cultural content",
+    "presenter": "TBA",
+    "icon": "chat"
+  },
+  {
+    "time": "3:50 PM",
+    "activity": "CG research for creativity",
+    "presenter": "TBA",
+    "icon": "chat"
+  },
+  {
+    "time": "4:10 PM",
+    "activity": "Panel discussion: CG and HCI, research and practice, France and Japan, collaboration opportunities",
+    "icon": "comments"
+  },
+  {
+    "time": "4:55 PM",
+    "activity": "Closing Remarks",
+    "icon": "comment alternate"
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Jun Kato",
+    "affiliation": "Senior Researcher, AIST and Visiting Scientist, Universite Paris-Saclay",
+    "url": "https://junkato.jp",
+    "image": "https://junkato.jp/images/junkato.jpg"
+  },
+  {
+    "name": "Takayuki Nakatsuka",
+    "affiliation": "Researcher, AIST",
+    "url": "https://sites.google.com/site/ntakayuki9359/",
+    "image": "/chap2025paris/takayuki-nakatsuka.png"
+  },
+  {
+    "name": "Capucine Ngheim",
+    "affiliation": "Doctorate Student, Université Paris-Saclay"
+  },
+  {
+    "name": "Theophanis Tsandilas",
+    "affiliation": "Research Scientist, Inria & Université Paris-Saclay",
+    "url": "https://www.lri.fr/~fanis/",
+    "image": "/chap2025paris/theophanis-tsandilas.jpg"
+  },
+  {
+    "name": "Samuel Huron",
+    "affiliation": "Associate Professor, Institute Polytechnique de Paris",
+    "url": "https://samuel-huron.github.io/",
+    "image": "/chap2025paris/samuel-huron.png"
+  },
+  {
+    "name": "Martin Tricaud",
+    "affiliation": "Lecturer, Gobelins Paris",
+    "image": "/chap2025paris/martin-tricaud.jpg"
+  },
+  {
+    "name": "Baptiste Caramiaux",
+    "affiliation": "Researcher, CNRS & Sorbonne Université",
+    "url": "https://baptistecaramiaux.com/",
+    "image": "/chap2025paris/baptiste-caramiaux.jpg"
+  }
+]
