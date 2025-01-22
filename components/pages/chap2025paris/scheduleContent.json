@@ -6,25 +6,25 @@
     "icon": "comment alternate"
   },
   {
-    "time": "1:45 PM",
-    "activity": "How manga is made and how it differs from bande dessinée",
+    "time": "1:40 PM",
+    "activity": "How manga is made ― mixing digital and analog practices",
     "presenter": "Akira Shinohara (comic artist)",
     "icon": "chat"
   },
   {
     "time": "2:00 PM",
-    "activity": "How anime is made with the help of computers",
-    "presenter": "Marc Salvati (OLM Digital Inc.) and Jun Kato (AIST)",
+    "activity": "How anime is made ― overview and the role of tool builders",
+    "presenter": "Marc Salvati (OLM Digital Inc.)",
     "icon": "chat"
   },
   {
-    "time": "2:20 PM",
+    "time": "2:30 PM",
     "activity": "Building digital tools to gain unique styles from analog practices",
     "presenter": "Baku Hashimoto (visual artist)",
     "icon": "chat"
   },
   {
-    "time": "2:35 PM",
+    "time": "2:45 PM",
     "activity": "Lightning talks",
     "presenter": "Various researchers and artists",
     "icon": "chat"
@@ -33,7 +33,7 @@
   {
     "time": "3:30 PM",
     "activity": "Creating, translating, and delivering cultural content",
-    "presenter": "TBA",
+    "presenter": "Benoit Huot (Glénat)",
     "icon": "chat"
   },
   {
