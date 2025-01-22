@@ -60,7 +60,7 @@ export const Body: FC = () => (
     </Menu>
     <div className={styles.body} id="top">
       <div className={styles.hero}>
-        <Container>
+        <Container className={styles.heroContent}>
           <Header
             as="h1"
             content={workshopTitle}
@@ -75,6 +75,8 @@ export const Body: FC = () => (
             <List.Item icon="calendar" content="Monday, February 10, 2025" />
           </List>
         </Container>
+        <div className={styles.heroBackground} />
+        <div className={styles.heroImage} />
       </div>
       <div className={styles.content}>
         <Container>
