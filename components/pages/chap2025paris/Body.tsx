@@ -13,22 +13,27 @@ import {
   Image,
 } from "semantic-ui-react";
 
-import { VenueSegment } from "./VenueSegment";
 import styles from "./Body.module.css";
+
+import { VenueSegment } from "./VenueSegment";
 import { Alertbox } from "../aist-seminar/Alertbox";
 
 import organizers from "./organizers.json";
 import scheduleContent from "./scheduleContent.json";
 
 const workshopTitle =
-  "A Workshop on Creativity support for Hand-drawn Art Practices (CHAP)";
+  "A Workshop on Creativity support for Hand-drawn Art Practices (CHAP2025 Paris)";
 const workshopDescription =
-  "A Workshop on Creativity Support for Hand-drawn Art Practices (CHAP) will be held in Paris in February 2025, organised by researchers from Japan and France who share an interest in creativity support for animation and comics. The workshop is dedicated to understanding and supporting creative practices in such hand-drawn arts.";
-// const workshopImage = "/hand-drawn-art/workshop.jpg";
+  "A Workshop on Creativity Support for Hand-drawn Art Practices (CHAP2025 Paris) will be held in Paris in February 2025, organised by researchers from Japan and France who share an interest in creativity support for animation and comics. The workshop is dedicated to understanding and supporting creative practices in such hand-drawn arts.";
+const workshopImage = "/chap2025paris/chap2025paris-title.png";
 const workshopColor: SemanticCOLORS = "orange";
+
+const lastUpdate = "January 28, 2025";
 
 const workshopRegistrationUrl =
   "https://sondages.inria.fr/index.php/449649?newtest=Y&lang=en";
+const workshopOnlineRegistrationUrl =
+  "https://us06web.zoom.us/meeting/register/4CbI9ldXRuqzDerKr2RpHg";
 
 export const Body: FC = () => (
   <>
@@ -37,10 +42,10 @@ export const Body: FC = () => (
       <meta name="description" content={workshopDescription} />
       <meta property="og:title" content={workshopTitle} />
       <meta property="og:description" content={workshopDescription} />
-      {/* <meta property="og:image" content={workshopImage} /> */}
+      <meta property="og:image" content={workshopImage} />
       <meta property="twitter:title" content={workshopTitle} />
       <meta name="twitter:card" content="summary_large_image" />
-      {/* <meta property="twitter:image" content={workshopImage} /> */}
+      <meta property="twitter:image" content={workshopImage} />
       <meta charSet="utf-8" />
       <link rel="stylesheet" href="/chap.css" />
     </Head>
@@ -171,9 +176,6 @@ export const Body: FC = () => (
                     required to attend the event.
                   </List.Item>
                   <List.Item>
-                    An online registration link will be available soon.
-                  </List.Item>
-                  <List.Item>
                     Please note that the number of attendees for the onsite
                     event is limited and seats will be allocated on a
                     first-come, first-served basis.
@@ -181,14 +183,23 @@ export const Body: FC = () => (
                 </List>
               }
             >
-              <Button
-                icon="map marker alternate"
-                color={workshopColor}
-                size="massive"
-                content="Onsite registration"
-                as="a"
-                href={workshopRegistrationUrl}
-              />
+              <Button.Group size="massive">
+                <Button
+                  icon="map marker alternate"
+                  color={workshopColor}
+                  content="Onsite registration"
+                  as="a"
+                  href={workshopRegistrationUrl}
+                />
+                <Button.Or />
+                <Button
+                  icon="video camera"
+                  color="blue"
+                  content="Online registration"
+                  as="a"
+                  href={workshopOnlineRegistrationUrl}
+                />
+              </Button.Group>
             </Alertbox>
           </Segment>
           <Segment color={workshopColor} basic>
@@ -270,7 +281,7 @@ export const Body: FC = () => (
           <List horizontal divided>
             <List.Item>CHAP Workshop announcement website</List.Item>
             <List.Item>© Workshop Organizers</List.Item>
-            <List.Item>Last update: January 19, 2025</List.Item>
+            <List.Item>Last update: {lastUpdate}</List.Item>
           </List>
         </Container>
       </Segment>

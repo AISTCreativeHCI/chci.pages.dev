@@ -23,12 +23,12 @@ export default function Index() {
           <Grid stackable columns={3}>
             <Grid.Column>
               <Link href="/chap2025paris">
-                <div className={styles.thumbnail}>
-                  <Header
-                    content="CHAP 2025 Paris"
-                    subheader="A Workshop on Creativity support for Hand-drawn Art Practices (CHAP)"
-                  />
-                </div>
+                <Image
+                  bordered
+                  src="/chap2025paris/chap2025paris-title.png"
+                  alt="A Workshop on Creativity support for Hand-drawn Art Practices (CHAP2025 Paris)"
+                  fluid
+                />
               </Link>
             </Grid.Column>
             <Grid.Column>

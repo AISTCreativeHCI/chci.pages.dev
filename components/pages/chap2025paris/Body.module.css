@@ -40,6 +40,9 @@
   z-index: 3;
   position: relative;
 }
+.hero .heroContent h1:global(.ui.header) {
+  font-size: 1.8rem;
+}
 .hero .heroList {
   border: 1px solid rgba(34, 36, 38, 0.1);
   border-width: 1px 0 0 0;
