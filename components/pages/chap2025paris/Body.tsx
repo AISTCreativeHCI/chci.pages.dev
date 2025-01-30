@@ -11,6 +11,7 @@ import {
   Segment,
   SemanticCOLORS,
   Image,
+  Divider,
 } from "semantic-ui-react";
 
 import styles from "./Body.module.css";
@@ -160,6 +161,15 @@ export const Body: FC = () => (
                 </Grid.Column>
               </Grid.Row>
             </Grid>
+            <Divider />
+            <p>
+              This event is part of{" "}
+              <a href="https://pepr-iccare.fr/">the PEPR ICCARE project</a> and
+              Japan-based researchers and practitioners are invited by{" "}
+              <a href="https://www.aist.go.jp/index_en.html">AIST</a>. Please
+              refer to <a href="#supporters">the list of supporters</a> for more
+              details.
+            </p>
           </Segment>
           <Segment color={workshopColor} basic>
             <a id="registration" className="anchor"></a>
@@ -272,6 +282,64 @@ export const Body: FC = () => (
               ))}
             </List>
           </Segment>
+          <Segment color={workshopColor} className={styles.supporters}>
+            <a id="supporters" className="anchor"></a>
+            <Header as="h3" content="Supporters" />
+            <Grid columns={2} stackable>
+              <Grid.Row>
+                <Grid.Column>
+                  <List horizontal className={styles.logos}>
+                    <List.Item>
+                      <Image
+                        src="/chap2025paris/logos/iccare.png"
+                        className={styles.iccare}
+                      />
+                    </List.Item>
+                    <List.Item>
+                      <Image src="/chap2025paris/logos/france2030.svg" />
+                    </List.Item>
+                    <List.Item>
+                      <Image src="/chap2025paris/logos/cnrs.svg" />
+                    </List.Item>
+                    <List.Item>
+                      <Image src="/chap2025paris/logos/anr.png" />
+                    </List.Item>
+                  </List>
+                  <p>
+                    This event is held as part of{" "}
+                    <a href="https://pepr-iccare.fr/">
+                      the PEPR ICCARE project
+                    </a>
+                    .
+                  </p>
+                </Grid.Column>
+                <Grid.Column>
+                  <List horizontal className={styles.logos}>
+                    <List.Item>
+                      <Image
+                        src="/chap2025paris/logos/aist.gif"
+                        className={styles.aist}
+                      />
+                    </List.Item>
+                    <List.Item>
+                      <Image src="/chap2025paris/logos/acm-chapter.jpg" />
+                    </List.Item>{" "}
+                  </List>
+                  <p>
+                    Japan-based researchers and practitioners are invited by{" "}
+                    <a href="https://www.aist.go.jp/index_en.html">AIST</a>. The
+                    event is also supported by{" "}
+                    <a href="https://sigchi.org/people/chapters/">
+                      ACM SIGCHI Local Chapters
+                    </a>{" "}
+                    including{" "}
+                    <a href="https://paris.sigchi.acm.org/home/">Paris</a> and{" "}
+                    <a href="https://sigchi.jp/">Japan</a> ACM SIGCHI Chapters.
+                  </p>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
         </Container>
       </div>
     </div>
@@ -279,7 +347,7 @@ export const Body: FC = () => (
       <Segment basic color={workshopColor} inverted textAlign="center">
         <Container>
           <List horizontal divided>
-            <List.Item>CHAP Workshop announcement website</List.Item>
+            <List.Item>CHAP2025 Paris announcement website</List.Item>
             <List.Item>© Workshop Organizers</List.Item>
             <List.Item>Last update: {lastUpdate}</List.Item>
           </List>
