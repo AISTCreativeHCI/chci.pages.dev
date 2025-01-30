@@ -238,14 +238,14 @@ export const Body: FC = () => (
             <Header
               as="h3"
               dividing
-              content="Invitation-only Workshops: Tuesday and Wednesday, February 11-12, 2025"
+              content="Workshops: Tuesday and Wednesday, February 11-12, 2025"
               color={workshopColor}
             />
             <p>
               The public seminar is followed by two invitation-only workshops
               focusing on animation (Tuesday) and comics (Wednesday),
               respectively. If you are interested in participating in the
-              invitation-only workshops, please feel free to contact{" "}
+              workshops, please feel free to contact{" "}
               <a href="mailto:jun.kato@aist.go.jp">the organizer</a>.
             </p>
             <Grid stackable>
