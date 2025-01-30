@@ -1,0 +1,27 @@
+[
+  {
+    "time": "1:30 PM",
+    "activity": "Panel by experts",
+    "icon": "comments"
+  },
+  {
+    "time": "2:20 PM",
+    "activity": "Coffee break",
+    "icon": "coffee"
+  },
+  {
+    "time": "2:40 PM",
+    "activity": "Group discussion",
+    "icon": "comments"
+  },
+  {
+    "time": "4:00 PM",
+    "activity": "Reports from group discussion",
+    "icon": "chat"
+  },
+  {
+    "time": "4:30 PM",
+    "activity": "Closing Remarks",
+    "icon": "comment alternate"
+  }
+]

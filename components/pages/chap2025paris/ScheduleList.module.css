@@ -1,0 +1,12 @@
+.scheduleList :global(> .item) {
+  padding-top: 0.5em !important;
+  padding-bottom: 0.2em !important;
+}
+
+.scheduleList .scheduleListItem :global(> .item) {
+  border-right-width: 1px !important;
+}
+
+.scheduleList .scheduleListItem :global(> .item:not(:first-child)) {
+  color: #f2711c;
+}

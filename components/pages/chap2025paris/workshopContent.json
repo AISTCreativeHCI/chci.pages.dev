@@ -1,0 +1,13 @@
+[
+  { "time": "10:00 AM", "activity": "Doors Open", "icon": "coffee" },
+  {
+    "time": "10:15 AM",
+    "activity": "Hands-on experience and talks by experts",
+    "icon": "comment alternate"
+  },
+  {
+    "time": "12:00 PM",
+    "activity": "Lunch break",
+    "icon": "coffee"
+  }
+]

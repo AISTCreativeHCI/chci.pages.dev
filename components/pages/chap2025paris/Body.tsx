@@ -3,24 +3,27 @@ import { FC } from "react";
 import {
   Button,
   Container,
+  Divider,
   Grid,
   Header,
   Icon,
+  Image,
   List,
   Menu,
   Segment,
   SemanticCOLORS,
-  Image,
-  Divider,
 } from "semantic-ui-react";
 
 import styles from "./Body.module.css";
 
-import { VenueSegment } from "./VenueSegment";
 import { Alertbox } from "../aist-seminar/Alertbox";
+import { ScheduleList } from "./ScheduleList";
+import { VenueSegment } from "./VenueSegment";
 
 import organizers from "./organizers.json";
-import scheduleContent from "./scheduleContent.json";
+import seminarContent from "./seminarContent.json";
+import workshopContent from "./workshopContent.json";
+import workshopAfternoonContent from "./workshopAfternoonContent.json";
 
 const workshopTitle =
   "A Workshop on Creativity support for Hand-drawn Art Practices (CHAP2025 Paris)";
@@ -29,11 +32,13 @@ const workshopDescription =
 const workshopImage = "/chap2025paris/chap2025paris-title.png";
 const workshopColor: SemanticCOLORS = "orange";
 
-const lastUpdate = "January 28, 2025";
+const lastUpdate = "January 30, 2025";
 
-const workshopRegistrationUrl =
+const seminarVenue = "Inria Paris or Online (Zoom)";
+const seminarDate = "Monday, February 10, 2025";
+const seminarRegistrationUrl =
   "https://sondages.inria.fr/index.php/449649?newtest=Y&lang=en";
-const workshopOnlineRegistrationUrl =
+const seminarOnlineRegistrationUrl =
   "https://us06web.zoom.us/meeting/register/4CbI9ldXRuqzDerKr2RpHg";
 
 export const Body: FC = () => (
@@ -73,12 +78,10 @@ export const Body: FC = () => (
             subheader="Connecting France and Japan, animation and comics, and research and practice."
           />
           <List horizontal className={styles.heroList}>
-            <List.Item
-              icon="map marker alternate"
-              content="Inria Paris (or Zoom Webinar)"
-            />
+            <List.Item>Public seminar:</List.Item>
+            <List.Item icon="map marker alternate" content={seminarVenue} />
             <List.Item icon="clock" content="1:30 PM - 5:00 PM" />
-            <List.Item icon="calendar" content="Monday, February 10, 2025" />
+            <List.Item icon="calendar" content={seminarDate} />
           </List>
         </Container>
         <div className={styles.heroBackground} />
@@ -182,13 +185,13 @@ export const Body: FC = () => (
               text={
                 <List bulleted>
                   <List.Item>
-                    The event will be held in hybrid format, and registration is
-                    required to attend the event.
+                    The public seminar will be held in hybrid format, and
+                    registration is required to attend it.
                   </List.Item>
                   <List.Item>
-                    Please note that the number of attendees for the onsite
-                    event is limited and seats will be allocated on a
-                    first-come, first-served basis.
+                    Please note that the number of onsite attendees is limited
+                    and seats will be allocated on a first-come, first-served
+                    basis.
                   </List.Item>
                 </List>
               }
@@ -199,7 +202,7 @@ export const Body: FC = () => (
                   color={workshopColor}
                   content="Onsite registration"
                   as="a"
-                  href={workshopRegistrationUrl}
+                  href={seminarRegistrationUrl}
                 />
                 <Button.Or />
                 <Button
@@ -207,7 +210,7 @@ export const Body: FC = () => (
                   color="blue"
                   content="Online registration"
                   as="a"
-                  href={workshopOnlineRegistrationUrl}
+                  href={seminarOnlineRegistrationUrl}
                 />
               </Button.Group>
             </Alertbox>
@@ -216,40 +219,45 @@ export const Body: FC = () => (
             <a id="schedule" className="anchor"></a>
             <Header
               as="h2"
-              content="Tentative Schedule"
-              subheader="Public Seminar: Monday, February 10, 2025"
+              content="Schedule"
               icon={<Icon name="calendar" color={workshopColor} />}
             />
             <p>
               The workshop spans three days, beginning with a public seminar on
               the first day (Monday), followed by two invitation-only workshops
               focusing on animation (Tuesday) and comics (Wednesday),
-              respectively. The schedule of the public seminar is provided
-              below. If you are interested in participating in the
-              invitation-only workshops, please feel free to contact{" "}
-              <a href="mailto:jun.kato@aist.go.jp">Jun</a>.
+              respectively.
             </p>
-            <List relaxed celled className={styles.scheduleList}>
-              {scheduleContent.map(
-                ({ time, activity, presenter, icon }, index) => (
-                  <List.Item
-                    key={index}
-                    icon={icon}
-                    header={time}
-                    description={
-                      <List
-                        horizontal
-                        divided
-                        className={styles.scheduleListItem}
-                      >
-                        <List.Item content={activity} />
-                        {presenter && <List.Item content={presenter} />}
-                      </List>
-                    }
-                  />
-                )
-              )}
-            </List>
+            <Header
+              as="h3"
+              dividing
+              content={`Public Seminar: ${seminarDate}`}
+              color={workshopColor}
+            />
+            <ScheduleList content={seminarContent} />
+            <Header
+              as="h3"
+              dividing
+              content="Invitation-only Workshops: Tuesday and Wednesday, February 11-12, 2025"
+              color={workshopColor}
+            />
+            <p>
+              The public seminar is followed by two invitation-only workshops
+              focusing on animation (Tuesday) and comics (Wednesday),
+              respectively. If you are interested in participating in the
+              invitation-only workshops, please feel free to contact{" "}
+              <a href="mailto:jun.kato@aist.go.jp">the organizer</a>.
+            </p>
+            <Grid stackable>
+              <Grid.Row columns={2}>
+                <Grid.Column>
+                  <ScheduleList content={workshopContent} />
+                </Grid.Column>
+                <Grid.Column>
+                  <ScheduleList content={workshopAfternoonContent} />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Segment>
           <VenueSegment
             color={workshopColor}
@@ -282,11 +290,12 @@ export const Body: FC = () => (
               ))}
             </List>
           </Segment>
+          <Divider />
           <Segment color={workshopColor} className={styles.supporters}>
             <a id="supporters" className="anchor"></a>
             <Header as="h3" content="Supporters" />
-            <Grid columns={2} stackable>
-              <Grid.Row>
+            <Grid stackable>
+              <Grid.Row columns={2}>
                 <Grid.Column>
                   <List horizontal className={styles.logos}>
                     <List.Item>
@@ -344,15 +353,15 @@ export const Body: FC = () => (
       </div>
     </div>
     <footer className={styles.footer}>
-      <Segment basic color={workshopColor} inverted textAlign="center">
-        <Container>
+      <Container>
+        <Segment basic color={workshopColor} inverted textAlign="center">
           <List horizontal divided>
             <List.Item>CHAP2025 Paris announcement website</List.Item>
             <List.Item>© Workshop Organizers</List.Item>
             <List.Item>Last update: {lastUpdate}</List.Item>
           </List>
-        </Container>
-      </Segment>
+        </Segment>
+      </Container>
     </footer>
   </>
 );

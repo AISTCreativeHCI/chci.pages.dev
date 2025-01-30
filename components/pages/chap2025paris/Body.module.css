@@ -86,27 +86,14 @@
   color: #999;
 }
 
-.content .scheduleList :global(> .item) {
-  padding-top: 0.5em !important;
-  padding-bottom: 0.2em !important;
-}
-
-.content .scheduleList .scheduleListItem :global(> .item) {
-  border-right-width: 1px !important;
-}
-
-.content .scheduleList .scheduleListItem :global(> .item:not(:first-child)) {
-  color: #f2711c;
-}
-
-.content .logos img {
+.supporters .logos img {
   height: 2rem;
 }
-.content .supporters h3:global(.ui.header) {
+.supporters h3:global(.ui.header) {
   margin-top: 0.5rem;
 }
-.content .supporters .iccare,
-.content .supporters .aist {
+.supporters .iccare,
+.supporters .aist {
   height: 3rem;
 }
 
