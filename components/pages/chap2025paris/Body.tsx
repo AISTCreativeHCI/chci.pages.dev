@@ -196,23 +196,47 @@ export const Body: FC = () => (
                 </List>
               }
             >
-              <Button.Group size="massive">
-                <Button
-                  icon="map marker alternate"
-                  color={workshopColor}
-                  content="Onsite registration"
-                  as="a"
-                  href={seminarRegistrationUrl}
-                />
-                <Button.Or />
-                <Button
-                  icon="video camera"
-                  color="blue"
-                  content="Online registration"
-                  as="a"
-                  href={seminarOnlineRegistrationUrl}
-                />
-              </Button.Group>
+              <div className={styles.showOnTablet}>
+                <Button.Group size="huge">
+                  <Button
+                    icon="map marker alternate"
+                    color={workshopColor}
+                    content="Onsite registration"
+                    as="a"
+                    href={seminarRegistrationUrl}
+                  />
+                  <Button.Or />
+                  <Button
+                    icon="video camera"
+                    color="blue"
+                    content="Online registration"
+                    as="a"
+                    href={seminarOnlineRegistrationUrl}
+                  />
+                </Button.Group>
+              </div>
+              <div className={styles.hideOnTablet}>
+                <List horizontal>
+                  <List.Item>
+                    <Button
+                      icon="map marker alternate"
+                      color={workshopColor}
+                      content="Onsite registration"
+                      as="a"
+                      href={seminarRegistrationUrl}
+                    />
+                  </List.Item>
+                  <List.Item>
+                    <Button
+                      icon="video camera"
+                      color="blue"
+                      content="Online registration"
+                      as="a"
+                      href={seminarOnlineRegistrationUrl}
+                    />
+                  </List.Item>
+                </List>
+              </div>
             </Alertbox>
           </Segment>
           <Segment color={workshopColor} basic>
@@ -294,60 +318,92 @@ export const Body: FC = () => (
           <Segment color={workshopColor} className={styles.supporters}>
             <a id="supporters" className="anchor"></a>
             <Header as="h3" content="Supporters" />
-            <Grid stackable>
-              <Grid.Row columns={2}>
-                <Grid.Column>
-                  <List horizontal className={styles.logos}>
-                    <List.Item>
-                      <Image
-                        src="/chap2025paris/logos/iccare.png"
-                        className={styles.iccare}
-                      />
-                    </List.Item>
-                    <List.Item>
-                      <Image src="/chap2025paris/logos/france2030.svg" />
-                    </List.Item>
-                    <List.Item>
-                      <Image src="/chap2025paris/logos/cnrs.svg" />
-                    </List.Item>
-                    <List.Item>
-                      <Image src="/chap2025paris/logos/anr.png" />
-                    </List.Item>
-                  </List>
-                  <p>
-                    This event is held as part of{" "}
-                    <a href="https://pepr-iccare.fr/">
-                      the PEPR ICCARE project
-                    </a>
-                    .
-                  </p>
-                </Grid.Column>
-                <Grid.Column>
-                  <List horizontal className={styles.logos}>
-                    <List.Item>
-                      <Image
-                        src="/chap2025paris/logos/aist.gif"
-                        className={styles.aist}
-                      />
-                    </List.Item>
-                    <List.Item>
-                      <Image src="/chap2025paris/logos/acm-chapter.jpg" />
-                    </List.Item>{" "}
-                  </List>
-                  <p>
-                    Japan-based researchers and practitioners are invited by{" "}
-                    <a href="https://www.aist.go.jp/index_en.html">AIST</a>. The
-                    event is also supported by{" "}
-                    <a href="https://sigchi.org/people/chapters/">
-                      ACM SIGCHI Local Chapters
-                    </a>{" "}
-                    including{" "}
-                    <a href="https://paris.sigchi.acm.org/home/">Paris</a> and{" "}
-                    <a href="https://sigchi.jp/">Japan</a> ACM SIGCHI Chapters.
-                  </p>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <div className={styles.supportersContent}>
+              <Grid stackable>
+                <Grid.Row columns={3}>
+                  <Grid.Column width={4}>
+                    <List horizontal className={styles.logos}>
+                      <List.Item>
+                        <Image
+                          src="/chap2025paris/logos/iccare.png"
+                          className={styles.iccare}
+                        />
+                      </List.Item>
+                    </List>
+                    <List horizontal className={styles.logos}>
+                      <List.Item>
+                        <Image src="/chap2025paris/logos/france2030.svg" />
+                      </List.Item>
+                      <List.Item>
+                        <Image src="/chap2025paris/logos/cnrs.svg" />
+                      </List.Item>
+                      <List.Item>
+                        <Image src="/chap2025paris/logos/anr.png" />
+                      </List.Item>
+                    </List>
+                    <p>
+                      This event is held as part of{" "}
+                      <a href="https://pepr-iccare.fr/">
+                        the PEPR ICCARE project
+                      </a>
+                      .
+                    </p>
+                  </Grid.Column>
+                  <Grid.Column width={4}>
+                    <List horizontal className={styles.logos}>
+                      <List.Item>
+                        <Image
+                          src="/chap2025paris/logos/aist.gif"
+                          className={styles.aist}
+                        />
+                      </List.Item>
+                    </List>
+                    <p>
+                      Japan-based researchers and practitioners are invited by{" "}
+                      <a href="https://www.aist.go.jp/index_en.html">AIST</a>.
+                    </p>
+                  </Grid.Column>
+                  <Grid.Column width={8}>
+                    <p>
+                      The public seminar is also supported by{" "}
+                      <a href="https://sigchi.org/people/chapters/">
+                        ACM SIGCHI Local Chapters
+                      </a>{" "}
+                      including{" "}
+                      <a href="https://paris.sigchi.acm.org/home/">Paris</a> and{" "}
+                      <a href="https://sigchi.jp/">Japan</a> ACM SIGCHI
+                      Chapters, as well as{" "}
+                      <a href="https://www.mcjp.fr/">
+                        Maison de la culture du Japon à Paris (パリ日本文化会館)
+                      </a>
+                      .
+                    </p>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </div>
+            <div className={styles.supportersBottomRightLogos}>
+              <List
+                horizontal
+                relaxed
+                divided
+                verticalAlign="bottom"
+                className={styles.logos}
+              >
+                <List.Item>
+                  <Image
+                    src="/chap2025paris/logos/acm-chapter.jpg"
+                    className={styles.acm}
+                  />
+                </List.Item>
+                <List.Item>
+                  <Image
+                    src="/chap2025paris/logos/mcjp.svg"
+                    className={styles.mcjp}
+                  />
+                </List.Item>
+              </List>
+            </div>
           </Segment>
         </Container>
       </div>

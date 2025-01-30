@@ -86,17 +86,64 @@
   color: #999;
 }
 
+.supporters {
+  position: relative;
+}
+.supporters .logos + p {
+  margin-top: 0.7em;
+}
 .supporters .logos img {
   height: 2rem;
 }
 .supporters h3:global(.ui.header) {
   margin-top: 0.5rem;
 }
-.supporters .iccare,
-.supporters .aist {
+.supporters .logos img.iccare,
+.supporters .logos img.aist {
+  height: 2.5rem;
+}
+.supporters .supportersContent {
+  z-index: 2;
+}
+.supporters .supportersBottomRightLogos {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  z-index: 1;
+}
+.supporters .supportersBottomRightLogos .acm {
   height: 3rem;
+}
+.supporters .supportersBottomRightLogos .mcjp {
+  height: 7rem;
 }
 
 .footer {
   padding: 2rem 0 7rem 0;
+}
+@media (min-width: 768px) {
+  .supporters {
+    padding-bottom: 3.5rem !important;
+  }
+  .showOnTablet {
+    display: block;
+  }
+  .hideOnTablet {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .supporters {
+    padding-bottom: 9rem !important;
+  }
+  .showOnTablet {
+    display: none;
+  }
+  .hideOnTablet {
+    display: block;
+  }
+}
+.hideOnTablet :global(.ui.horizontal.list:not(.celled) > .item) {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }

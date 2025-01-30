@@ -15,9 +15,9 @@ export const VenueSegment: FC<
     dividing?: boolean;
   }
 > = (props) => {
-  const { icon, dividing } = props;
+  const { icon, dividing, ...props_ } = props;
   return (
-    <Segment basic {...props}>
+    <Segment basic {...props_}>
       <a id="venue" className="anchor"></a>
       <Header
         as="h2"
