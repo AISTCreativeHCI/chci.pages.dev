@@ -32,7 +32,7 @@ const workshopDescription =
 const workshopImage = "/chap2025paris/chap2025paris-title.png";
 const workshopColor: SemanticCOLORS = "orange";
 
-const lastUpdate = "January 30, 2025";
+const lastUpdate = "January 31, 2025";
 
 const seminarVenue = "Inria Paris or Online (Zoom)";
 const seminarDate = "Monday, February 10, 2025";
@@ -80,7 +80,7 @@ export const Body: FC = () => (
           <List horizontal className={styles.heroList}>
             <List.Item>Public seminar:</List.Item>
             <List.Item icon="map marker alternate" content={seminarVenue} />
-            <List.Item icon="clock" content="1:30 PM - 5:00 PM" />
+            <List.Item icon="clock" content="1:30 PM - 5:30 PM" />
             <List.Item icon="calendar" content={seminarDate} />
           </List>
         </Container>
