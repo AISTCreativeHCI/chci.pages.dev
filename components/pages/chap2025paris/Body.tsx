@@ -258,6 +258,7 @@ export const Body: FC = () => (
               content={`Public Seminar: ${seminarDate}`}
               color={workshopColor}
             />
+            <p>Please note that the talk titles are tentative.</p>
             <ScheduleList content={seminarContent} />
             <Header
               as="h3"
