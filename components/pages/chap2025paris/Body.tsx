@@ -189,33 +189,37 @@ export const Body: FC = () => (
                     registration is required to attend it.
                   </List.Item>
                   <List.Item>
-                    Please note that the number of onsite attendees is limited
-                    and seats will be allocated on a first-come, first-served
-                    basis.
+                    <del>
+                      Please note that the number of onsite attendees is limited
+                      and seats will be allocated on a first-come, first-served
+                      basis.
+                    </del>{" "}
+                    Onsite registration is now closed.
                   </List.Item>
                 </List>
               }
             >
-              <div className={styles.showOnTablet}>
-                <Button.Group size="huge">
-                  <Button
-                    icon="map marker alternate"
-                    color={workshopColor}
-                    content="Onsite registration"
-                    as="a"
-                    href={seminarRegistrationUrl}
-                  />
-                  <Button.Or />
-                  <Button
-                    icon="video camera"
-                    color="blue"
-                    content="Online registration"
-                    as="a"
-                    href={seminarOnlineRegistrationUrl}
-                  />
-                </Button.Group>
-              </div>
-              <div className={styles.hideOnTablet}>
+              {/* <div className={styles.showOnTablet}> */}
+              {/* <Button.Group size="huge"> */}
+              {/* <Button
+                icon="map marker alternate"
+                color={workshopColor}
+                content="Onsite registration"
+                as="a"
+                size="huge"
+                href={seminarRegistrationUrl}
+              /> */}
+              {/* <Button.Or /> */}
+              <Button
+                icon="video camera"
+                color="blue"
+                content="Online registration"
+                as="a"
+                href={seminarOnlineRegistrationUrl}
+              />
+              {/* </Button.Group> */}
+              {/* </div> */}
+              {/* <div className={styles.hideOnTablet}>
                 <List horizontal>
                   <List.Item>
                     <Button
@@ -236,7 +240,7 @@ export const Body: FC = () => (
                     />
                   </List.Item>
                 </List>
-              </div>
+              </div> */}
             </Alertbox>
           </Segment>
           <Segment color={workshopColor} basic>
