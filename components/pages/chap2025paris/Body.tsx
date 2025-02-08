@@ -32,7 +32,7 @@ const workshopDescription =
 const workshopImage = "/chap2025paris/chap2025paris-title.png";
 const workshopColor: SemanticCOLORS = "orange";
 
-const lastUpdate = "January 31, 2025";
+const lastUpdate = "February 8, 2025";
 
 const seminarVenue = "Inria Paris or Online (Zoom)";
 const seminarDate = "Monday, February 10, 2025";
@@ -272,6 +272,11 @@ export const Body: FC = () => (
               respectively. If you are interested in participating in the
               workshops, please feel free to contact{" "}
               <a href="mailto:jun.kato@aist.go.jp">the organizer</a>.
+            </p>
+            <p>
+              Please note that the schedule is subject to change. For the most
+              current information, refer to the Google Docs shared with
+              attendees.
             </p>
             <Grid stackable>
               <Grid.Row columns={2}>
