@@ -204,6 +204,7 @@ export const Body: FC = () => (
                     content="Onsite registration"
                     as="a"
                     href={seminarRegistrationUrl}
+                    disabled
                   />
                   <Button.Or />
                   <Button
@@ -212,6 +213,7 @@ export const Body: FC = () => (
                     content="Online registration"
                     as="a"
                     href={seminarOnlineRegistrationUrl}
+                    disabled
                   />
                 </Button.Group>
               </div>
