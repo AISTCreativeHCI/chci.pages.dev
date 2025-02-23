@@ -16,7 +16,7 @@ import {
 
 import styles from "./Body.module.css";
 
-import { Alertbox } from "../aist-seminar/Alertbox";
+import { Alertbox } from "../Alertbox";
 import { ScheduleList } from "./ScheduleList";
 import { VenueSegment } from "./VenueSegment";
 

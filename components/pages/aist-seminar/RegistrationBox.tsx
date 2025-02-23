@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Button, List } from "semantic-ui-react";
 
 import { useSiteInfo } from "../../lib/useSiteInfo";
-import { Alertbox } from "./Alertbox";
+import { Alertbox } from "../Alertbox";
 
 interface IProps {
   href: string;

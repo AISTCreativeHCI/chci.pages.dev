@@ -5,7 +5,7 @@ import { Breadcrumb, Container, Divider } from "semantic-ui-react";
 import { PageFooter } from "../../PageFooter";
 import { PageHeader } from "../../PageHeader";
 import { useSiteInfo } from "../../lib/useSiteInfo";
-import { Alertbox } from "./Alertbox";
+import { Alertbox } from "../Alertbox";
 import { GenericHeroSegment } from "./GenericHeroSegment";
 import { SIGCHISegment } from "./SIGCHISegment";
 
