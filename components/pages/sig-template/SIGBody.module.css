@@ -1,12 +1,11 @@
 :global(.ui.menu) .brand:global(.item) {
-  background: #009776;
-  color: #eee;
+  background: var(--brand-background);
+  color: #fff;
   font-weight: bold;
 }
 :global(.ui.menu) .brand:global(.item):hover {
-  background: #009776cc;
-  color: #eee;
-  font-weight: bold;
+  background: var(--brand-background-hover);
+  color: #fff;
 }
 .body {
   background: #fff;
@@ -57,26 +56,6 @@
 .footer {
   padding: 2em 0 7em 0;
 }
-
-.alertbox {
-  text-align: center;
-  background-size: auto auto;
-  background-color: #fff;
-  background-image: repeating-linear-gradient(
-    135deg,
-    transparent,
-    transparent 2px,
-    #dfd 2px,
-    #dfd 28px
-  );
-  color: #5b9286;
-  border: 1px solid #dfd;
-  padding: 1.25em 1em;
-}
-.alertbox > .alert {
-  text-align: left;
-  margin-top: 1em;
-  padding-top: 1em;
-  margin-left: 0 !important;
-  padding-left: 1.25rem;
+.footer > :global(.ui.segment) {
+  background-color: var(--brand-background);
 }
