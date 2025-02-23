@@ -6,15 +6,15 @@
     135deg,
     transparent,
     transparent 2px,
-    #fff6f6 2px,
-    #fff6f6 28px
+    var(--background-color) 2px,
+    var(--background-color) 28px
   );
-  color: #a33;
+  color: var(--color);
   border: 1px solid #fee;
   padding: 1.25em 1em;
 }
 .alertbox > .alert {
-  border-top: 1px solid #fee;
+  border-top: 1px solid var(--border-color);
   text-align: left;
   margin-top: 1.25em;
   padding-top: 1.25em;
