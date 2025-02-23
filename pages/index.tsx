@@ -15,12 +15,22 @@ export default function Index() {
           key="description"
         />
       </Head>
-      <div className={styles.wrapper}>
+      <div>
         <Segment basic>
           <Header content="Welcome!" />
-          <p>This is a home page for the following three projects.</p>
+          <p>This is a home page for the following four projects.</p>
           <Divider />
-          <Grid stackable columns={3}>
+          <Grid stackable columns={2}>
+            <Grid.Column>
+              <Link href="/chi2025anime">
+                <div className={styles.thumbnail}>
+                  <Header
+                    content="[ACM CHI 2025] Anime SIG"
+                    subheader="Researching Japanese Animation From Technical, Cultural, and Industrial Perspectives"
+                  />
+                </div>
+              </Link>
+            </Grid.Column>
             <Grid.Column>
               <Link href="/chap2025paris">
                 <Image
