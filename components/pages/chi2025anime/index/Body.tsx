@@ -41,6 +41,7 @@ export const Body: FC = () => (
       },
       {
         url: "https://katieseaborn.com",
+        photoPath: "/images/katieseaborn.jpg",
         name: "Katie Seaborn",
         affiliation: "Institute of Science Tokyo",
       },
