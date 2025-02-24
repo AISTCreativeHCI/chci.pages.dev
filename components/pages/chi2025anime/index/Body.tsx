@@ -8,6 +8,7 @@ export const Body: FC = () => (
   <SIGBody
     path="chi2025anime"
     shorthand="Anime SIG"
+    hashtag="AnimeSIG"
     title="[ACM CHI 2025] Anime SIG"
     description="This page introduces the Anime SIG at CHI 2025"
     header={

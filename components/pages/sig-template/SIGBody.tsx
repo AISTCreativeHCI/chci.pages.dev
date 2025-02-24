@@ -17,6 +17,7 @@ import styles from "./SIGBody.module.css";
 interface SIGBodyProps {
   path?: string;
   shorthand: string;
+  hashtag?: string;
   title: string;
   description: string;
   image?: string;
@@ -41,6 +42,7 @@ interface Organizer {
 export const SIGBody: FC<SIGBodyProps> = ({
   path,
   shorthand,
+  hashtag,
   title,
   description,
   image,
@@ -100,7 +102,9 @@ export const SIGBody: FC<SIGBodyProps> = ({
               />
             ))}
           </div>
-          <div className={styles.share}>{createShareButtons(title, color)}</div>
+          <div className={styles.share}>
+            {createShareButtons(title, color, hashtag)}
+          </div>
         </Container>
       </div>
       <div className={styles.content}>

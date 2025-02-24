@@ -1,10 +1,11 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { Button, List, ListProps, SemanticCOLORS } from "semantic-ui-react";
+import { Button, List, SemanticCOLORS } from "semantic-ui-react";
 
 export function createShareButtons(
   title: string,
-  color: SemanticCOLORS = "red"
+  color: SemanticCOLORS = "red",
+  hashtag: string = "CreativeHCI"
 ) {
   const router = useRouter();
   const [url, setUrl] = useState<string | null>(null);
@@ -26,7 +27,7 @@ export function createShareButtons(
           icon="facebook"
           color={color}
           as="a"
-          href={`http://www.facebook.com/sharer.php?u=${u}`}
+          href={`http://www.facebook.com/sharer/sharer.php?u=${u}`}
           target="facebook"
         />
       </List.Item>
@@ -35,9 +36,9 @@ export function createShareButtons(
           icon="twitter"
           color={color}
           as="a"
-          href={`https://twitter.com/intent/tweet?hashtags=CreativeHCI&url=${u}&text=${encodeURIComponent(
-            title
-          )}`}
+          href={`https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(
+            hashtag
+          )}&url=${u}&text=${encodeURIComponent(title)}`}
           target="twitter"
         />
       </List.Item>
