@@ -33,6 +33,7 @@ export const Body: FC = () => (
       },
       {
         name: "Akinobu Maejima",
+        photoPath: "/images/akinobumaejima.jpg",
         affiliation: "OLM Digital, Inc.",
       },
       {
