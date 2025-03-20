@@ -50,7 +50,7 @@ export const Body: FC = () => (
       },
     ]}
     color="pink"
-    lastUpdate="February 23, 2025"
+    lastUpdate="March 20, 2025"
     styling={{
       brandBackground: "#ff90be",
       brandBackgroundHover: "#ff90becc",
@@ -58,6 +58,58 @@ export const Body: FC = () => (
   >
     <Segment color="pink">
       <a id="about" className="anchor"></a>
+      <Header as="h2" content="About" dividing />
+      <Table stackable basic="very">
+        <Table.Body>
+          <Table.Row>
+            <Table.HeaderCell width={3}>Where?</Table.HeaderCell>
+            <Table.Cell>
+              <List>
+                <List.Item
+                  icon="map pin"
+                  content={
+                    <>
+                      <strong>Onsite venue:</strong> Room G217, Pacifico North
+                      2F
+                    </>
+                  }
+                />
+              </List>
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.HeaderCell width={3}>When?</Table.HeaderCell>
+            <Table.Cell>
+              <List>
+                <List.Item
+                  icon="clock"
+                  content={
+                    <a href="https://www.timeanddate.com/worldclock/fixedtime.html?msg=Anime+SIG%3A+Researching+Japanese+Animation+From+Technical%2C+Cultural%2C+and+Industrial+Perspectives&iso=20250428T1110&p1=667&ah=1&am=30">
+                      Mon, Apr 28 | 11:10 - 12:40
+                    </a>
+                  }
+                ></List.Item>
+              </List>
+            </Table.Cell>
+          </Table.Row>
+          <Table.Row>
+            <Table.HeaderCell width={3}>CHI &apos;25 Program</Table.HeaderCell>
+            <Table.Cell>
+              <List>
+                <List.Item
+                  icon="book"
+                  content={
+                    <a href="https://programs.sigchi.org/chi/2025/program/content/189764">
+                      Anime SIG: Researching Japanese Animation From Technical,
+                      Cultural, and Industrial Perspectives - CHI &apos;25
+                    </a>
+                  }
+                ></List.Item>
+              </List>
+            </Table.Cell>
+          </Table.Row>
+        </Table.Body>
+      </Table>
       <Header content="Abstract" />
       <p>
         Japanese animation, or anime for short, has attracted global attention
