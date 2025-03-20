@@ -39,6 +39,7 @@ export const Body: FC = () => (
       {
         url: "https://rmihara.net/",
         name: "Ryotaro Mihara",
+        photoPath: "/images/ryotaromihara.jpg",
         affiliation: "Keio University & Arch Inc.",
       },
       {
