@@ -1,8 +1,18 @@
 import { FC } from "react";
-import { Button, Header, Icon, List, Segment, Table } from "semantic-ui-react";
+import {
+  Button,
+  Header,
+  Icon,
+  List,
+  Message,
+  Segment,
+  Table,
+} from "semantic-ui-react";
 
 import { Alertbox } from "../../Alertbox";
 import { SIGBody } from "../../sig-template/SIGBody";
+
+const lastUpdate = "April 23, 2025";
 
 export const Body: FC = () => (
   <SIGBody
@@ -12,11 +22,16 @@ export const Body: FC = () => (
     title="[ACM CHI 2025] Anime SIG"
     description="This page introduces the Anime SIG at CHI 2025"
     header={
-      <Header
-        as="h1"
-        content="Anime SIG"
-        subheader="Researching Japanese Animation From Technical, Cultural, and Industrial Perspectives"
-      />
+      <>
+        <Header
+          as="h1"
+          content="Anime SIG"
+          subheader="Researching Japanese Animation From Technical, Cultural, and Industrial Perspectives"
+        />
+        <p style={{ marginTop: "-0.8em" }}>
+          &mdash;「アニメ」を技術・文化・産業の観点で研究する
+        </p>
+      </>
     }
     organizers={[
       {
@@ -29,7 +44,7 @@ export const Body: FC = () => (
         url: "https://koyama.xyz",
         photoPath: "/images/yukikoyama.jpg",
         name: "Yuki Koyama",
-        affiliation: "AIST & Graphinica, Inc.",
+        affiliation: "The University of Tokyo & Graphinica, Inc.",
       },
       {
         name: "Akinobu Maejima",
@@ -50,7 +65,7 @@ export const Body: FC = () => (
       },
     ]}
     color="pink"
-    lastUpdate="March 20, 2025"
+    lastUpdate={lastUpdate}
     styling={{
       brandBackground: "#ff90be",
       brandBackgroundHover: "#ff90becc",
@@ -131,13 +146,23 @@ export const Body: FC = () => (
         collective discussion on potential directions and community fostering of
         anime-interested researchers.
       </p>
+      <Message
+        icon="info circle"
+        info
+        content={
+          <>
+            <strong>[For Japanese speakers]</strong>{" "}
+            <abbr title="Special Interest Group">SIG</abbr>{" "}
+            は講演を聞くだけでなくインタラクティブに議論へ参加することが期待されるセッションですが、当セッションでは質疑やグループワークなどの際、日本語話者のオーガナイザが一人以上対応可能なように構成しますので、言語バリアを気にせず奮ってご参加ください。
+          </>
+        }
+      />
       <Header content="Keywords" />
       <p>
         Anime, creativity support, interaction design, social science,
         anthropology, psychology
       </p>
       <Header content="Interested?" />
-      <p>The registration form opens soon.</p>
       <Alertbox
         text={
           <List bulleted>
@@ -163,13 +188,12 @@ export const Body: FC = () => (
         }}
       >
         <Button
-          disabled
           icon="edit"
           color="pink"
           size="huge"
           content="Registration (optional)"
           as="a"
-          href="#"
+          href="https://forms.gle/vuZjTTLbPiWLXvxQ8"
         />
       </Alertbox>
       <Header content="More details" />
