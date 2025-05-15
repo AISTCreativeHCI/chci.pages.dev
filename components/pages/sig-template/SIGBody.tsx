@@ -23,6 +23,7 @@ interface SIGBodyProps {
   image?: string;
   header?: ReactNode;
   organizers: Organizer[];
+  preFooter?: ReactNode;
   color?: SemanticCOLORS;
   lastUpdate?: string;
   children?: ReactNode;
@@ -48,6 +49,7 @@ export const SIGBody: FC<SIGBodyProps> = ({
   image,
   header,
   organizers,
+  preFooter,
   color = "green",
   lastUpdate,
   children,
@@ -132,6 +134,7 @@ export const SIGBody: FC<SIGBodyProps> = ({
               ))}
             </List>
           </Segment>
+          {preFooter}
         </Container>
       </div>
     </div>

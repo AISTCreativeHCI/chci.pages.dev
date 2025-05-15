@@ -2,3 +2,20 @@ html,
 body {
   background: #ff90be;
 }
+
+.ui.list > .item > .content > .ui.horizontal.list {
+  color: #999;
+}
+.ui.list > a.item {
+  text-decoration: none;
+  padding: 0.375em 0 !important;
+}
+
+.ui.list > a.item > .content > .ui.horizontal.list > .item {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.ui.selection.list > a.item > .content > .ui.horizontal.list > .item:hover {
+  background: inherit;
+  color: inherit;
+}
