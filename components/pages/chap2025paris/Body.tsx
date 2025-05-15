@@ -32,7 +32,7 @@ const workshopDescription =
 const workshopImage = "/chap2025paris/chap2025paris-title.png";
 const workshopColor: SemanticCOLORS = "orange";
 
-const lastUpdate = "February 8, 2025";
+const lastUpdate = "May 16, 2025";
 
 const seminarVenue = "Inria Paris or Online (Zoom)";
 const seminarDate = "Monday, February 10, 2025";
@@ -173,6 +173,83 @@ export const Body: FC = () => (
               refer to <a href="#supporters">the list of supporters</a> for more
               details.
             </p>
+          </Segment>
+          <Segment color={workshopColor} basic>
+            <a id="report" className="anchor"></a>
+            <Header
+              as="h2"
+              content="After Report"
+              icon={<Icon name={"text file" as any} color={workshopColor} />}
+            />
+            <p>
+              The public seminar on the first day was concluded with a fruitful
+              panel discussion following informative talks by researchers and
+              professionals in art and related fields. You can find graphic
+              recordings by{" "}
+              <a href="https://sandrinemartin.com">Sandrine Martin</a>, some
+              photos, and a link to the shared notes.
+            </p>
+            <a id="graphic-recordings" className="anchor"></a>
+            <Header
+              as="h3"
+              dividing
+              content="Graphic Recordings"
+              color={workshopColor}
+            />
+            <Grid columns={3} stackable>
+              {[
+                "1-DSC04660",
+                "2-DSC04662",
+                "3-DSC04665",
+                "4-DSC04672",
+                "5-DSC04674",
+                "6-DSC04676",
+              ].map((name) => (
+                <Grid.Column key={name}>
+                  <a href={`/chap2025paris/${name}.jpg`}>
+                    <Image src={`/chap2025paris/${name}_small.jpg`} fluid />
+                  </a>
+                </Grid.Column>
+              ))}
+            </Grid>
+            <a id="photos" className="anchor"></a>
+            <Header as="h3" dividing content="Photos" color={workshopColor} />
+            <Grid columns={3} stackable>
+              {[
+                "DSC04506",
+                "DSC04514",
+                "DSC04522",
+                "DSC04523",
+                "DSC04535",
+                "DSC04592",
+                "DSC04602",
+                "DSC04614",
+                "DSC04626",
+              ].map((name) => (
+                <Grid.Column key={name}>
+                  <a href={`/chap2025paris/${name}.jpg`}>
+                    <Image src={`/chap2025paris/${name}_small.jpg`} fluid />
+                  </a>
+                </Grid.Column>
+              ))}
+            </Grid>
+            <a id="notes" className="anchor"></a>
+            <Header
+              as="h3"
+              dividing
+              content="Shared notes"
+              color={workshopColor}
+            />
+            <Alertbox>
+              <Button
+                icon="text file"
+                color={workshopColor}
+                size="huge"
+                content="Google Docs"
+                as="a"
+                href="https://bit.ly/chap2025paris"
+              />
+            </Alertbox>
           </Segment>
           <Segment color={workshopColor} basic>
             <a id="registration" className="anchor"></a>
