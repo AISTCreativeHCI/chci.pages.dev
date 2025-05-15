@@ -105,6 +105,7 @@ export const Body: FC = () => (
     hashtag="AnimeSIG"
     title="[ACM CHI 2025] Anime SIG"
     description="This page introduces the Anime SIG at CHI 2025"
+    image="/chi2025anime/chi2025-animesig-title.png"
     header={
       <>
         <Header

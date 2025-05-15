@@ -23,12 +23,12 @@ export default function Index() {
           <Grid stackable columns={2}>
             <Grid.Column>
               <Link href="/chi2025anime">
-                <div className={styles.thumbnail}>
-                  <Header
-                    content="[ACM CHI 2025] Anime SIG"
-                    subheader="Researching Japanese Animation From Technical, Cultural, and Industrial Perspectives"
-                  />
-                </div>
+                <Image
+                  bordered
+                  src="/chi2025anime/chi2025-animesig.png"
+                  alt="ACM CHI 2025: Anime SIG – Researching Japanese Animation From Technical, Cultural, and Industrial Perspectives"
+                  fluid
+                />
               </Link>
             </Grid.Column>
             <Grid.Column>
