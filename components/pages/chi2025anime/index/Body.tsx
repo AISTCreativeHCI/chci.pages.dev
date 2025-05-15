@@ -405,9 +405,14 @@ export const Body: FC = () => (
       <p>
         More details on why and how we are organizing this SIG meeting can be
         found in{" "}
-        <a href="/chi2025anime/chi2025-animesig.pdf">
-          <Icon name="download" />
-          the author version of the special interest group proposal
+        <del>
+          <a href="/chi2025anime/chi2025-animesig.pdf">
+            <Icon name="download" />
+            the author version of the special interest group proposal
+          </a>
+        </del>{" "}
+        <a href="https://doi.org/10.1145/3706599.3716296">
+          the ACM Digital Library (open access)
         </a>
         .
       </p>
