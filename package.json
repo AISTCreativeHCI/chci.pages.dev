@@ -8,7 +8,7 @@
     "build:next": "next build",
     "build:semantic-ui": "cd semantic && npx gulp build-css && npx gulp build-assets && npm run copy:semantic-ui",
     "copy:semantic-ui": "copyfiles -u 2 \"semantic/dist/semantic.min.css\" \"semantic/dist/themes/**/*\" public/",
-    "prettify": "prettier --write components pages",
+    "prettify": "prettier --write wrangler.jsonc components pages",
     "start": "next start",
     "lint": "next lint"
   },
@@ -25,6 +25,7 @@
     "@types/react": "^19.2.9",
     "@types/react-dom": "^19.2.3",
     "copyfiles": "^2.4.1",
-    "prettier": "^3.8.1"
+    "prettier": "^3.8.1",
+    "wrangler": "^4.60.0"
   }
 }
