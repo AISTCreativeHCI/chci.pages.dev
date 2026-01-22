@@ -1,0 +1,12 @@
+# wrangler.toml for Cloudflare Pages
+name = "chci-pages-dev"
+compatibility_date = "2026-01-23"
+
+[build]
+command = "npm ci --legacy-peer-deps && npm run build"
+
+[build.environment]
+NODE_VERSION = "24"
+
+[site]
+bucket = "out"
