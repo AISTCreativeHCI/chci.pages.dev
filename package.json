@@ -8,7 +8,6 @@
     "build:next": "next build",
     "build:semantic-ui": "cd semantic && npx gulp build-css && npx gulp build-assets && npm run copy:semantic-ui",
     "copy:semantic-ui": "copyfiles -u 2 \"semantic/dist/semantic.min.css\" \"semantic/dist/themes/**/*\" public/",
-    "export": "next export",
     "prettify": "prettier --write components pages",
     "start": "next start",
     "lint": "next lint"
