@@ -1,17 +1,19 @@
-// wrangler.jsonc for Cloudflare Pages
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-
-  // Name of the project
   "name": "chci",
-  // Cloudflare compatibility date
   "compatibility_date": "2026-01-23",
   "build": {
-    // Install dependencies and build
     "command": "npm ci --legacy-peer-deps && npm run build",
   },
-  "site": {
-    // Output directory for static files
-    "bucket": "out",
+  "pages_build_output_dir": "out",
+  "vars": {
+    "NODE_VERSION": "24"
   },
+  "env": {
+    "production": {
+      "vars": {
+        "NODE_VERSION": "24"
+      }
+    }
+  }
 }
