@@ -5,7 +5,7 @@ import { Button, List, SemanticCOLORS } from "semantic-ui-react";
 export function createShareButtons(
   title: string,
   color: SemanticCOLORS = "red",
-  hashtag: string = "CreativeHCI"
+  hashtag: string = "CreativeHCI",
 ) {
   const router = useRouter();
   const [url, setUrl] = useState<string | null>(null);
@@ -14,7 +14,7 @@ export function createShareButtons(
     setUrl(
       typeof window === "undefined"
         ? null
-        : `${location.protocol}//${location.host}${router.asPath}`
+        : `${location.protocol}//${location.host}${router.asPath}`,
     );
   }, [router.asPath]);
 
@@ -37,7 +37,7 @@ export function createShareButtons(
           color={color}
           as="a"
           href={`https://twitter.com/intent/tweet?hashtags=${encodeURIComponent(
-            hashtag
+            hashtag,
           )}&url=${u}&text=${encodeURIComponent(title)}`}
           target="twitter"
         />

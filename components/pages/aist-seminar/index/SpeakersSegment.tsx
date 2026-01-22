@@ -7,7 +7,7 @@ import speakers from "../invited-speakers.json";
 import seminars from "../seminars.json";
 
 interface IProps {
-  list: typeof speakers[0];
+  list: (typeof speakers)[0];
   edition: number;
 }
 
@@ -35,8 +35,8 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
                     typeof s.talkUrl === "string"
                       ? s.talkUrl
                       : ja
-                      ? s.talkUrl.ja
-                      : s.talkUrl.en
+                        ? s.talkUrl.ja
+                        : s.talkUrl.en
                   }
                   disabled={!s.talkUrl}
                 />
@@ -48,8 +48,8 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
                   typeof s.name === "string"
                     ? s.name
                     : ja
-                    ? s.name.ja
-                    : s.name.en
+                      ? s.name.ja
+                      : s.name.en
                 }]`}
               />
               <List.Content>
@@ -58,18 +58,18 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
                     typeof s.name === "string"
                       ? s.name
                       : ja
-                      ? s.name.ja
-                      : s.name.en
+                        ? s.name.ja
+                        : s.name.en
                   }
                   as={typeof s.link !== "undefined" ? "a" : "div"}
                   href={
                     typeof s.link === "undefined"
                       ? undefined
                       : typeof s.link === "string"
-                      ? s.link
-                      : ja
-                      ? s.link.ja
-                      : s.link.en
+                        ? s.link
+                        : ja
+                          ? s.link.ja
+                          : s.link.en
                   }
                 />
                 <List.Description
@@ -79,8 +79,8 @@ export const SpeakersSegment: FC<IProps> = ({ list, edition }) => {
                         {typeof s.affiliation === "string"
                           ? s.affiliation
                           : ja
-                          ? s.affiliation.ja
-                          : s.affiliation.en}
+                            ? s.affiliation.ja
+                            : s.affiliation.en}
                       </p>
                       {(s as any).bio}
                     </>

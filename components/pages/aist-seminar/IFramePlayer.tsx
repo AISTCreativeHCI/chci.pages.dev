@@ -3,7 +3,7 @@ import { FC, IframeHTMLAttributes } from "react";
 import styles from "./IFramePlayer.module.css";
 
 export const IFramePlayer: FC<IframeHTMLAttributes<HTMLIFrameElement>> = (
-  props
+  props,
 ) => (
   <iframe
     className={styles.player}

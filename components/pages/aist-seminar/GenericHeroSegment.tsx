@@ -31,7 +31,7 @@ export const GenericHeroSegment: FC<IProps> = ({
   const title = ja ? si.title.ja : si.title.en;
   const subtitle = ss
     .map((s) =>
-      typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+      typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"],
     )
     .join(", ");
   const dateTime = ja

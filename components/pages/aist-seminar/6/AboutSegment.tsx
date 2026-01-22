@@ -66,7 +66,7 @@ export const AboutSegment: FC<IProps> = ({ bare }) => {
           </p>
         </>
       ),
-    [ja]
+    [ja],
   );
   return bare ? (
     content

@@ -46,7 +46,7 @@ export const ReferencesSegment: FC<IProps> = ({
         </List>
       </>
     ),
-    [publications]
+    [publications],
   );
   return bare ? content : <Segment basic>{content}</Segment>;
 };

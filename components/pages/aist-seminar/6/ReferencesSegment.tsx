@@ -38,7 +38,7 @@ export const ReferencesSegment: FC<IProps> = ({ bare }) => {
         url: "https://doi.org/10.1145/3576856",
       },
     ],
-    []
+    [],
   );
   return (
     <GenericReferencesSegment

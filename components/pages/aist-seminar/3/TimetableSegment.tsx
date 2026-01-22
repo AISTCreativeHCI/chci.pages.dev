@@ -111,7 +111,7 @@ export const TimetableSegment: FC<IProps> = ({ bare }) => {
         </Table>
       </>
     ),
-    []
+    [],
   );
   return bare ? content : <Segment basic>{content}</Segment>;
 };

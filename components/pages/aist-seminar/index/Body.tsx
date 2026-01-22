@@ -32,10 +32,10 @@ export const Body: FC<IProps> = ({ title: t, description: d, mode }) => {
     (mode === ListingMode.ByEdition
       ? site.title
       : mode === ListingMode.BySpeaker
-      ? `${site.title}: ${ja ? "講演者の紹介" : "By speaker"}`
-      : mode === ListingMode.ByPanelTopic
-      ? `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`
-      : `${site.title}: ${ja ? "ワークショップ" : "Workshop"}`);
+        ? `${site.title}: ${ja ? "講演者の紹介" : "By speaker"}`
+        : mode === ListingMode.ByPanelTopic
+          ? `${site.title}: ${ja ? "パネルトピック" : "By panel topics"}`
+          : `${site.title}: ${ja ? "ワークショップ" : "Workshop"}`);
   return (
     <>
       <Head>

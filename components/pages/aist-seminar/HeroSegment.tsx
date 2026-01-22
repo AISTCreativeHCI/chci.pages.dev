@@ -63,7 +63,7 @@ export const HeroSegment: FC<IProps> = ({
                           .map((s) =>
                             typeof s.name === "string"
                               ? s.name
-                              : s.name[ja ? "ja" : "en"]
+                              : s.name[ja ? "ja" : "en"],
                           )
                           .join(", ")
                       : "?")
@@ -79,8 +79,8 @@ export const HeroSegment: FC<IProps> = ({
                     typeof s.name === "string"
                       ? s.name
                       : ja
-                      ? s.name.ja
-                      : s.name.en
+                        ? s.name.ja
+                        : s.name.en,
                   )
                   .join(", "))
             }

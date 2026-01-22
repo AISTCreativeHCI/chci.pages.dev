@@ -28,7 +28,7 @@ export const PanelTopicSegment: FC<IProps> = ({ children, index }) => {
   const title = ja ? si.title.ja : si.title.en;
   const subtitle = ss
     .map((s) =>
-      typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"]
+      typeof s.name === "string" ? s.name : s.name[ja ? "ja" : "en"],
     )
     .join(", ");
   const youTubeUrl = `https://youtu.be/${si.youTubeVideoId}?t=${si.panelIndexTime}s`;
