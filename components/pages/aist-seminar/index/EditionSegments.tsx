@@ -1,11 +1,11 @@
+import Link from "next/link";
 import { FC } from "react";
+import { Message } from "semantic-ui-react";
 
 import { EditionSegment } from "./EditionSegment";
 
-import seminars from "../seminars.json";
 import { useSiteInfo } from "../../../lib/useSiteInfo";
-import { Message } from "semantic-ui-react";
-import Link from "next/link";
+import seminars from "../seminars.json";
 
 export const EditionSegments: FC = () => {
   const { ja } = useSiteInfo();
